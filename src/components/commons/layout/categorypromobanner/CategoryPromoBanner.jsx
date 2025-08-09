@@ -7,7 +7,7 @@ const CategoryPromoBanner = () => {
     <S.Wrapper>
       <S.MainBox>
         {CategoryPromoBannerItems.map((el) => (
-          <CategoryPromoBannerItem CategoryPromoBannerItem={el} />
+          <CategoryPromoBannerItem key={el.id} CategoryPromoBannerItem={el} />
         ))}
       </S.MainBox>
     </S.Wrapper>
