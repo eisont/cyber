@@ -9,7 +9,7 @@ const CategoryHighlightUI = (pr) => {
           <S.Top>Browse By Category</S.Top>
           <S.Categories>
             {pr.CategoryCard.map((el) => (
-              <CategoryItem CategoryCardData={el} />
+              <CategoryItem key={el.id} CategoryCardData={el} />
             ))}
           </S.Categories>
         </S.MainBox>
