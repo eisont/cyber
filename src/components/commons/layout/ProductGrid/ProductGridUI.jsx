@@ -1,6 +1,9 @@
+<<<<<<<< HEAD:src/components/commons/layout/ProductGrid/index.jsx
 import { ProductsCategory, ProductsItems } from '../../../../commons/monks/products/Products.monk';
+========
 import ProductCard from '../../components/ProductCard';
 import * as S from './ProductGrid.styled';
+>>>>>>>> dfd1c05555481934f9da5cfff6d499603c729237:src/components/commons/layout/ProductGrid/ProductGridUI.jsx
 
 const ProductGrid = () => {
   return (
