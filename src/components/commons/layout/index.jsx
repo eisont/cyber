@@ -4,7 +4,7 @@ import CategoryHighlight from './categoryhighlight/CategoryHighlightUI.container
 import ProductGrid from './productgrid/ProductGrid.container';
 import CategoryPromoBanner from './categorypromobanner/CategoryPromoBanner';
 import SeasonalSaleBanner from './seasonalsalebanner/SeasonalSaleBanner';
-import Footer from './footer/Footer.container';
+import Footer from './Footer';
 
 const Layout = () => {
   return (
