@@ -1,9 +1,9 @@
-import Header from './header/Header.container';
-import HeroBanner from './herobanner/HeroBanner.container';
-import CategoryHighlight from './categoryhighlight/CategoryHighlightUI.container';
-import ProductGrid from './productgrid/ProductGrid.container';
-import CategoryPromoBanner from './categorypromobanner/CategoryPromoBanner';
-import SeasonalSaleBanner from './seasonalsalebanner/SeasonalSaleBanner';
+import Header from './Header';
+import HeroBanner from './HeroBanner';
+import CategoryHighlight from './CategoryHighlight';
+import ProductGrid from './ProductGrid';
+import CategoryPromoBanner from './CategoryPromoBanner';
+import SeasonalSaleBanner from './SeasonalSaleBanner';
 import Footer from './Footer';
 
 const Layout = () => {
