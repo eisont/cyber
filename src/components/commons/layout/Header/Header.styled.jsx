@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   height: 88px;
   background-color: #fff;
+  border-bottom: 1px solid #b5b5b5;
 
   display: flex;
   justify-content: center;
