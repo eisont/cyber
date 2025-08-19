@@ -1,12 +1,12 @@
 import Product from '../../components/Product';
 import * as S from './Products.styled';
 
-const Products = () => {
+const Products = (pr) => {
   return (
     <S.Wrapper>
       <S.FlexBox>
         <S.ProductsCount>
-          Selected Products: <S.Count>85</S.Count>
+          Selected Products: <S.Count>{pr.product ? pr.product.length : 0}</S.Count>
         </S.ProductsCount>
 
         <S.SeleteBox name='Dropdown'>
@@ -15,9 +15,15 @@ const Products = () => {
       </S.FlexBox>
 
       <S.ProductsBox>
-        <Product />
-        <Product />
-        <Product />
+        {pr.product ? (
+          <>
+            {pr.product.map((el) => (
+              <Product key={el.id} product={el} />
+            ))}
+          </>
+        ) : (
+          <S.EmptyData>ⓧ</S.EmptyData>
+        )}
       </S.ProductsBox>
     </S.Wrapper>
   );
