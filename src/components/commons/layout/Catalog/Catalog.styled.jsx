@@ -23,3 +23,8 @@ export const Arrow = styled.img`
   margin: 0 20px 0 0;
   width: 24px;
 `;
+
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;

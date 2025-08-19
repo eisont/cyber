@@ -1,4 +1,5 @@
 import Fiter from '../Fiter';
+import Products from '../Products';
 import * as S from './Catalog.styled';
 
 const Catalog = () => {
@@ -13,7 +14,10 @@ const Catalog = () => {
           <S.CategoryMenu>Smartphones</S.CategoryMenu>
         </S.Category>
 
-        <Fiter />
+        <S.FlexBox>
+          <Fiter />
+          <Products />
+        </S.FlexBox>
       </S.MainWrapper>
     </S.Wrapper>
   );

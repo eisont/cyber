@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <Catalog />
+      {currentPage === '/products' && <Catalog />}
       {currentPage === '/' && <HeroBanner />}
       {currentPage === '/' && <CategoryHighlight />}
       {currentPage === '/' && <ProductGrid />}
