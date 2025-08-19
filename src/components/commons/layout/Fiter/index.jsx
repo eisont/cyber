@@ -20,7 +20,7 @@ const Fiter = (pr) => {
             <S.BrandBox>
               {pr.data.map((el) => (
                 <S.BrandInBox key={el.slug}>
-                  <S.Brand id={el.slug} onClick={(e) => pr.setProductsData(e.target.id)}>
+                  <S.Brand id={el.slug} onClick={(e) => pr.setProductsId(e.target.id)}>
                     {el.name}
                   </S.Brand>
                 </S.BrandInBox>

@@ -29,13 +29,13 @@ export const SeleteBox = styled.select`
 `;
 
 export const ProductsBox = styled.div`
-  margin: 15px 0;
+  padding: 20px 0;
+  width: 831px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  gap: 16px;
   flex-wrap: wrap;
 `;
+
 export const EmptyData = styled.div`
   width: 831px;
   height: 432px;

@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useCategroy } from '../../../../commons/api/filterApi';
+import { useFilterOptions } from '../../../../commons/api/filterApi';
 import Fiter from '../Fiter';
 import Products from '../Products';
 import * as S from './Catalog.styled';
-import { useFilterOptions } from '../../../../commons/api/filterApi';
 
 const Catalog = () => {
-  const [productsData, setProductsData] = useState([]);
+  const [productsId, setProductsId] = useState('');
 
-  const pData = useFilterOptions(`https://dummyjson.com/products/category/${productsData}`);
+  const ProductsData = useFilterOptions(`https://dummyjson.com/products/category/${productsId || 'beauty'}`);
 
   const data = useCategroy();
 
@@ -24,8 +24,8 @@ const Catalog = () => {
         </S.Category>
 
         <S.FlexBox>
-          <Fiter data={data[0][0]} setProductsData={setProductsData} />
-          <Products product={pData[0].products} />
+          <Fiter data={data[0][0]} setProductsId={setProductsId} />
+          <Products product={ProductsData[0].products} />
         </S.FlexBox>
       </S.MainWrapper>
     </S.Wrapper>
