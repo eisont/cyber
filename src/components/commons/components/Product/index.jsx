@@ -1,16 +1,16 @@
 import * as S from './Product.styled';
 
-const Product = () => {
+const Product = (pr) => {
   return (
     <S.Wrapper>
       <S.MainBox>
         <S.IconBox>
           <S.LikeIcon src='../../../../../public/icon/Like.png' />
         </S.IconBox>
-        <S.ImgBox />
+        <S.ImgBox src={pr.product.images[0]} />
 
-        <S.Title>title</S.Title>
-        <S.Price>$ price</S.Price>
+        <S.Title>{pr.product.title}</S.Title>
+        <S.Price>$ {pr.product.price}</S.Price>
         <S.Button>Buy Now</S.Button>
       </S.MainBox>
     </S.Wrapper>

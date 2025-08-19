@@ -25,7 +25,6 @@ export const Arrow = styled.img`
     cursor: pointer;
   }
 `;
-export const Hr = styled.div``;
 
 export const SearchBox = styled.div`
   margin: 10px 0;
@@ -69,5 +68,10 @@ export const BrandInBox = styled.div`
   align-items: center;
 `;
 export const CheckBox = styled.input``;
-export const Brand = styled.div``;
+export const Brand = styled.div`
+  :hover {
+    cursor: pointer;
+    color: #aeaeae;
+  }
+`;
 export const Number = styled.div``;

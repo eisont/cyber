@@ -36,3 +36,16 @@ export const ProductsBox = styled.div`
 
   flex-wrap: wrap;
 `;
+export const EmptyData = styled.div`
+  width: 831px;
+  height: 432px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300px;
+  color: #afafaf;
+
+  border-radius: 10px;
+  background: #f6f6f6;
+`;
