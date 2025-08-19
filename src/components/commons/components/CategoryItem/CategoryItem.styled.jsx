@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
   width: 160px;
   height: 128px;
 
@@ -12,6 +13,8 @@ export const Wrapper = styled.div`
   border-radius: 15px;
   background: rgb(0, 0, 0, 0.08);
 
+  text-decoration: none;
+  color: #000;
   :hover {
     cursor: pointer;
     background: rgb(0, 0, 0, 0.2);
