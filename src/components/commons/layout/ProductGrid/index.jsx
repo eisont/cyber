@@ -2,14 +2,16 @@ import { ProductsCategory, ProductsItems } from '../../../../commons/monks/produ
 import ProductCard from '../../components/ProductCard';
 import * as S from './ProductGrid.styled';
 
-const ProductGrid = () => {
+const ProductGrid = (pr) => {
   return (
     <S.Wrapper>
       <S.TotalBox>
         <S.MainBox>
           <S.CategoryBox>
-            {ProductsCategory.map((el) => (
-              <S.Category key={el.id}>{el.category}</S.Category>
+            {pr.data.map((el) => (
+              <S.Category key={el.slug} onClick={(e) => pr.setProductId(e.target.value)}>
+                {el.name}
+              </S.Category>
             ))}
           </S.CategoryBox>
           <S.ProductsItemsBox>

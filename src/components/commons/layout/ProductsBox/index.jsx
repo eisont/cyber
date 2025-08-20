@@ -1,4 +1,4 @@
-import Product from '../../components/Product';
+import ProductItem from '../../components/ProductItem';
 import * as S from './ProductsBox.styled';
 
 const ProductsBox = (pr) => {
@@ -6,7 +6,7 @@ const ProductsBox = (pr) => {
     <S.Wrapper>
       <S.FlexBox>
         <S.ProductsCount>
-          Selected Products: <S.Count>{pr.product ? pr.product.length : 0}</S.Count>
+          Selected Products: <S.Count>{pr.productListData ? pr.productListData.length : 0}</S.Count>
         </S.ProductsCount>
 
         <S.SeleteBox name='Dropdown'>
@@ -15,10 +15,10 @@ const ProductsBox = (pr) => {
       </S.FlexBox>
 
       <S.ProductsBox>
-        {pr.product ? (
+        {pr.productListData ? (
           <>
-            {pr.product.map((el) => (
-              <Product key={el.id} product={el} />
+            {pr.productListData.map((el) => (
+              <ProductItem key={el.id} product={el} />
             ))}
           </>
         ) : (

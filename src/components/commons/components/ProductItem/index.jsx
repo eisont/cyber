@@ -1,6 +1,6 @@
-import * as S from './Product.styled';
+import * as S from './ProductItem.styled';
 
-const Product = (pr) => {
+const ProductItem = (pr) => {
   return (
     <S.Wrapper>
       <S.MainBox>
@@ -17,4 +17,4 @@ const Product = (pr) => {
   );
 };
 
-export default Product;
+export default ProductItem;

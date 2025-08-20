@@ -24,6 +24,9 @@ export const MainBox = styled.div`
 `;
 
 export const CategoryBox = styled.div`
+  width: 100%;
+  overflow-x: scroll;
+
   margin: 0 0 25px 0;
   display: flex;
   align-items: center;
