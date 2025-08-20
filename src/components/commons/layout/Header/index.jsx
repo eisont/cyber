@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as S from './Header.styled';
 
 const Header = () => {
+  const location = useLocation();
+  const pathname = location.pathname;
+
   return (
     <S.Wrapper>
       <S.TotalBox>
@@ -13,17 +16,17 @@ const Header = () => {
           <S.Input type='text' placeholder='Search'></S.Input>
         </S.InputBox>
         <S.MenuBox>
-          <S.LinkSt to='/'>
-            <S.Menu>Home</S.Menu>
+          <S.LinkSt to='/' pathname={pathname === '/'}>
+            Home
           </S.LinkSt>
-          <S.LinkSt to='/about'>
-            <S.Menu>About</S.Menu>
+          <S.LinkSt to='/about' pathname={pathname === '/about'}>
+            About
           </S.LinkSt>
-          <S.LinkSt to='/contact'>
-            <S.Menu>Contact Us</S.Menu>
+          <S.LinkSt to='/contact' pathname={pathname === '/contact'}>
+            Contact Us
           </S.LinkSt>
-          <S.LinkSt to='/blog'>
-            <S.Menu>Blog</S.Menu>
+          <S.LinkSt to='/blog' pathname={pathname === '/blog'}>
+            Blog
           </S.LinkSt>
         </S.MenuBox>
         <S.IconBox>

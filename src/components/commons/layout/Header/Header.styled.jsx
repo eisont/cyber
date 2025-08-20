@@ -53,10 +53,11 @@ export const MenuBox = styled.div`
 `;
 export const LinkSt = styled(Link)`
   text-decoration: none;
-  color: #000;
-`;
-export const Menu = styled.div`
-  cursor: pointer;
+  color: ${(pr) => (pr.pathname ? '#000' : '#aeaeae')};
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 export const IconBox = styled.div`
   width: 144px;
