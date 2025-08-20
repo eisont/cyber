@@ -12,6 +12,8 @@ export const ProductsCount = styled.div`
   display: flex;
   align-items: center;
   color: #6c6c6c;
+
+  cursor: default;
 `;
 export const Count = styled.div`
   font-size: 20px;
@@ -26,6 +28,10 @@ export const SeleteBox = styled.select`
 
   border: 0.5px solid #d4d4d4;
   border-radius: 8px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const ProductsBox = styled.div`

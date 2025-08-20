@@ -18,9 +18,11 @@ export const TitleBox = styled.div`
 export const Title = styled.div`
   margin: 10px 0;
   font-size: 18px;
+  cursor: default;
 `;
 export const Arrow = styled.img`
   transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
+
   :hover {
     cursor: pointer;
   }
@@ -69,6 +71,8 @@ export const BrandInBox = styled.div`
 `;
 export const CheckBox = styled.input``;
 export const Brand = styled.div`
+  color: ${(pr) => (pr.name === pr.productId ? '#000' : '#A4A4A4')};
+
   :hover {
     cursor: pointer;
     color: #aeaeae;

@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   width: 268px;
   height: 432px;
-  font-family: 'Inter', sans-serif;
 
   display: flex;
   justify-content: center;
