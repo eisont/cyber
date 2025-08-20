@@ -13,6 +13,7 @@ const ProductGrid = (pr) => {
               </S.Category>
             ))}
           </S.CategoryBox>
+
           <S.ProductsItemsBox>
             {pr.productListData?.map((el) => (
               <ProductItem key={el.id} product={el} />

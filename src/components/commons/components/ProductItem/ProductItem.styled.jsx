@@ -34,7 +34,6 @@ export const LikeIcon = styled.img`
   }
 `;
 export const ImgBox = styled.img`
-  width: 160px;
   height: 160px;
 `;
 export const Title = styled.div`
