@@ -1,7 +1,7 @@
 import Product from '../../components/Product';
-import * as S from './Products.styled';
+import * as S from './ProductsBox.styled';
 
-const Products = (pr) => {
+const ProductsBox = (pr) => {
   return (
     <S.Wrapper>
       <S.FlexBox>
@@ -29,4 +29,4 @@ const Products = (pr) => {
   );
 };
 
-export default Products;
+export default ProductsBox;

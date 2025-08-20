@@ -16,7 +16,6 @@ export const Macbookpro14TextBox = styled.div`
 `;
 
 export const TitleText = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 64px;
   font-weight: 600;
 

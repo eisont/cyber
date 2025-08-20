@@ -25,7 +25,6 @@ export const CategoryImg = styled.img`
   width: 48px;
 `;
 export const Title = styled.div`
-  font-family: 'Inter', sans-serif;
   margin: 10px 0 0 0;
   font-weight: 500;
   font-size: 18px;

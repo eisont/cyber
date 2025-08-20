@@ -27,17 +27,23 @@ export const IconBox = styled.div`
   display: flex;
   justify-content: end;
 `;
-export const LikeIcon = styled.img``;
+export const LikeIcon = styled.img`
+  :hover {
+    cursor: pointer;
+  }
+`;
 export const ImgBox = styled.img`
   width: 160px;
   height: 160px;
 `;
 export const Title = styled.div`
   font-weight: 500;
+  cursor: default;
 `;
 export const Price = styled.div`
   font-weight: 600;
   font-size: 24px;
+  cursor: default;
 `;
 export const Button = styled.button`
   width: 188px;
@@ -51,4 +57,8 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
 `;

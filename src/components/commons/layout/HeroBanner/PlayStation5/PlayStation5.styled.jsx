@@ -19,7 +19,6 @@ export const Playstation5TextBox = styled.div`
 `;
 
 export const TitleText = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 49px;
   font-weight: 500;
   color: #000;

@@ -32,7 +32,6 @@ export const Category = styled.div`
   margin: 0 20px 0 0;
   font-weight: 500;
   font-size: 18px;
-  font-family: 'Inter', sans-serif;
 
   :hover {
     cursor: pointer;

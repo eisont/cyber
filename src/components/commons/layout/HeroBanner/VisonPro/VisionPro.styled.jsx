@@ -19,7 +19,6 @@ export const VisionproTextBox = styled.div`
 `;
 
 export const TitleText = styled.div`
-  font-family: 'Inter', sans-serif;
   width: 140px;
   font-size: 28px;
   font-weight: 500;

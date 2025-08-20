@@ -16,7 +16,6 @@ export const HeadText = styled.div`
   color: rgba(100, 100, 100, 0.4);
 `;
 export const TitleText = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 96px;
   font-weight: 600;
   letter-spacing: -3px;

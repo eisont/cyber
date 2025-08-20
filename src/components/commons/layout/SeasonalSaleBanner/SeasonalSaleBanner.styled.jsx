@@ -26,7 +26,6 @@ export const Banner2TextBox = styled.div`
 `;
 
 export const TitleText = styled.div`
-  font-family: 'Inter', sans-serif;
   font-size: 72px;
   font-weight: 500;
   letter-spacing: -1px;

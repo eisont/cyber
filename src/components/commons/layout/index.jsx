@@ -6,7 +6,7 @@ import CategoryPromoBanner from './CategoryPromoBanner';
 import SeasonalSaleBanner from './SeasonalSaleBanner';
 import Footer from './Footer';
 import { useLocation } from 'react-router-dom';
-import Catalog from './Catalog';
+import CategoryList from './CategoryList';
 
 const Layout = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      {currentPage === '/products' && <Catalog />}
+      {currentPage === '/category' && <CategoryList />}
       {currentPage === '/' && <HeroBanner />}
       {currentPage === '/' && <CategoryHighlight />}
       {currentPage === '/' && <ProductGrid />}
