@@ -7,7 +7,7 @@ const Category = (pr) => {
     <S.Wrapper>
       <S.MainWrapper>
         <S.Category>
-          <S.CategoryMenu>Home</S.CategoryMenu>
+          <S.CategoryMenu to='/'>Home</S.CategoryMenu>
           <S.Arrow src='../../../../../public/filter/Arrow.png' />
           <S.CategoryMenu>Catalog</S.CategoryMenu>
           <S.Arrow src='../../../../../public/filter/Arrow.png' />

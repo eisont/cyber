@@ -7,7 +7,7 @@ const ProductItem = (pr) => {
         <S.IconBox>
           <S.LikeIcon src='../../../../../public/icon/Like.png' />
         </S.IconBox>
-        <S.ImgBox src={pr.product.images[0]} />
+        <S.ImgBox src={pr.product.thumbnail} />
 
         <S.Title>{pr.product.title}</S.Title>
         <S.Price>$ {pr.product.price}</S.Price>

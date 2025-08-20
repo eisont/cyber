@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,12 +16,17 @@ export const Category = styled.div`
   display: flex;
   align-items: center;
 `;
-export const CategoryMenu = styled.div`
+export const CategoryMenu = styled(Link)`
   margin: 0 20px 0 0;
   font-weight: 500;
-  cursor: default;
+  text-decoration: none;
 
   color: #a4a4a4;
+
+  :hover {
+    cursor: pointer;
+    color: #000;
+  }
 `;
 export const Arrow = styled.img`
   margin: 0 20px 0 0;

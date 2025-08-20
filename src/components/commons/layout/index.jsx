@@ -30,7 +30,7 @@ const Layout = () => {
       <Header />
       {currentPage === '/' && <HeroBanner />}
       {currentPage === '/' && <CategoryHighlight />}
-      {currentPage === '/' && <ProductGrid data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} />}
+      {currentPage === '/' && <ProductGrid data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={productId} />}
       {currentPage === '/' && <CategoryPromoBanner />}
       {currentPage === '/' && <SeasonalSaleBanner />}
       {currentPage === '/category' && <Category data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={ToUpper(productId)} />}

@@ -34,10 +34,15 @@ export const CategoryBox = styled.div`
 export const Category = styled.div`
   margin: 0 20px 0 0;
   font-weight: 500;
-  font-size: 18px;
+  text-align: center;
+
+  font-size: ${(pr) => (pr.id === pr.productId ? '18px' : '14px')};
+  color: ${(pr) => (pr.id === pr.productId ? '#000' : '#A4A4A4')};
+  font-weight: ${(pr) => pr.id === pr.productId && '900'};
 
   :hover {
     cursor: pointer;
+    color: #000;
   }
 `;
 export const ProductsItemsBox = styled.div`

@@ -5,12 +5,13 @@ export const Wrapper = styled.div`
   width: 266px;
   height: 432px;
 
-  border-radius: 9px;
-  background: #f6f6f6;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: #f6f6f6;
+  border-radius: 10px;
+  cursor: default;
 `;
 
 export const MainBox = styled.div`
