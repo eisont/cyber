@@ -1,4 +1,4 @@
-import Iphone14Pro from './Iphone14Pro';
+import Iphone13Pro from './Iphone13Pro';
 import PlayStation5 from './PlayStation5';
 import AirpodMax from './AirpodMax';
 import MacbookPro14 from './MacbookPro14';
@@ -9,7 +9,7 @@ const HeroBanner = () => {
   return (
     <S.Wrapper>
       <S.BannerBox>
-        <Iphone14Pro />
+        <Iphone13Pro />
       </S.BannerBox>
       <S.SideBannerBox>
         <S.SmallBannerBox>
