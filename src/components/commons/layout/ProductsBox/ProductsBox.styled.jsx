@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
+import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 831px;
 `;
-export const FlexBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+export const FlexBox = styled(FlexBetween)``;
+
 export const ProductsCount = styled.div`
   display: flex;
   align-items: center;
@@ -42,14 +40,10 @@ export const ProductsBox = styled.div`
   flex-wrap: wrap;
 `;
 
-export const EmptyData = styled.div`
+export const EmptyData = styled(FlexDiv)`
   width: 831px;
   height: 432px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 300px;
   color: #afafaf;
 
   border-radius: 10px;

@@ -1,3 +1,4 @@
+import { FavoritesSVG } from '../../../../shared/assets/SVGicons/32pxIcon';
 import * as S from './ProductItem.styled';
 
 const ProductItem = (pr) => {
@@ -7,7 +8,7 @@ const ProductItem = (pr) => {
     <S.Wrapper>
       <S.MainBox>
         <S.IconBox>
-          <S.LikeIcon src='../../../../../public/icon/Like.png' />
+          <S.LikeIcon>{FavoritesSVG('#919191')}</S.LikeIcon>
         </S.IconBox>
         <S.ImgBox src={pr.product.thumbnail} />
 

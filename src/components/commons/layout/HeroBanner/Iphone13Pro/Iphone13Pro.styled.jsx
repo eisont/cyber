@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
+import { FlexBetween } from '../../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexBetween)`
   width: 1120px;
   height: 632px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 export const Iphone14ProTextBox = styled.div`
   cursor: default;

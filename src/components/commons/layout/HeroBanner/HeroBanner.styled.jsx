@@ -1,12 +1,8 @@
 import styled from '@emotion/styled';
+import { FlexBetween, FlexColBetween } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexColBetween)`
   height: 1232px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const BannerBox = styled.div`
@@ -17,25 +13,12 @@ export const BannerBox = styled.div`
   background: #211c24;
 `;
 
-export const SideBannerBox = styled.div`
+export const SideBannerBox = styled(FlexBetween)`
   width: 1440px;
   height: 600px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
-export const SmallBannerBox = styled.div`
+export const SmallBannerBox = styled(FlexColBetween)`
   width: 720px;
   height: 600px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 `;
-export const ToSmallBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+export const ToSmallBox = styled(FlexBetween)``;

@@ -1,12 +1,14 @@
+import { FacebookSVG, InstagramSVG, TitokSVG, TwitterSVG } from '../../../../shared/assets/SVGicons/16pxIcon';
+import { LogoSVG } from '../../../../shared/assets/SVGicons/logo';
 import * as S from './Footer.styled';
 
 const Footer = () => {
   return (
     <S.Wrapper>
-      <S.TotalBox>
+      <div>
         <S.TextBox>
           <S.Box1>
-            <S.Logo src='../../../../../public/logo/Color=White.png' />
+            <S.Logo>{LogoSVG('#fff')}</S.Logo>
             <S.Stext>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</S.Stext>
           </S.Box1>
           <S.Box2>
@@ -29,12 +31,12 @@ const Footer = () => {
           </S.Box3>
         </S.TextBox>
         <S.SnsBox>
-          <S.Snslogo src='../../../../../public/icon/Twitter.png' />
-          <S.Snslogo src='../../../../../public/icon/Facebook.png' />
-          <S.Snslogo src='../../../../../public/icon/Tiktok.png' />
-          <S.Snslogo src='../../../../../public/icon/Instagram.png' />
+          <S.Snslogo>{TwitterSVG('#fff')}</S.Snslogo>
+          <S.Snslogo>{FacebookSVG('#fff')}</S.Snslogo>
+          <S.Snslogo>{TitokSVG('#fff')}</S.Snslogo>
+          <S.Snslogo>{InstagramSVG('#fff', '#000')}</S.Snslogo>
         </S.SnsBox>
-      </S.TotalBox>
+      </div>
     </S.Wrapper>
   );
 };
