@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -28,13 +29,12 @@ export const CategoryMenu = styled(Link)`
     color: #000;
   }
 `;
-export const Arrow = styled.img`
+export const Arrow = styled(FlexDiv)`
   margin: 0 20px 0 0;
   width: 24px;
   cursor: default;
 `;
 
-export const FlexBox = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const FlexBox = styled(FlexBetween)`
+  align-items: start;
 `;

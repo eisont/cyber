@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FlexBetween } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -28,7 +29,6 @@ export const Arrow = styled.img`
   cursor: default;
 `;
 
-export const FlexBox = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const FlexBox = styled(FlexBetween)`
+  align-items: start;
 `;

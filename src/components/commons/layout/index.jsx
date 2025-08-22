@@ -5,10 +5,17 @@ import ProductGrid from './ProductGrid';
 import CategoryPromoBanner from './CategoryPromoBanner';
 import SeasonalSaleBanner from './SeasonalSaleBanner';
 import Footer from './Footer';
+import Category from './Category';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { useCategroy, useFilterOptions } from '../../../commons/api/filterApi';
-import Category from './Category';
+import { FlexColBetween } from '../../../shared/assets/styled/CommonStyled';
+import styled from '@emotion/styled';
+
+const Wrapper = styled(FlexColBetween)`
+  align-items: stretch;
+  width: 100vw;
+`;
 
 const Layout = () => {
   const location = useLocation();
@@ -26,16 +33,18 @@ const Layout = () => {
     return first + second;
   };
   return (
-    <>
+    <Wrapper>
       <Header />
       {currentPage === '/' && <HeroBanner />}
       {currentPage === '/' && <CategoryHighlight />}
       {currentPage === '/' && <ProductGrid data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={productId} />}
       {currentPage === '/' && <CategoryPromoBanner />}
       {currentPage === '/' && <SeasonalSaleBanner />}
+
+      {/* 페이지 */}
       {currentPage === '/category' && <Category data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={ToUpper(productId)} />}
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 

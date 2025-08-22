@@ -1,26 +1,21 @@
 import { Link } from 'react-router-dom';
+import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
-export const FlexBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-export const Wrapper = styled(FlexBox)`
+export const FlexBox = styled(FlexBetween)``;
+
+export const Wrapper = styled(FlexBetween)`
+  width: 100vw;
   height: 88px;
   background-color: #fff;
   border-bottom: 1px solid #b5b5b5;
 
   justify-content: center;
 `;
-export const TotalBox = styled(FlexBox)`
+export const TotalBox = styled(FlexBetween)`
   width: 1120px;
 `;
-export const Logo = styled.img`
-  width: 96px;
-  cursor: pointer;
-`;
-export const InputBox = styled(FlexBox)`
+export const InputBox = styled(FlexBetween)`
   margin: 0 20px;
   width: 433px;
   height: 56px;
@@ -28,7 +23,7 @@ export const InputBox = styled(FlexBox)`
   border-radius: 10px;
   background: #f5f5f5;
 `;
-export const SearchIcon = styled.img`
+export const SearchIcon = styled.div`
   margin: 0 0 0 15px;
   width: 24px;
 `;
@@ -42,7 +37,7 @@ export const Input = styled.input`
   background: rgba(0, 0, 0, 0);
 `;
 
-export const MenuBox = styled(FlexBox)`
+export const MenuBox = styled(FlexBetween)`
   width: 351px;
 `;
 export const LinkSt = styled(Link)`
@@ -50,10 +45,11 @@ export const LinkSt = styled(Link)`
     cursor: pointer;
   }
 `;
-export const IconBox = styled(FlexBox)`
+export const IconBox = styled(FlexBetween)`
   width: 144px;
 `;
-export const Icon = styled.img`
-  width: 32px;
-  cursor: pointer;
+export const Icon = styled(FlexDiv)`
+  :hover {
+    cursor: pointer;
+  }
 `;

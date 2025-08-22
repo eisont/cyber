@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FlexBetween, FlexColAround, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 256px;
@@ -8,11 +9,9 @@ export const CategoryBox = styled.div`
   margin: 0 0 20px 0;
 `;
 
-export const TitleBox = styled.div`
+export const TitleBox = styled(FlexBetween)`
   width: 256px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   border-bottom: 0.5px solid #b5b5b5;
 `;
 export const Title = styled.div`
@@ -20,7 +19,7 @@ export const Title = styled.div`
   font-size: 18px;
   cursor: default;
 `;
-export const Arrow = styled.img`
+export const Arrow = styled(FlexDiv)`
   transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
 
   :hover {
@@ -28,21 +27,16 @@ export const Arrow = styled.img`
   }
 `;
 
-export const SearchBox = styled.div`
+export const SearchBox = styled(FlexBetween)`
   margin: 10px 0;
   width: 256px;
   height: 40px;
   border-radius: 8px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   background: #f5f5f5;
 `;
-export const SearchIcon = styled.img`
+export const SearchIcon = styled(FlexDiv)`
   margin: 0 0 0 15px;
-  width: 24px;
 `;
 
 export const Input = styled.input`
@@ -55,11 +49,9 @@ export const Input = styled.input`
   background: rgba(0, 0, 0, 0);
 `;
 
-export const BrandBox = styled.div`
+export const BrandBox = styled(FlexColAround)`
   width: 256px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  align-items: start;
 `;
 export const BrandInBox = styled.div`
   height: 24px;

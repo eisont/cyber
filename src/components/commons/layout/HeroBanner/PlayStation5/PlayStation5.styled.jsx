@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
+import { FlexBetween } from '../../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexBetween)`
   position: relative;
   width: 720px;
   height: 328px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #fff;
 `;
 

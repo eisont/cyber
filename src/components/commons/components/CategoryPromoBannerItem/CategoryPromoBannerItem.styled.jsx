@@ -1,24 +1,17 @@
 import styled from '@emotion/styled';
+import { FlexColBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexDiv)`
   width: 360px;
   height: 552px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: default;
 
   background: ${({ background }) => background};
 `;
 
-export const MainBox = styled.div`
+export const MainBox = styled(FlexColBetween)`
   width: 297px;
   height: 485px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 `;
 export const ItemImg = styled.img`
   width: 297px;

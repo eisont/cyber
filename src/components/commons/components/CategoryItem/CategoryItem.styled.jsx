@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import { FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(Link)`
   width: 160px;
@@ -21,9 +22,8 @@ export const Wrapper = styled(Link)`
   }
 `;
 
-export const CategoryImg = styled.img`
-  width: 48px;
-`;
+export const CategoryImg = styled(FlexDiv)``;
+
 export const Title = styled.div`
   margin: 10px 0 0 0;
   font-weight: 500;

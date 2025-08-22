@@ -1,23 +1,17 @@
 import styled from '@emotion/styled';
+import { FlexBetween, FlexColBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexDiv)`
+  width: 100vw;
   height: 504px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   background-color: #000;
 `;
 
-export const TotalBox = styled.div``;
-export const TextBox = styled.div`
+export const TextBox = styled(FlexBetween)`
   width: 1120px;
   height: 216px;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const Box1 = styled.div`
@@ -25,26 +19,29 @@ export const Box1 = styled.div`
   height: 100%;
   color: #fff;
 `;
-export const Box2 = styled.div`
+
+export const Logo = styled(FlexDiv)`
+  margin: 0 0 15px 0;
+  justify-content: start;
+
+  cursor: default;
+`;
+
+export const Box2 = styled(FlexColBetween)`
   width: 300px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
   align-items: start;
+
   color: #fff;
 `;
-export const Box3 = styled.div`
+export const Box3 = styled(FlexColBetween)`
   width: 300px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
   align-items: start;
+
   color: #fff;
-`;
-export const Logo = styled.img`
-  font-size: 30px;
 `;
 export const Stitle = styled.div`
   cursor: default;
@@ -57,14 +54,13 @@ export const Stext = styled.li`
   cursor: default;
 `;
 
-export const SnsBox = styled.div`
+export const SnsBox = styled(FlexBetween)`
   margin: 30px 0 0 0;
   width: 173px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
-export const Snslogo = styled.img`
-  height: 16px;
-  cursor: pointer;
+
+export const Snslogo = styled(FlexDiv)`
+  :hover {
+    cursor: pointer;
+  }
 `;

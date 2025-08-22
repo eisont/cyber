@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
+import { FlexBetween } from '../../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(FlexBetween)`
   width: 720px;
   height: 600px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #ededed;
 `;
 export const Macbookpro14TextBox = styled.div`
