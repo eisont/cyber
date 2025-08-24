@@ -10,8 +10,7 @@ import { useLocation } from 'react-router-dom';
 import { useFilterOptions } from '../../../commons/api/filterApi';
 import { FlexColBetween } from '../../../shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
-import { useState } from 'react';
-import { useProductId } from '../../../context/productIdContext';
+import { useSelector } from 'react-redux';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
@@ -22,8 +21,7 @@ const Layout = () => {
   const location = useLocation();
   const currentPage = location.pathname;
 
-  // const [productId, setProductId] = useState('beauty');
-  const [productId] = useProductId();
+  const productId = useSelector((state) => state.productId);
 
   const ProductsData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`);
 

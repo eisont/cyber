@@ -1,13 +1,15 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { useCategroy } from '../../../../commons/api/filterApi';
-import { useProductId } from '../../../../context/productIdContext';
 import ProductItem from '../../components/ProductItem';
 import * as S from './ProductGrid.styled';
+import { getProductId } from '../../../../redux/redux';
 
 const ProductGrid = (pr) => {
   const data = useCategroy();
   const CategoryData = data[0][0];
 
-  const [productId, setProductId] = useProductId();
+  const productId = useSelector((state) => state.productId);
+  const dispatch = useDispatch();
 
   return (
     <S.Wrapper>
@@ -15,7 +17,7 @@ const ProductGrid = (pr) => {
         <S.MainBox>
           <S.CategoryBox>
             {CategoryData.map((el) => (
-              <S.Category key={el.slug} id={el.slug} productId={productId} onClick={(e) => setProductId(e.target.id)}>
+              <S.Category key={el.slug} id={el.slug} productId={productId} onClick={(e) => dispatch(getProductId(e.target.id))}>
                 {el.name}
               </S.Category>
             ))}

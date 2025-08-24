@@ -1,4 +1,4 @@
-import { useProductId } from '../../../../context/productIdContext';
+import { useSelector } from 'react-redux';
 import { ArrowSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
 import { ToUpper } from '../../../../shared/lib';
 import Fiter from '../Fiter';
@@ -6,7 +6,7 @@ import ProductsBox from '../ProductsBox';
 import * as S from './Category.styled';
 
 const Category = (pr) => {
-  const [productId] = useProductId();
+  const productId = useSelector((state) => state);
 
   return (
     <S.Wrapper>
