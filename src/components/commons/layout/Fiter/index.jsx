@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import * as S from './Fiter.styld';
 import { ExpandDownSVG, SearchSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
+import { useCategroy } from '../../../../commons/api/filterApi';
+import { ToUpper } from '../../../../shared/lib';
+import { useDispatch, useSelector } from 'react-redux';
+import { productIdSlice } from '../../../../redux/redux';
 
-const Fiter = (pr) => {
+const Fiter = () => {
   const [toggle, setToggle] = useState(false);
+
+  const data = useCategroy();
+  const CategoryData = data[0][0];
+
+  const productId = useSelector((state) => state.productId);
+  const dispatch = useDispatch();
 
   return (
     <S.Wrapper>
@@ -21,9 +31,9 @@ const Fiter = (pr) => {
               <S.Input type='text' placeholder='Search'></S.Input>
             </S.SearchBox>
             <S.BrandBox>
-              {pr.data.map((el) => (
+              {CategoryData.map((el) => (
                 <S.BrandInBox key={el.slug}>
-                  <S.Brand id={el.slug} onClick={(e) => pr.setProductId(e.target.id)} productId={pr.productId} name={el.name}>
+                  <S.Brand id={el.slug} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
                     {el.name}
                   </S.Brand>
                 </S.BrandInBox>
