@@ -6,7 +6,7 @@ import ProductsBox from '../ProductsBox';
 import * as S from './Category.styled';
 
 const Category = (pr) => {
-  const productId = useSelector((state) => state);
+  const productId = useSelector((state) => state.productId);
 
   return (
     <S.Wrapper>

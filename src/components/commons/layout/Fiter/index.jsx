@@ -4,7 +4,7 @@ import { ExpandDownSVG, SearchSVG } from '../../../../shared/assets/SVGicons/24p
 import { useCategroy } from '../../../../commons/api/filterApi';
 import { ToUpper } from '../../../../shared/lib';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductId } from '../../../../redux/redux';
+import { productIdSlice } from '../../../../redux/redux';
 
 const Fiter = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,7 +12,7 @@ const Fiter = () => {
   const data = useCategroy();
   const CategoryData = data[0][0];
 
-  const productId = useSelector((state) => state);
+  const productId = useSelector((state) => state.productId);
   const dispatch = useDispatch();
 
   return (
@@ -33,7 +33,7 @@ const Fiter = () => {
             <S.BrandBox>
               {CategoryData.map((el) => (
                 <S.BrandInBox key={el.slug}>
-                  <S.Brand id={el.slug} onClick={(e) => dispatch(getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
+                  <S.Brand id={el.slug} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
                     {el.name}
                   </S.Brand>
                 </S.BrandInBox>

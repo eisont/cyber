@@ -1,20 +1,18 @@
-import { combineReducers, legacy_createStore } from 'redux';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-export const getProductId = (id) => {
-  return {
-    type: 'getProductId',
-    payload: id,
-  };
-};
+export const productIdSlice = createSlice({
+  name: 'productId', // 이름
+  initialState: 'beauty', // 초기값
+  reducers: {
+    // 상태가 변하는 값
+    getProductId(state, action) {
+      return (state = action.payload);
+    },
+  },
+});
 
-const productIdReducer = (state = 'beauty', action) => {
-  switch (action.type) {
-    case 'getProductId':
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-const rootReducer = combineReducers({ productId: productIdReducer });
-export const store = legacy_createStore(rootReducer);
+export const store = configureStore({
+  reducer: {
+    productId: productIdSlice.reducer,
+  },
+});
