@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import * as S from './Fiter.styld';
 import { ExpandDownSVG, SearchSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
+import { useCategroy } from '../../../../commons/api/filterApi';
 
 const Fiter = (pr) => {
   const [toggle, setToggle] = useState(false);
+
+  const data = useCategroy();
+  const CategoryData = data[0][0];
 
   return (
     <S.Wrapper>
@@ -21,7 +25,7 @@ const Fiter = (pr) => {
               <S.Input type='text' placeholder='Search'></S.Input>
             </S.SearchBox>
             <S.BrandBox>
-              {pr.data.map((el) => (
+              {CategoryData.map((el) => (
                 <S.BrandInBox key={el.slug}>
                   <S.Brand id={el.slug} onClick={(e) => pr.setProductId(e.target.id)} productId={pr.productId} name={el.name}>
                     {el.name}

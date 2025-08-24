@@ -7,10 +7,10 @@ import SeasonalSaleBanner from './SeasonalSaleBanner';
 import Footer from './Footer';
 import Category from './Category';
 import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
-import { useCategroy, useFilterOptions } from '../../../commons/api/filterApi';
+import { useFilterOptions } from '../../../commons/api/filterApi';
 import { FlexColBetween } from '../../../shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
+import { useState } from 'react';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
@@ -20,12 +20,9 @@ const Wrapper = styled(FlexColBetween)`
 const Layout = () => {
   const location = useLocation();
   const currentPage = location.pathname;
-
   const [productId, setProductId] = useState('beauty');
 
   const ProductsData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`);
-
-  const data = useCategroy();
 
   const ToUpper = (word) => {
     const first = word.split('')[0].toUpperCase();
@@ -37,12 +34,12 @@ const Layout = () => {
       <Header />
       {currentPage === '/' && <HeroBanner />}
       {currentPage === '/' && <CategoryHighlight />}
-      {currentPage === '/' && <ProductGrid data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={productId} />}
+      {currentPage === '/' && <ProductGrid setProductId={setProductId} productListData={ProductsData[0].products} productId={productId} />}
       {currentPage === '/' && <CategoryPromoBanner />}
       {currentPage === '/' && <SeasonalSaleBanner />}
 
       {/* 페이지 */}
-      {currentPage === '/category' && <Category data={data[0][0]} setProductId={setProductId} productListData={ProductsData[0].products} productId={ToUpper(productId)} />}
+      {currentPage === '/category' && <Category setProductId={setProductId} productListData={ProductsData[0].products} productId={ToUpper(productId)} />}
       <Footer />
     </Wrapper>
   );

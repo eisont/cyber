@@ -16,7 +16,7 @@ const Category = (pr) => {
         </S.Category>
 
         <S.FlexBox>
-          <Fiter data={pr.data} setProductId={pr.setProductId} productId={pr.productId} />
+          <Fiter setProductId={pr.setProductId} productId={pr.productId} />
           <ProductsBox productListData={pr.productListData} />
         </S.FlexBox>
       </S.MainWrapper>
