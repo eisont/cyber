@@ -2,8 +2,6 @@ import { FavoritesSVG } from '../../../../shared/assets/SVGicons/32pxIcon';
 import * as S from './ProductItem.styled';
 
 const ProductItem = (pr) => {
-  console.log('product', pr.product);
-
   return (
     <S.Wrapper>
       <S.MainBox>
