@@ -85,8 +85,7 @@ export const AvailabilityStatus = styled.div``;
 export const Rating = styled.div``;
 
 const Bt = styled(FlexCenter)`
-  width: 100px;
-  height: 50px;
+  padding: 15px 20px;
 
   border: 1px solid black;
   background: none;
@@ -97,7 +96,7 @@ const Bt = styled(FlexCenter)`
   }
 `;
 export const SellBt = styled(Bt)`
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 0;
 `;
 export const CartBt = styled(Bt)``;
 
