@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FlexBetween } from '../../../../../shared/assets/styled/CommonStyled';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled(FlexBetween)`
   width: 720px;
@@ -24,6 +25,11 @@ export const SubText = styled.div`
   line-height: 24px;
   color: #909090;
 `;
+export const Linkst = styled(Link)`
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+`;
 export const Botton = styled.button`
   margin: 20px 0 0 0;
   width: 191px;
@@ -33,8 +39,9 @@ export const Botton = styled.button`
   background: none;
   color: #000;
   border-radius: 6px;
+
   :hover {
-    background: rgba(100, 100, 100, 0.4);
+    background: rgba(100, 100, 100, 0.2);
     cursor: pointer;
   }
 `;

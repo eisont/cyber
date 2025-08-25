@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as S from './Fiter.styld';
-import { ExpandDownSVG, SearchSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
+import { ExpandDownSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
 import { useCategroy } from '../../../../commons/api/filterApi';
 import { ToUpper } from '../../../../shared/lib';
 import { useDispatch, useSelector } from 'react-redux';
