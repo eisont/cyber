@@ -24,7 +24,7 @@ const ProductGrid = (pr) => {
           </S.CategoryBox>
 
           <S.ProductsItemsBox>
-            {pr.productListData?.map((el) => (
+            {pr.ProductListData?.map((el) => (
               <ProductItem key={el.id} product={el} />
             ))}
           </S.ProductsItemsBox>

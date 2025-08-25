@@ -6,7 +6,7 @@ const ProductsBox = (pr) => {
     <S.Wrapper>
       <S.FlexBox>
         <S.ProductsCount>
-          Selected Products: <S.Count>{pr.productListData ? pr.productListData.length : 0}</S.Count>
+          Selected Products: <S.Count>{pr.ProductListData ? pr.ProductListData.length : 0}</S.Count>
         </S.ProductsCount>
 
         <S.SeleteBox name='Dropdown'>
@@ -15,9 +15,9 @@ const ProductsBox = (pr) => {
       </S.FlexBox>
 
       <S.ProductsBox>
-        {pr.productListData ? (
+        {pr.ProductListData ? (
           <>
-            {pr.productListData.map((el) => (
+            {pr.ProductListData.map((el) => (
               <ProductItem key={el.id} product={el} />
             ))}
           </>

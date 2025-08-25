@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 export const FlexBox = styled(FlexBetween)``;
@@ -48,7 +48,7 @@ export const LinkSt = styled(Link)`
 export const IconBox = styled(FlexBetween)`
   width: 144px;
 `;
-export const Icon = styled(FlexDiv)`
+export const Icon = styled(FlexCenter)`
   :hover {
     cursor: pointer;
   }

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-import { FlexBt, FlexColBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBt, FlexColBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
+import { Link } from 'react-router-dom';
 
-export const Wrapper = styled(FlexDiv)`
+export const Wrapper = styled(FlexCenter)`
   margin: 10px 0;
   width: 266px;
   height: 432px;
@@ -20,7 +21,7 @@ export const IconBox = styled.div`
   display: flex;
   justify-content: end;
 `;
-export const LikeIcon = styled(FlexDiv)`
+export const LikeIcon = styled(FlexCenter)`
   :hover {
     cursor: pointer;
   }
@@ -28,6 +29,7 @@ export const LikeIcon = styled(FlexDiv)`
 export const ImgBox = styled.img`
   height: 160px;
 `;
+export const Linkst = styled(Link)``;
 export const Title = styled.div`
   font-weight: 500;
   cursor: default;

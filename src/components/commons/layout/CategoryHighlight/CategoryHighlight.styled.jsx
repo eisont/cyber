@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexColBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled(FlexDiv)`
+export const Wrapper = styled(FlexCenter)`
   height: 352px;
 `;
 
-export const TotalBox = styled(FlexDiv)`
+export const TotalBox = styled(FlexCenter)`
   width: 1440px;
   height: 352px;
 

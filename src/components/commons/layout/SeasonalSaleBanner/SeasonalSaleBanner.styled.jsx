@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
-import { FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled(FlexDiv)`
+export const Wrapper = styled(FlexCenter)`
   width: 100%;
-  height: 448px;
 `;
-export const Background = styled(FlexDiv)`
+export const Background = styled(FlexCenter)`
   width: 1440px;
-  height: 448px;
+  height: 447px;
 
   background-size: contain;
   background-repeat: no-repeat;

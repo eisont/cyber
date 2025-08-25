@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled(FlexDiv)`
+export const Wrapper = styled(FlexCenter)`
   width: 100%;
   height: 552px;
 `;

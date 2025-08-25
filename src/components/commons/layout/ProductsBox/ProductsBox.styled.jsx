@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 831px;
@@ -40,7 +40,7 @@ export const ProductsBox = styled.div`
   flex-wrap: wrap;
 `;
 
-export const EmptyData = styled(FlexDiv)`
+export const EmptyData = styled(FlexCenter)`
   width: 831px;
   height: 432px;
 

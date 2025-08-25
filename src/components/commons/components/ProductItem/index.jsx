@@ -8,7 +8,9 @@ const ProductItem = (pr) => {
         <S.IconBox>
           <S.LikeIcon>{FavoritesSVG('#919191')}</S.LikeIcon>
         </S.IconBox>
-        <S.ImgBox src={pr.product.thumbnail} />
+        <S.Linkst to={`/category/${pr.product.id}`}>
+          <S.ImgBox src={pr.product.thumbnail} />
+        </S.Linkst>
 
         <S.Title>{pr.product.title}</S.Title>
         <S.Price>$ {pr.product.price}</S.Price>

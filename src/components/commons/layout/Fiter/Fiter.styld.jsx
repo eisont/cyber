@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColAround, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexColAround, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 256px;
@@ -19,7 +19,7 @@ export const Title = styled.div`
   font-size: 18px;
   cursor: default;
 `;
-export const Arrow = styled(FlexDiv)`
+export const Arrow = styled(FlexCenter)`
   transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
 
   :hover {
@@ -35,7 +35,7 @@ export const SearchBox = styled(FlexBetween)`
 
   background: #f5f5f5;
 `;
-export const SearchIcon = styled(FlexDiv)`
+export const SearchIcon = styled(FlexCenter)`
   margin: 0 0 0 15px;
 `;
 
