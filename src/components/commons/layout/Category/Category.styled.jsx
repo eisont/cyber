@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const MainWrapper = styled.div`
-  width: 1200px;
+  width: 1120px;
 `;
 
 export const Category = styled.div`

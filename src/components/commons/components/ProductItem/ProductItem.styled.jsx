@@ -18,6 +18,7 @@ export const MainBox = styled(FlexColBetween)`
 `;
 export const IconBox = styled.div`
   width: 234px;
+  height: 32px;
   display: flex;
   justify-content: end;
 `;
