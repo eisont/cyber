@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -29,7 +29,15 @@ export const CategoryMenu = styled(Link)`
     color: #000;
   }
 `;
-export const Arrow = styled(FlexDiv)`
+export const ProductAllMenu = styled(CategoryMenu)`
+  color: ${(pr) => !pr.params && '#000'};
+  font-weight: 900;
+`;
+export const ProductItemMenu = styled(CategoryMenu)`
+  color: ${(pr) => pr.params && '#000'};
+  font-weight: 900;
+`;
+export const Arrow = styled(FlexCenter)`
   margin: 0 20px 0 0;
   width: 24px;
   cursor: default;
@@ -37,4 +45,11 @@ export const Arrow = styled(FlexDiv)`
 
 export const FlexBox = styled(FlexBetween)`
   align-items: start;
+`;
+
+export const SideItem = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

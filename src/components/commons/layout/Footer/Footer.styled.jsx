@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColBetween, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexColBetween, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled(FlexDiv)`
+export const Wrapper = styled(FlexCenter)`
   width: 100vw;
   height: 504px;
 
@@ -20,7 +20,7 @@ export const Box1 = styled.div`
   color: #fff;
 `;
 
-export const Logo = styled(FlexDiv)`
+export const Logo = styled(FlexCenter)`
   margin: 0 0 15px 0;
   justify-content: start;
 
@@ -59,7 +59,7 @@ export const SnsBox = styled(FlexBetween)`
   width: 173px;
 `;
 
-export const Snslogo = styled(FlexDiv)`
+export const Snslogo = styled(FlexCenter)`
   :hover {
     cursor: pointer;
   }

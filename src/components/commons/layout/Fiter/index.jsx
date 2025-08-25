@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { productIdSlice } from '../../../../redux/redux';
 
 const Fiter = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const data = useCategroy();
   const CategoryData = data[0][0];

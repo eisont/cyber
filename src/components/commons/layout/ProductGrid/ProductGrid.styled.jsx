@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { FlexColAround, FlexDiv } from '../../../../shared/assets/styled/CommonStyled';
+import { FlexColAround, FlexCenter } from '../../../../shared/assets/styled/CommonStyled';
 
-export const Wrapper = styled(FlexDiv)``;
+export const Wrapper = styled(FlexCenter)``;
 
-export const TotalBox = styled(FlexDiv)`
+export const TotalBox = styled(FlexCenter)`
   width: 1440px;
 `;
 export const MainBox = styled(FlexColAround)`
@@ -40,7 +40,7 @@ export const Category = styled.div`
   }
 `;
 
-export const ProductsItemsBox = styled(FlexDiv)`
+export const ProductsItemsBox = styled(FlexCenter)`
   width: 100%;
   height: 900px;
   gap: 0 16px;
