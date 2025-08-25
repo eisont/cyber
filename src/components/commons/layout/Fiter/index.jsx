@@ -18,18 +18,16 @@ const Fiter = () => {
   return (
     <S.Wrapper>
       <S.CategoryBox>
-        <S.TitleBox>
+        <S.TitleBox onClick={() => setToggle((prev) => !prev)}>
           <S.Title>Category</S.Title>
-          <S.Arrow onClick={() => setToggle((prev) => !prev)} toggle={toggle}>
-            {ExpandDownSVG('#191919')}
-          </S.Arrow>
+          <S.Arrow toggle={toggle}>{ExpandDownSVG('#191919')}</S.Arrow>
         </S.TitleBox>
         {toggle ? (
           <>
-            <S.SearchBox>
+            {/* <S.SearchBox>
               <S.SearchIcon>{SearchSVG('#989898')}</S.SearchIcon>
               <S.Input type='text' placeholder='Search'></S.Input>
-            </S.SearchBox>
+            </S.SearchBox> */}
             <S.BrandBox>
               {CategoryData.map((el) => (
                 <S.BrandInBox key={el.slug}>

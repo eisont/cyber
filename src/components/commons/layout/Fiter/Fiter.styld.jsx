@@ -13,6 +13,11 @@ export const TitleBox = styled(FlexBetween)`
   width: 256px;
 
   border-bottom: 0.5px solid #b5b5b5;
+
+  :hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.044);
+  }
 `;
 export const Title = styled.div`
   margin: 10px 0;
@@ -21,10 +26,6 @@ export const Title = styled.div`
 `;
 export const Arrow = styled(FlexCenter)`
   transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
-
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export const SearchBox = styled(FlexBetween)`
@@ -50,6 +51,8 @@ export const Input = styled.input`
 `;
 
 export const BrandBox = styled(FlexColAround)`
+  margin: 10px 0;
+
   width: 256px;
   align-items: start;
 `;

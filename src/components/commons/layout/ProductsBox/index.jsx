@@ -9,9 +9,9 @@ const ProductsBox = (pr) => {
           Selected Products: <S.Count>{pr.ProductListData ? pr.ProductListData.length : 0}</S.Count>
         </S.ProductsCount>
 
-        <S.SeleteBox name='Dropdown'>
+        {/* <S.SeleteBox name='Dropdown'>
           <option value=''>By rating</option>
-        </S.SeleteBox>
+        </S.SeleteBox> */}
       </S.FlexBox>
 
       <S.ProductsBox>
