@@ -1,20 +1,54 @@
-import { CamerasSVG, ComputersSVG, GamingSVG, HeadphonesSVG, PhonesSVG, SmartWatchesSVG } from '../../../../shared/assets/SVGicons/48pxIcon';
-import CategoryItem from '../../components/CategoryItem';
+import { useDispatch } from 'react-redux';
+import {
+  BaseballOutlineSVG,
+  CamerasSVG,
+  CarSportsOulineSVG,
+  ComputersSVG,
+  FastFoodOutlineSVG,
+  GamingSVG,
+  HeadphonesSVG,
+  LaptopSVG,
+  ManOutlineSVG,
+  PhonesSVG,
+  SmartWatchesSVG,
+  WomanOutlineSVG,
+} from '../../../../shared/assets/SVGicons/48pxIcon';
 import * as S from './CategoryHighlight.styled';
+import { productIdSlice } from '../../../../redux/redux';
 
 const CategoryHighlight = () => {
+  const dispatch = useDispatch();
+
   return (
     <S.Wrapper>
       <S.TotalBox>
         <S.MainBox>
           <S.Top>Browse By Category</S.Top>
           <S.Categories>
-            <CategoryItem img={PhonesSVG('#000', '#fff')} title='Phones'></CategoryItem>
-            <CategoryItem img={SmartWatchesSVG('#000', '#fff')} title='SmartWatches'></CategoryItem>
-            <CategoryItem img={CamerasSVG('#000', '#fff')} title='Cameras'></CategoryItem>
-            <CategoryItem img={ComputersSVG('#000', '#fff')} title='Computers'></CategoryItem>
-            <CategoryItem img={GamingSVG('#000', '#fff')} title='Gaming'></CategoryItem>
-            <CategoryItem img={HeadphonesSVG('#000', '#fff')} title='Headphones'></CategoryItem>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('vehicle'))}>
+              <S.CategoryImg>{CarSportsOulineSVG('#000')}</S.CategoryImg>
+              <S.Title>Vehicle</S.Title>
+            </S.ItemBox>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('sports-accessories'))}>
+              <S.CategoryImg>{BaseballOutlineSVG('#000')}</S.CategoryImg>
+              <S.Title>Sports Accessories</S.Title>
+            </S.ItemBox>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
+              <S.CategoryImg>{LaptopSVG('#000')}</S.CategoryImg>
+              <S.Title>Laptops</S.Title>
+            </S.ItemBox>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('groceries'))}>
+              <S.CategoryImg>{FastFoodOutlineSVG('#000')}</S.CategoryImg>
+              <S.Title>Groceries</S.Title>
+            </S.ItemBox>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('mens-shirts'))}>
+              <S.CategoryImg>{ManOutlineSVG('#000')}</S.CategoryImg>
+              <S.Title>Mens Shirts</S.Title>
+            </S.ItemBox>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('womens-dresses'))}>
+              <S.CategoryImg>{WomanOutlineSVG('#000')}</S.CategoryImg>
+              <S.Title>Womens Dresses</S.Title>
+            </S.ItemBox>
           </S.Categories>
         </S.MainBox>
       </S.TotalBox>
