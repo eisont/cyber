@@ -54,4 +54,5 @@ export const Title = styled.div`
   margin: 10px 0 0 0;
   font-weight: 500;
   font-size: 18px;
+  text-align: center;
 `;

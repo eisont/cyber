@@ -8,7 +8,7 @@ const MacbookPro14 = () => {
     <S.Wrapper>
       <S.Macbookpro14TextBox>
         <S.TitleText>
-          <span style={{ fontWeight: '100' }}>Macbook</span> Pro 14
+          Macbook<span style={{ fontWeight: '600' }}> Pro</span> 14
         </S.TitleText>
         <S.SubText>The new 14‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</S.SubText>
         <S.Linkst to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>

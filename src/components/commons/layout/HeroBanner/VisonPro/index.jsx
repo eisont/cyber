@@ -6,7 +6,7 @@ const VisionPro = () => {
       <S.VisionproImg src='../../../../../public/HeroBanner/visionpro.png' />
       <S.VisionproTextBox>
         <S.TitleText>
-          <span style={{ fontWeight: '300' }}>
+          <span style={{ fontWeight: '200' }}>
             Apple
             <br /> Vision
           </span>{' '}
