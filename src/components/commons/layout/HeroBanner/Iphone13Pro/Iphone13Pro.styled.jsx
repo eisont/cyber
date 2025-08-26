@@ -17,7 +17,6 @@ export const HeadText = styled.div`
 export const TitleText = styled.div`
   font-size: 96px;
   font-weight: 600;
-  letter-spacing: -3px;
   color: #fff;
 `;
 export const SubText = styled.div`

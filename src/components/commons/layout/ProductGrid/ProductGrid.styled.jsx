@@ -32,7 +32,7 @@ export const Category = styled.div`
 
   font-size: ${(pr) => (pr.id === pr.productId ? '18px' : '14px')};
   color: ${(pr) => (pr.id === pr.productId ? '#000' : '#A4A4A4')};
-  font-weight: ${(pr) => pr.id === pr.productId && '900'};
+  font-weight: ${(pr) => pr.id === pr.productId && '700'};
 
   :hover {
     cursor: pointer;

@@ -1,18 +1,5 @@
 import { useDispatch } from 'react-redux';
-import {
-  BaseballOutlineSVG,
-  CamerasSVG,
-  CarSportsOulineSVG,
-  ComputersSVG,
-  FastFoodOutlineSVG,
-  GamingSVG,
-  HeadphonesSVG,
-  LaptopSVG,
-  ManOutlineSVG,
-  PhonesSVG,
-  SmartWatchesSVG,
-  WomanOutlineSVG,
-} from '../../../../shared/assets/SVGicons/48pxIcon';
+import { BaseballOutlineSVG, CarSportsOulineSVG, FastFoodOutlineSVG, LaptopSVG, ManOutlineSVG, WomanOutlineSVG } from '../../../../shared/assets/SVGicons/48pxIcon';
 import * as S from './CategoryHighlight.styled';
 import { productIdSlice } from '../../../../redux/redux';
 

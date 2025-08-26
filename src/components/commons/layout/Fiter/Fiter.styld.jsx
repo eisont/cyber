@@ -22,7 +22,10 @@ export const TitleBox = styled(FlexBetween)`
 export const Title = styled.div`
   margin: 10px 0;
   font-size: 18px;
-  cursor: default;
+  font-weight: 500;
+  :hover {
+    cursor: default;
+  }
 `;
 export const Arrow = styled(FlexCenter)`
   transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
@@ -68,7 +71,7 @@ export const CheckBox = styled.input``;
 export const Brand = styled.div`
   font-size: ${(pr) => (pr.name === pr.productId ? '18px' : '14px')};
   color: ${(pr) => (pr.name === pr.productId ? '#000' : '#A4A4A4')};
-  font-weight: ${(pr) => pr.name === pr.productId && '900'};
+  font-weight: ${(pr) => pr.name === pr.productId && '700'};
 
   :hover {
     cursor: pointer;

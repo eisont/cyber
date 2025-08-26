@@ -16,7 +16,8 @@ export const Macbookpro14TextBox = styled.div`
 
 export const TitleText = styled.div`
   font-size: 64px;
-  font-weight: 600;
+  font-weight: 100;
+  line-height: 64px;
 
   color: #000;
 `;
