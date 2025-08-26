@@ -10,7 +10,7 @@ export const Background = styled(FlexCenter)`
 
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('../../../../../public/HeroBanner/SeasonalSaleBanner.png');
+  background-image: url('../../../../../public/img/HeroBanner/SeasonalSaleBanner.png');
 `;
 export const Banner2TextBox = styled.div`
   text-align: center;

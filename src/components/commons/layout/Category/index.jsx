@@ -17,7 +17,6 @@ const Category = (pr) => {
   const pathname = location.pathname;
 
   const productId = useSelector((state) => state.productId);
-  console.log(productId);
 
   return (
     <S.Wrapper>

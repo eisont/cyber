@@ -30,7 +30,7 @@ const ProductItemDetail = (pr) => {
         </S.SubTitleBox>
 
         <S.ContentBox>
-          <S.ProductImg src={pr.data.thumbnail} />
+          <S.ProductImg src={pr.data.thumbnail} alt='thumbnail' />
 
           <S.RBox>
             <div>
