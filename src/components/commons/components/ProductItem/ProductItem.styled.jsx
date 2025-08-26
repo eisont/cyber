@@ -9,7 +9,7 @@ export const Wrapper = styled(FlexCenter)`
 
   background: #f6f6f6;
   border-radius: 10px;
-  cursor: default;
+  text-align: center;
 `;
 
 export const MainBox = styled(FlexColBetween)`
@@ -22,15 +22,16 @@ export const IconBox = styled.div`
   display: flex;
   justify-content: end;
 `;
-export const LikeIcon = styled(FlexCenter)`
+export const LikeIcon = styled(FlexCenter)``;
+
+export const ImgBox = styled.img`
+  height: 160px;
+`;
+export const Linkst = styled(Link)`
   :hover {
     cursor: pointer;
   }
 `;
-export const ImgBox = styled.img`
-  height: 160px;
-`;
-export const Linkst = styled(Link)``;
 export const Title = styled.div`
   font-weight: 500;
   cursor: default;

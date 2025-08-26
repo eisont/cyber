@@ -31,7 +31,7 @@ export const CategoryMenu = styled(Link)`
 `;
 export const ProductAllMenu = styled(CategoryMenu)`
   color: ${(pr) => !pr.params && '#000'};
-  font-weight: 900;
+  font-weight: ${(pr) => (pr.params ? '500' : '900')};
 `;
 export const ProductItemMenu = styled(CategoryMenu)`
   color: ${(pr) => pr.params && '#000'};

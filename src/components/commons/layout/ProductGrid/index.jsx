@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useCategroy } from '../../../../commons/api/filterApi';
 import ProductItem from '../../components/ProductItem';
-import * as S from './ProductGrid.styled';
 import { productIdSlice } from '../../../../redux/redux';
+import * as S from './ProductGrid.styled';
 
 const ProductGrid = (pr) => {
   const data = useCategroy();
