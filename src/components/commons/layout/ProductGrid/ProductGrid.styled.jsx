@@ -21,7 +21,7 @@ export const CategoryBox = styled.div`
   display: flex;
   align-items: center;
 
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar-button {
     height: 5px;
   }
 `;

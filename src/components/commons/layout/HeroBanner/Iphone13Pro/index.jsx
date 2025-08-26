@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import * as S from './Iphone13Pro.styled';
 import { productIdSlice } from '../../../../../redux/redux';
+import * as S from './Iphone13Pro.styled';
 
 const Iphone13Pro = () => {
   const dispatch = useDispatch();

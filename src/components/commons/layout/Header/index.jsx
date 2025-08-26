@@ -1,7 +1,7 @@
-import * as S from './Header.styled';
 import { LogoSVG } from '../../../../shared/assets/SVGicons/logo';
 import { FavoritesSVG, UserSVG, CartSVG } from '../../../../shared/assets/SVGicons/32pxIcon';
 import { SearchSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
+import * as S from './Header.styled';
 
 const Header = () => {
   return (

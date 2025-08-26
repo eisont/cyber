@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import * as S from './MacbookPro14.styled';
 import { productIdSlice } from '../../../../../redux/redux';
+import * as S from './MacbookPro14.styled';
 
 const MacbookPro14 = () => {
   const dispatch = useDispatch();

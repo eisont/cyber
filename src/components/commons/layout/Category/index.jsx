@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import { ToUpper } from '../../../../shared/lib';
-import Fiter from '../Fiter';
+import Filter from '../Filter';
 import ProductsBox from '../ProductsBox';
 import ProductItemDetail from '../ProductItemDetail';
 import { ArrowSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
@@ -41,7 +41,7 @@ const Category = (pr) => {
         <S.FlexBox>
           {pathname === '/category' && (
             <>
-              <Fiter />
+              <Filter />
               <ProductsBox ProductListData={pr.ProductListData} />
             </>
           )}

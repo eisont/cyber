@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import * as S from './Fiter.styld';
 import { ExpandDownSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
 import { useCategroy } from '../../../../commons/api/filterApi';
 import { ToUpper } from '../../../../shared/lib';
 import { useDispatch, useSelector } from 'react-redux';
 import { productIdSlice } from '../../../../redux/redux';
+import * as S from './Fiter.styled';
 
-const Fiter = () => {
+const Filter = () => {
   const [toggle, setToggle] = useState(true);
 
   const data = useCategroy();
@@ -46,4 +46,4 @@ const Fiter = () => {
   );
 };
 
-export default Fiter;
+export default Filter;
