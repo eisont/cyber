@@ -3,7 +3,7 @@ import * as S from './AirpodMax.styled';
 const AirpodMax = () => {
   return (
     <S.Wrapper>
-      <S.AirpodmaxImg src='../../../../../public/img/HeroBanner/airpodmax.png' alt='airpodmax' />
+      <S.AirpodmaxImg src='../../../../../public/img/HeroBanner/airpodmax.webp' alt='airpodmax' />
       <S.AirpodmaxTextBox>
         <S.TitleText>
           <span style={{ fontWeight: '200' }}>Apple AirPods</span> Max

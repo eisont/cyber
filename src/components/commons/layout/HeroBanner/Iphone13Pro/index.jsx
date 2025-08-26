@@ -17,7 +17,7 @@ const Iphone13Pro = () => {
           <S.Botton>Shop Now</S.Botton>
         </S.Linkst>
       </S.Iphone14ProTextBox>
-      <S.Iphone14ProImg src='../../../../../public/img/HeroBanner/Iphone14pro.png' alt='Iphone14pro' />
+      <S.Iphone14ProImg src='../../../../../public/img/HeroBanner/Iphone14pro.webp' alt='Iphone14pro' />
     </S.Wrapper>
   );
 };
