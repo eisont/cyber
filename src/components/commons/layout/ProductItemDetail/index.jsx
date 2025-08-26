@@ -1,8 +1,6 @@
 import * as S from './ProductItemDetail.style';
 
 const ProductItemDetail = (pr) => {
-  console.log('pr.data', pr.data.brand);
-
   const originalPrice = () => {
     const num = pr.data.price / (1 - pr.data.discountPercentage / 100);
     return num.toFixed(2);
@@ -30,7 +28,7 @@ const ProductItemDetail = (pr) => {
         </S.SubTitleBox>
 
         <S.ContentBox>
-          <S.ProductImg src={pr.data.thumbnail} />
+          <S.ProductImg src={pr.data.thumbnail} alt='thumbnail' />
 
           <S.RBox>
             <div>

@@ -7,7 +7,7 @@ const ProductItem = (pr) => {
       <S.MainBox>
         <S.IconBox>{/* <S.LikeIcon>{FavoritesSVG('#919191')}</S.LikeIcon> */}</S.IconBox>
         <S.Linkst to={`/category/${pr.product.id}`}>
-          <S.ImgBox src={pr.product.thumbnail} />
+          <S.ImgBox src={pr.product.thumbnail} alt='thumbnail' />
         </S.Linkst>
 
         <S.Title>{pr.product.title}</S.Title>

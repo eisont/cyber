@@ -8,8 +8,6 @@ const App = () => {
 
   const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`);
 
-  console.log(ProductListData);
-
   return <Layout ProductListData={ProductListData[0].products} />;
 };
 

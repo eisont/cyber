@@ -15,7 +15,7 @@ const MacbookPro14 = () => {
           <S.Botton>Shop Now</S.Botton>
         </S.Linkst>
       </S.Macbookpro14TextBox>
-      <S.Macbookpro14Img src='../../../../../public/HeroBanner/MacBookPro14.png' />
+      <S.Macbookpro14Img src='../../../../../public/img/HeroBanner/MacBookPro14.png' alt='MacBookPro14' />
     </S.Wrapper>
   );
 };

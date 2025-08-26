@@ -3,7 +3,7 @@ import * as S from './VisionPro.styled';
 const VisionPro = () => {
   return (
     <S.Wrapper>
-      <S.VisionproImg src='../../../../../public/HeroBanner/visionpro.png' />
+      <S.VisionproImg src='../../../../../public/img/HeroBanner/visionpro.png' alt='visionpro' />
       <S.VisionproTextBox>
         <S.TitleText>
           <span style={{ fontWeight: '200' }}>
