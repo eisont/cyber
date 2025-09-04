@@ -1,0 +1,49 @@
+import { useState } from 'react';
+import { ExpandDownSVG } from '../../assets/SVGicons/24pxIcon';
+import { useDispatch, useSelector } from 'react-redux';
+import * as S from './Fiter.styled';
+import { productIdSlice } from '../../../redux/redux';
+import { ToUpper } from '../../lib';
+import { useCategroy } from '../../../commons/api/filterApi';
+
+const Filter = () => {
+  const [toggle, setToggle] = useState(true);
+
+  const data = useCategroy();
+  const CategoryData = data[0][0];
+
+  const productId = useSelector((state) => state.productId);
+  const dispatch = useDispatch();
+
+  return (
+    <S.Wrapper>
+      <S.CategoryBox>
+        <S.TitleBox onClick={() => setToggle((prev) => !prev)}>
+          <S.Title>Category</S.Title>
+          <S.Arrow toggle={toggle}>{ExpandDownSVG('#191919')}</S.Arrow>
+        </S.TitleBox>
+        {toggle ? (
+          <>
+            {/* <S.SearchBox>
+              <S.SearchIcon>{SearchSVG('#989898')}</S.SearchIcon>
+              <S.Input type='text' placeholder='Search'></S.Input>
+            </S.SearchBox> */}
+            <S.BrandBox>
+              {CategoryData.map((el) => (
+                <S.BrandInBox key={el.slug}>
+                  <S.Brand id={el.slug} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
+                    {el.name}
+                  </S.Brand>
+                </S.BrandInBox>
+              ))}
+            </S.BrandBox>
+          </>
+        ) : (
+          <></>
+        )}
+      </S.CategoryBox>
+    </S.Wrapper>
+  );
+};
+
+export default Filter;

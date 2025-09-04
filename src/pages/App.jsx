@@ -2,22 +2,22 @@
 
 import { Route, Routes } from 'react-router-dom';
 import { FlexColBetween } from '../shared/assets/styled/CommonStyled';
-import HeroBanner from '../components/commons/layout/HeroBanner';
-import CategoryHighlight from '../components/commons/layout/CategoryHighlight';
-import ProductGrid from '../components/commons/layout/ProductGrid';
-import CategoryPromoBanner from '../components/commons/layout/CategoryPromoBanner';
-import SeasonalSaleBanner from '../components/commons/layout/SeasonalSaleBanner';
-import Footer from '../components/commons/layout/Footer';
-import Category from '../components/commons/layout/Category';
-import Header from '../components/commons/layout/Header';
+import CategoryHighlight from '../shared/ui/CategoryHighlight';
+import CategoryPromoBanner from '../shared/ui/CategoryPromoBanner';
+import Category from './Category';
+import HeroBanner from '../shared/ui/HeroBanner';
+import ProductGrid from '../shared/ui/ProductGrid';
+import SeasonalSaleBanner from '../shared/ui/SeasonalSaleBanner';
 import styled from '@emotion/styled';
+import Header from '../shared/layout/Header';
+import Footer from '../shared/layout/Footer';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
   width: 100vw;
 `;
 
-const App = () => {
+const Layout = () => {
   return (
     <Wrapper>
       <Header />
@@ -42,4 +42,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Layout;
