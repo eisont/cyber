@@ -32,7 +32,7 @@ const Category = () => {
 
           {pathname === `/category/${params.id}` && (
             <>
-              <S.Arrow>{ArrowSVG('#a4a4a4')}</S.Arrow>
+              <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
               <S.ProductItemMenu params={params.id}>{Itemdata.title}</S.ProductItemMenu>
             </>
           )}

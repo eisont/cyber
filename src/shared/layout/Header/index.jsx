@@ -1,7 +1,7 @@
 import { LogoSVG } from '@/shared/assets/SVGicons/logo';
-import { FavoritesSVG, UserSVG, CartSVG } from '@/shared/assets/SVGicons/32pxIcon';
 import { SearchSVG } from '@/shared/assets/SVGicons/24pxIcon';
 import * as S from './Header.styled';
+import { BagSVG } from '@/shared/assets/SVGicons/32pxIcon';
 
 const Header = () => {
   return (
@@ -20,13 +20,13 @@ const Header = () => {
         </S.FlexBox>
         <S.IconBox>
           {/* <S.LinkSt to='/favorites'> */}
-          <S.Icon>{FavoritesSVG('#191919')}</S.Icon>
+          {/* <S.Icon>{FavoritesSVG({ color: '#191919' })}</S.Icon> */}
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/cart'> */}
-          <S.Icon>{CartSVG('#191919')}</S.Icon>
+          <S.Icon>{BagSVG({ color: '#191919' })}</S.Icon>
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/user'> */}
-          <S.Icon>{UserSVG('#191919')}</S.Icon>
+          {/* <S.Icon>{UserSVG({ color: '#191919' })}</S.Icon> */}
           {/* </S.LinkSt> */}
         </S.IconBox>
       </S.TotalBox>

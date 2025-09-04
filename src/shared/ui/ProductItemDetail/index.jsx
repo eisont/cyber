@@ -1,4 +1,4 @@
-import { OriginalPrice } from '../../lib';
+import { OriginalPrice } from '@/shared/lib';
 import * as S from './ProductItemDetail.styled';
 
 const ProductItemDetail = (pr) => {

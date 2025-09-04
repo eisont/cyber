@@ -322,3 +322,38 @@ export const BetteryCapacitySVG = () => (
     />
   </svg>
 );
+export const EmptyCartSVG = ({ color }) => (
+  <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path
+      d='M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001'
+      stroke={color}
+      strokeWidth='1.5'
+      strokeMiterlimit='10'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+    <path
+      d='M8.99999 22H15C19.02 22 19.74 20.39 19.95 18.43L20.7 12.43C20.97 9.99 20.27 8 16 8H7.99999C3.72999 8 3.02999 9.99 3.29999 12.43L4.04999 18.43C4.25999 20.39 4.97999 22 8.99999 22Z'
+      stroke={color}
+      strokeWidth='1.5'
+      strokeMiterlimit='10'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
+    <path d='M15.4955 12H15.5045' stroke={color} strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M8.49451 12H8.50349' stroke={color} strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+  </svg>
+);
+export const AddToCartSVG = ({ color }) => (
+  <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M9.62 16L11.12 17.5L14.37 14.5' stroke={color} strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M8.81 2L5.19 5.63' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M15.19 2L18.81 5.63' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+    <path
+      d='M2 7.84998C2 5.99998 2.99 5.84998 4.22 5.84998H19.78C21.01 5.84998 22 5.99998 22 7.84998C22 9.99998 21.01 9.84998 19.78 9.84998H4.22C2.99 9.84998 2 9.99998 2 7.84998Z'
+      stroke={color}
+      strokeWidth='1.5'
+    />
+    <path d='M3.5 10L4.91 18.64C5.23 20.58 6 22 8.86 22H14.89C18 22 18.46 20.64 18.82 18.76L20.5 10' stroke={color} strokeWidth='1.5' strokeLinecap='round' />
+  </svg>
+);
