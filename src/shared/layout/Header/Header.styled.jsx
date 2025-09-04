@@ -47,8 +47,10 @@ export const LinkSt = styled(Link)`
 `;
 export const IconBox = styled(FlexBetween)`
   width: 144px;
+  justify-content: flex-end;
 `;
 export const Icon = styled(FlexCenter)`
+  font-size: 320px;
   :hover {
     cursor: pointer;
   }

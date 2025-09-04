@@ -63,3 +63,22 @@ export const LikeSVG = ({ color }) => (
     />
   </svg>
 );
+export const BagSVG = ({ color }) => (
+  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M11.7467 2.66663L6.92001 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M20.2533 2.66663L25.08 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
+    <path
+      d='M2.66666 10.4667C2.66666 8.00005 3.98666 7.80005 5.62666 7.80005H26.3733C28.0133 7.80005 29.3333 8.00005 29.3333 10.4667C29.3333 13.3334 28.0133 13.1334 26.3733 13.1334H5.62666C3.98666 13.1334 2.66666 13.3334 2.66666 10.4667Z'
+      stroke='#292D32'
+      strokeWidth='1.5'
+    />
+    <path d='M13.0133 18.6666V23.4' stroke={color} strokeWidth='1.5' strokeLinecap='round' />
+    <path d='M19.1467 18.6666V23.4' stroke={color} strokeWidth='1.5' strokeLinecap='round' />
+    <path
+      d='M4.66666 13.3334L6.54666 24.8534C6.97332 27.44 7.99999 29.3334 11.8133 29.3334H19.8533C24 29.3334 24.6133 27.52 25.0933 25.0134L27.3333 13.3334'
+      stroke='#292D32'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+    />
+  </svg>
+);

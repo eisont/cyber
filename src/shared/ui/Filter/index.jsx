@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as S from './Fiter.styled';
 import { productIdSlice } from '@/redux/redux';
 import { ToUpper } from '@/shared/lib';
-import useFetch from '../../hooks/useFetch';
+import useFetch from '@/shared/hooks/useFetch';
 
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
