@@ -3,9 +3,10 @@ import { productIdSlice } from '@/redux/redux';
 import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductGrid.styled';
 import useFetch from '@/shared/hooks/useFetch';
+import { ToUpper } from '@/shared/lib';
 
 const ProductGrid = () => {
-  const CategoriesData = useFetch({ query: 'https://dummyjson.com/products/categories' });
+  const CategoryListData = useFetch({ query: 'https://dummyjson.com/products/category-list' });
 
   const productId = useSelector((state) => state.productId);
   const data = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
@@ -18,9 +19,9 @@ const ProductGrid = () => {
       <S.TotalBox>
         <S.MainBox>
           <S.CategoryBox>
-            {CategoriesData.map((el) => (
-              <S.Category key={el.slug} id={el.slug} productId={productId} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))}>
-                {el.name}
+            {CategoryListData.map((el) => (
+              <S.Category key={Number(new Date()) + el} id={el} productId={productId} onClick={() => dispatch(productIdSlice.actions.getProductId(el))}>
+                {ToUpper(el)}
               </S.Category>
             ))}
           </S.CategoryBox>

@@ -9,9 +9,10 @@ import useFetch from '@/shared/hooks/useFetch';
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
 
-  const CategoriesData = useFetch({ query: 'https://dummyjson.com/products/categories' });
+  const CategoryListData = useFetch({ query: 'https://dummyjson.com/products/category-list' });
 
   const productId = useSelector((state) => state.productId);
+
   const dispatch = useDispatch();
 
   return (
@@ -28,10 +29,10 @@ const Filter = () => {
               <S.Input type='text' placeholder='Search'></S.Input>
             </S.SearchBox> */}
             <S.BrandBox>
-              {CategoriesData.map((el) => (
-                <S.BrandInBox key={el.slug}>
-                  <S.Brand id={el.slug} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
-                    {el.name}
+              {CategoryListData.map((el) => (
+                <S.BrandInBox key={Number(new Date()) + el}>
+                  <S.Brand onClick={() => dispatch(productIdSlice.actions.getProductId(el))} productId={ToUpper(productId)} name={ToUpper(el)}>
+                    {ToUpper(el)}
                   </S.Brand>
                 </S.BrandInBox>
               ))}
