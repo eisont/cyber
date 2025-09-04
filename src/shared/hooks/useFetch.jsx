@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 
-export const useFilterOptions = (url) => {
+const useFetch = ({ query, id = '', enabled = true }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+
     try {
+      const url = query + id;
       const fetchData = async () => {
         const res = await fetch(url);
         const json = await res.json();
@@ -16,13 +21,9 @@ export const useFilterOptions = (url) => {
     } catch (err) {
       console.error(err);
     }
-  }, [url]);
+  }, [query, id, enabled]);
 
-  return [data];
+  return data;
 };
 
-export const useCategroy = () => {
-  const categoriesData = useFilterOptions('https://dummyjson.com/products/categories');
-
-  return [categoriesData];
-};
+export default useFetch;

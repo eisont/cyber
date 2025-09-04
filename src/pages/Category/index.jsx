@@ -2,16 +2,16 @@ import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import { ArrowSVG } from '@/shared/assets/SVGicons/24pxIcon';
 import { ToUpper } from '@/shared/lib';
-import { useFilterOptions } from '@/shared/hooks/useApiHooks';
 import Filter from '@/shared/ui/Filter';
 import * as S from './Category.styled';
 import ProductGrid from '@/shared/ui/ProductGrid';
 import ProductItemDetail from '@/shared/ui/ProductItemDetail';
 import ProductsBox from '@/shared/ui/ProductsBox';
+import useFetch from '@/shared/hooks/useFetch';
 
 const Category = () => {
   const params = useParams();
-  const data = useFilterOptions(`https://dummyjson.com/products/${params.id}`);
+  const Itemdata = useFetch({ query: 'https://dummyjson.com/products/', id: params.id });
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -27,13 +27,13 @@ const Category = () => {
           <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
           <S.Arrow>{ArrowSVG('#a4a4a4')}</S.Arrow>
           <S.ProductAllMenu to='/category' params={params.id}>
-            {!data[0].Category && ToUpper(productId)}
+            {!Itemdata.Category && ToUpper(productId)}
           </S.ProductAllMenu>
 
           {pathname === `/category/${params.id}` && (
             <>
               <S.Arrow>{ArrowSVG('#a4a4a4')}</S.Arrow>
-              <S.ProductItemMenu params={params.id}>{data[0].title}</S.ProductItemMenu>
+              <S.ProductItemMenu params={params.id}>{Itemdata.title}</S.ProductItemMenu>
             </>
           )}
         </S.Category>
@@ -48,7 +48,7 @@ const Category = () => {
 
           {pathname === `/category/${params.id}` && (
             <S.SideItem>
-              <ProductItemDetail data={data[0]} />
+              <ProductItemDetail data={Itemdata} />
               <ProductGrid />
             </S.SideItem>
           )}
