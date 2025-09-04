@@ -23,9 +23,9 @@ const Category = () => {
       <S.MainWrapper>
         <S.Category>
           <S.CategoryMenu to='/'>Home</S.CategoryMenu>
-          <S.Arrow>{ArrowSVG('#a4a4a4')}</S.Arrow>
+          <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
           <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
-          <S.Arrow>{ArrowSVG('#a4a4a4')}</S.Arrow>
+          <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
           <S.ProductAllMenu to='/category' params={params.id}>
             {!Itemdata.Category && ToUpper(productId)}
           </S.ProductAllMenu>

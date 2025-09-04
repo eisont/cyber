@@ -19,7 +19,7 @@ const Filter = () => {
       <S.CategoryBox>
         <S.TitleBox onClick={() => setToggle((prev) => !prev)}>
           <S.Title>Category</S.Title>
-          <S.Arrow toggle={toggle}>{ExpandDownSVG('#191919')}</S.Arrow>
+          <S.Arrow toggle={toggle}>{ExpandDownSVG({ color: '#191919' })}</S.Arrow>
         </S.TitleBox>
         {toggle ? (
           <>

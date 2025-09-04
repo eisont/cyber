@@ -9,11 +9,11 @@ const Header = () => {
       <S.TotalBox>
         <S.FlexBox>
           <S.LinkSt to='/'>
-            <S.Icon>{LogoSVG('#000')}</S.Icon>
+            <S.Icon>{LogoSVG({ color: '#000' })}</S.Icon>
           </S.LinkSt>
           <S.InputBox>
             <S.SearchIcon>
-              <S.Icon>{SearchSVG('#989898')}</S.Icon>
+              <S.Icon>{SearchSVG({ color: '#989898' })}</S.Icon>
             </S.SearchIcon>
             <S.Input type='text' placeholder='Search'></S.Input>
           </S.InputBox>

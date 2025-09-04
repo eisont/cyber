@@ -1,4 +1,4 @@
-export const CartSVG = (color) => (
+export const CartSVG = ({ color }) => (
   // stroke = #191919"
 
   <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -12,7 +12,7 @@ export const CartSVG = (color) => (
   </svg>
 );
 
-export const FavoritesSVG = (color) => (
+export const FavoritesSVG = ({ color }) => (
   // stroke = #919191
 
   <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -26,7 +26,7 @@ export const FavoritesSVG = (color) => (
   </svg>
 );
 
-export const UserSVG = (color) => (
+export const UserSVG = ({ color }) => (
   // stroke = #191919"
 
   <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -40,7 +40,7 @@ export const UserSVG = (color) => (
   </svg>
 );
 
-export const ArrowSVG = (color) => (
+export const ArrowSVG = ({ color }) => (
   // fill='#2E2E2E'
 
   <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -51,7 +51,7 @@ export const ArrowSVG = (color) => (
   </svg>
 );
 
-export const LikeSVG = (color) => (
+export const LikeSVG = ({ color }) => (
   // stroke = '#919191'
 
   <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>

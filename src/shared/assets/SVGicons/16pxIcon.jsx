@@ -1,4 +1,4 @@
-export const TitokSVG = (color) => (
+export const TitokSVG = ({ color }) => (
   <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M11.8836 3.358C11.2243 2.59144 10.8788 1.60104 10.9063 0.592723L8.4425 0.533203C8.4425 0.533203 8.4425 0.638323 8.4425 0.780083V10.6602C8.4769 13.786 3.53834 13.7102 3.92906 10.2551C4.16794 8.88136 5.6441 8.03592 6.95578 8.51384V5.99992C4.1001 5.50264 1.39386 7.7756 1.42234 10.6713C1.67194 16.9513 10.6793 16.9521 10.9292 10.6713C10.8663 10.4465 10.9015 6.26152 10.8926 5.90856C12.0129 6.60568 13.3164 6.95416 14.6366 6.90952V4.3132C13.4161 4.3132 12.4847 3.98872 11.8836 3.358Z'
@@ -7,7 +7,7 @@ export const TitokSVG = (color) => (
   </svg>
 );
 
-export const FacebookSVG = (color) => (
+export const FacebookSVG = ({ color }) => (
   <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M8.84757 3.81794C8.84757 3.98169 8.84757 4.51541 8.84757 5.27366H11.4546L11.1719 7.59763H8.84757C8.84757 11.1816 8.84757 15.9843 8.84757 15.9843H5.76238C5.76238 15.9843 5.76238 11.2452 5.76238 7.59763H4.15479V5.27366H5.76238C5.76238 4.35204 5.76238 3.69669 5.76238 3.51422C5.76238 2.64485 5.69688 2.23235 6.06629 1.55866C6.43588 0.885005 7.47838 -0.00543266 9.28147 0.0160048C11.085 0.0382236 11.8452 0.211724 11.8452 0.211724L11.4546 2.6885C11.4546 2.6885 10.3029 2.38441 9.73763 2.49279C9.1731 2.60119 8.84757 2.94894 8.84757 3.81794Z'
@@ -16,7 +16,7 @@ export const FacebookSVG = (color) => (
   </svg>
 );
 
-export const InstagramSVG = (color, color2) => (
+export const InstagramSVG = ({ color, color2 }) => (
   <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <g clipPath='url(#clip0_1_5763)'>
       <path
@@ -41,7 +41,7 @@ export const InstagramSVG = (color, color2) => (
   </svg>
 );
 
-export const TwitterSVG = (color) => (
+export const TwitterSVG = ({ color }) => (
   <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       fillRule='evenodd'
