@@ -1,4 +1,4 @@
-import { FlexCenter, FlexColBetween } from '../../assets/styled/CommonStyled';
+import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 const Wrapper = styled(FlexCenter)`
@@ -43,7 +43,7 @@ const CategoryPromoBannerItem = (pr) => {
   return (
     <Wrapper background={pr.ItemData.background}>
       <MainBox>
-        <ItemImg src={`../../../../../public/img/CategoryPromoBanner/${pr.ItemData.img}`} alt={pr.ItemData.alt} />
+        <ItemImg src={`img/CategoryPromoBanner/${pr.ItemData.img}`} alt={pr.ItemData.alt} />
         <ItemText color={pr.ItemData.color}>{pr.ItemData.text}</ItemText>
         <ItemBt color={pr.ItemData.color} background={pr.ItemData.background} hover={pr.ItemData.hover}>
           {pr.ItemData.button}

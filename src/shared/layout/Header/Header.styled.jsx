@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '../../assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 export const FlexBox = styled(FlexBetween)``;

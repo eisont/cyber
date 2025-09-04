@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColBetween, FlexCenter } from '../../assets/styled/CommonStyled';
+import { FlexBetween, FlexColBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { Link } from 'react-router-dom';
 
 export const Wrapper = styled(FlexCenter)`

@@ -4,7 +4,7 @@ import AirpodMax from './AirpodMax';
 import MacbookPro14 from './MacbookPro14';
 import VisionPro from './VisonPro';
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColBetween } from '../../assets/styled/CommonStyled';
+import { FlexBetween, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexColBetween)`
   height: 1232px;

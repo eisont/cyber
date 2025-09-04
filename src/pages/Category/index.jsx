@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
-import { ArrowSVG } from '../../shared/assets/SVGicons/24pxIcon';
-import { ToUpper } from '../../shared/lib';
-import { useFilterOptions } from '../../commons/api/filterApi';
-import Filter from '../../shared/ui/Filter';
+import { ArrowSVG } from '@/shared/assets/SVGicons/24pxIcon';
+import { ToUpper } from '@/shared/lib';
+import { useFilterOptions } from '@/shared/hooks/useApiHooks';
+import Filter from '@/shared/ui/Filter';
 import * as S from './Category.styled';
-import ProductGrid from '../../shared/ui/ProductGrid';
-import ProductItemDetail from '../../shared/ui/ProductItemDetail';
-import ProductsBox from '../../shared/ui/ProductsBox';
+import ProductGrid from '@/shared/ui/ProductGrid';
+import ProductItemDetail from '@/shared/ui/ProductItemDetail';
+import ProductsBox from '@/shared/ui/ProductsBox';
 
 const Category = () => {
   const params = useParams();

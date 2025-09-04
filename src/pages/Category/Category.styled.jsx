@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '../../shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   display: flex;

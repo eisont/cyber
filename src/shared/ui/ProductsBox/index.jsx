@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { useFilterOptions } from '../../../commons/api/filterApi';
-import ProductItem from '../ProductItem';
+import { useFilterOptions } from '@/shared/hooks/useApiHooks';
+import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductsBox.styled';
 
 const ProductsBox = () => {

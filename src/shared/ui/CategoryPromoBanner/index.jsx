@@ -1,5 +1,5 @@
-import { GetMonkCategoryPromoItems } from '../../../commons/monks/categories.monk';
-import { FlexBetween, FlexCenter } from '../../assets/styled/CommonStyled';
+import { GetMonkCategoryPromoItems } from '@/shared/monks/categories.monk';
+import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import CategoryPromoBannerItem from './CategoryPromoBannerItem';
 import styled from '@emotion/styled';
 

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexCenter } from '../../assets/styled/CommonStyled';
+import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexCenter)`
   width: 100%;
@@ -10,7 +10,7 @@ const Background = styled(FlexCenter)`
 
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('../../../../../public/img/HeroBanner/SeasonalSaleBanner.webp');
+  background-image: url('img/HeroBanner/SeasonalSaleBanner.webp');
 `;
 const Banner2TextBox = styled.div`
   text-align: center;

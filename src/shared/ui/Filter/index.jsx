@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { ExpandDownSVG } from '../../assets/SVGicons/24pxIcon';
+import { ExpandDownSVG } from '@/shared/assets/SVGicons/24pxIcon';
 import { useDispatch, useSelector } from 'react-redux';
 import * as S from './Fiter.styled';
-import { productIdSlice } from '../../../redux/redux';
-import { ToUpper } from '../../lib';
-import { useCategroy } from '../../../commons/api/filterApi';
+import { productIdSlice } from '@/redux/redux';
+import { ToUpper } from '@/shared/lib';
+import { useCategroy } from '@/shared/hooks/useApiHooks';
 
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
