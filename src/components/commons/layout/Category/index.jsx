@@ -1,15 +1,15 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import { ToUpper } from '../../../../shared/lib';
+import { ArrowSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
+import { useFilterOptions } from '../../../../commons/api/filterApi';
 import Filter from '../Filter';
 import ProductsBox from '../ProductsBox';
 import ProductItemDetail from '../ProductItemDetail';
-import { ArrowSVG } from '../../../../shared/assets/SVGicons/24pxIcon';
-import { useFilterOptions } from '../../../../commons/api/filterApi';
 import ProductGrid from '../ProductGrid';
 import * as S from './Category.styled';
 
-const Category = (pr) => {
+const Category = () => {
   const params = useParams();
   const data = useFilterOptions(`https://dummyjson.com/products/${params.id}`);
 
@@ -42,14 +42,14 @@ const Category = (pr) => {
           {pathname === '/category' && (
             <>
               <Filter />
-              <ProductsBox ProductListData={pr.ProductListData} />
+              <ProductsBox />
             </>
           )}
 
           {pathname === `/category/${params.id}` && (
             <S.SideItem>
               <ProductItemDetail data={data[0]} />
-              <ProductGrid ProductListData={pr.ProductListData} />
+              <ProductGrid />
             </S.SideItem>
           )}
         </S.FlexBox>

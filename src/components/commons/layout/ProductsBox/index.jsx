@@ -1,12 +1,17 @@
+import { useSelector } from 'react-redux';
+import { useFilterOptions } from '../../../../commons/api/filterApi';
 import ProductItem from '../../components/ProductItem';
 import * as S from './ProductsBox.styled';
 
-const ProductsBox = (pr) => {
+const ProductsBox = () => {
+  const productId = useSelector((state) => state.productId);
+  const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`)[0].products;
+
   return (
     <S.Wrapper>
       <S.FlexBox>
         <S.ProductsCount>
-          Selected Products: <S.Count>{pr.ProductListData ? pr.ProductListData.length : 0}</S.Count>
+          Selected Products: <S.Count>{ProductListData ? ProductListData.length : 0}</S.Count>
         </S.ProductsCount>
 
         {/* <S.SeleteBox name='Dropdown'>
@@ -15,9 +20,9 @@ const ProductsBox = (pr) => {
       </S.FlexBox>
 
       <S.ProductsBox>
-        {pr.ProductListData ? (
+        {ProductListData ? (
           <>
-            {pr.ProductListData.map((el) => (
+            {ProductListData.map((el) => (
               <ProductItem key={el.id} product={el} />
             ))}
           </>

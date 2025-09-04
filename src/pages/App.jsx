@@ -2,8 +2,6 @@
 
 import { Route, Routes } from 'react-router-dom';
 import { FlexColBetween } from '../shared/assets/styled/CommonStyled';
-import { useSelector } from 'react-redux';
-import { useFilterOptions } from '../commons/api/filterApi';
 import HeroBanner from '../components/commons/layout/HeroBanner';
 import CategoryHighlight from '../components/commons/layout/CategoryHighlight';
 import ProductGrid from '../components/commons/layout/ProductGrid';
@@ -20,10 +18,6 @@ const Wrapper = styled(FlexColBetween)`
 `;
 
 const App = () => {
-  const productId = useSelector((state) => state.productId);
-
-  const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`);
-
   return (
     <Wrapper>
       <Header />
@@ -40,8 +34,8 @@ const App = () => {
             </>
           }
         />
-        <Route path='/category' element={<Category ProductListData={ProductListData[0].products} />} />
-        <Route path='/category/:id' element={<Category ProductListData={ProductListData[0].products} />} />
+        <Route path='/category' element={<Category />} />
+        <Route path='/category/:id' element={<Category />} />
       </Routes>
       <Footer />
     </Wrapper>

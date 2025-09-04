@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useCategroy } from '../../../../commons/api/filterApi';
-import ProductItem from '../../components/ProductItem';
+import { useCategroy, useFilterOptions } from '../../../../commons/api/filterApi';
 import { productIdSlice } from '../../../../redux/redux';
+import ProductItem from '../../components/ProductItem';
 import * as S from './ProductGrid.styled';
 
-const ProductGrid = (pr) => {
-  const data = useCategroy();
-  const CategoryData = data[0][0];
+const ProductGrid = () => {
+  const CategoryData = useCategroy()[0][0];
 
   const productId = useSelector((state) => state.productId);
+  const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`)[0].products;
+
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +25,7 @@ const ProductGrid = (pr) => {
           </S.CategoryBox>
 
           <S.ProductsItemsBox>
-            {pr.ProductListData?.map((el) => (
+            {ProductListData?.map((el) => (
               <ProductItem key={el.id} product={el} />
             ))}
           </S.ProductsItemsBox>
