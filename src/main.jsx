@@ -4,13 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/redux';
 import Layout from './pages/Layout';
+import ScrollToTop from './shared/hooks/ScrollToTop';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <Layout />
-      </Provider>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter>
+    <ScrollToTop />
+    <Provider store={store}>
+      <Layout />
+    </Provider>
+  </BrowserRouter>
 );
