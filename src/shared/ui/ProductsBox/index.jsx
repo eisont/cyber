@@ -1,11 +1,12 @@
 import { useSelector } from 'react-redux';
-import { useFilterOptions } from '@/shared/hooks/useApiHooks';
 import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductsBox.styled';
+import useFetch from '@/shared/hooks/useFetch';
 
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
-  const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`)[0].products;
+  const data = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+  const ProductListData = data.products;
 
   return (
     <S.Wrapper>

@@ -4,13 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as S from './Fiter.styled';
 import { productIdSlice } from '@/redux/redux';
 import { ToUpper } from '@/shared/lib';
-import { useCategroy } from '@/shared/hooks/useApiHooks';
+import useFetch from '../../hooks/useFetch';
 
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
 
-  const data = useCategroy();
-  const CategoryData = data[0][0];
+  const CategoriesData = useFetch({ query: 'https://dummyjson.com/products/categories' });
 
   const productId = useSelector((state) => state.productId);
   const dispatch = useDispatch();
@@ -29,7 +28,7 @@ const Filter = () => {
               <S.Input type='text' placeholder='Search'></S.Input>
             </S.SearchBox> */}
             <S.BrandBox>
-              {CategoryData.map((el) => (
+              {CategoriesData.map((el) => (
                 <S.BrandInBox key={el.slug}>
                   <S.Brand id={el.slug} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))} productId={ToUpper(productId)} name={el.name}>
                     {el.name}

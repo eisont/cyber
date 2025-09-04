@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useCategroy, useFilterOptions } from '@/shared/hooks/useApiHooks';
 import { productIdSlice } from '@/redux/redux';
 import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductGrid.styled';
+import useFetch from '@/shared/hooks/useFetch';
 
 const ProductGrid = () => {
-  const CategoryData = useCategroy()[0][0];
+  const CategoriesData = useFetch({ query: 'https://dummyjson.com/products/categories' });
 
   const productId = useSelector((state) => state.productId);
-  const ProductListData = useFilterOptions(`https://dummyjson.com/products/category/${productId}`)[0].products;
+  const data = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+  const ProductListData = data.products;
 
   const dispatch = useDispatch();
 
@@ -17,7 +18,7 @@ const ProductGrid = () => {
       <S.TotalBox>
         <S.MainBox>
           <S.CategoryBox>
-            {CategoryData.map((el) => (
+            {CategoriesData.map((el) => (
               <S.Category key={el.slug} id={el.slug} productId={productId} onClick={(e) => dispatch(productIdSlice.actions.getProductId(e.target.id))}>
                 {el.name}
               </S.Category>

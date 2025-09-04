@@ -1,11 +1,7 @@
+import { OriginalPrice } from '../../lib';
 import * as S from './ProductItemDetail.styled';
 
 const ProductItemDetail = (pr) => {
-  const originalPrice = () => {
-    const num = pr.data.price / (1 - pr.data.discountPercentage / 100);
-    return num.toFixed(2);
-  };
-
   return (
     <S.Wrapper>
       <S.MainBox>
@@ -33,7 +29,7 @@ const ProductItemDetail = (pr) => {
           <S.RBox>
             <div>
               <S.FlexBox>
-                <S.OriginalPrice>${originalPrice()}</S.OriginalPrice>
+                <S.OriginalPrice>${OriginalPrice(pr.data)}</S.OriginalPrice>
                 <S.DiscountPercentage>-{pr.data.discountPercentage}%</S.DiscountPercentage>
               </S.FlexBox>
               <S.Price>${pr.data.price}</S.Price>
