@@ -11,8 +11,19 @@ export const productIdSlice = createSlice({
   },
 });
 
+export const searchSlice = createSlice({
+  name: 'search',
+  initialState: '',
+  reducers: {
+    setSearchData(state, action) {
+      return (state = action.payload);
+    },
+  },
+});
+
 export const store = configureStore({
   reducer: {
     productId: productIdSlice.reducer,
+    setSearchData: searchSlice.reducer,
   },
 });

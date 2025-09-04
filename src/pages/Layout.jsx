@@ -1,4 +1,4 @@
-// 이미지 최적화, 무한스크롤, 검색 기능 구현
+// 스켈렙톤 구현, 무한스크롤, trottle, Ref 구현
 
 import { Route, Routes } from 'react-router-dom';
 import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
@@ -8,9 +8,10 @@ import Category from '@/pages/Category';
 import HeroBanner from '@/shared/ui/HeroBanner';
 import ProductGrid from '@/shared/ui/ProductGrid';
 import SeasonalSaleBanner from '@/shared/ui/SeasonalSaleBanner';
-import styled from '@emotion/styled';
+import SearchProducts from '@/shared/ui/SearchProducts';
 import Header from '@/shared/layout/Header';
 import Footer from '@/shared/layout/Footer';
+import styled from '@emotion/styled';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
@@ -36,6 +37,8 @@ const Layout = () => {
         />
         <Route path='/category' element={<Category />} />
         <Route path='/category/:id' element={<Category />} />
+
+        <Route path='/products' element={<SearchProducts />} />
       </Routes>
       <Footer />
     </Wrapper>
