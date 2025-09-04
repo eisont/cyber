@@ -1,4 +1,4 @@
-export const SearchSVG = (color) => (
+export const SearchSVG = ({ color }) => (
   // stroke = '#989898'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' fixmlns='http://www.w3.org/2000/svg'>
@@ -11,7 +11,7 @@ export const SearchSVG = (color) => (
   </svg>
 );
 
-export const ArrowSVG = (color) => (
+export const ArrowSVG = ({ color }) => (
   // stroke='#A4A4A4'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -19,7 +19,7 @@ export const ArrowSVG = (color) => (
   </svg>
 );
 
-export const ExpandDownSVG = (color) => (
+export const ExpandDownSVG = ({ color }) => (
   // stroke='#191919'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -27,7 +27,7 @@ export const ExpandDownSVG = (color) => (
   </svg>
 );
 
-export const ViewSVG = (color) => (
+export const ViewSVG = ({ color }) => (
   // stroke='#979797'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -39,7 +39,7 @@ export const ViewSVG = (color) => (
   </svg>
 );
 
-export const ToEditSVG = (color) => (
+export const ToEditSVG = ({ color }) => (
   // fill = '#222222'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -52,7 +52,7 @@ export const ToEditSVG = (color) => (
   </svg>
 );
 
-export const SmartWatchesSVG = (color) => (
+export const SmartWatchesSVG = ({ color }) => (
   // fill = '#2E2E2E'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -123,7 +123,7 @@ export const ScreenSizeSVG = () => (
   </svg>
 );
 
-export const PlusSVG = (color) => (
+export const PlusSVG = ({ color }) => (
   // fill='#222222'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -135,7 +135,7 @@ export const PlusSVG = (color) => (
     />
   </svg>
 );
-export const PhonesSVG = (color) => (
+export const PhonesSVG = ({ color }) => (
   // fill='#2E2E2E'
 
   <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>

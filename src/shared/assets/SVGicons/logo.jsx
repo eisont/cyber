@@ -1,4 +1,4 @@
-export const LogoSVG = (color) => (
+export const LogoSVG = ({ color }) => (
   <svg width='96' height='32' viewBox='0 0 96 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M5.42812 9.39935L8.91177 7.39026L6.96725 4.02409H25.2549L16.114 19.862L14.1695 16.49L10.6859 18.505L16.114 27.9044L32.2221 0H0L5.42812 9.39935Z' fill={color} />
     <path

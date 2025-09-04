@@ -1,4 +1,4 @@
-// 이미지 최적화, 무한스크롤 검색 기능 구현, customHooks 따로 관리, api fetch함수 수정
+// 이미지 최적화, 무한스크롤 검색 기능 구현
 
 import { Route, Routes } from 'react-router-dom';
 import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';

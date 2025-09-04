@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         <S.TextBox>
           <S.Box1>
-            <S.Logo>{LogoSVG('#fff')}</S.Logo>
+            <S.Logo>{LogoSVG({ color: '#fff' })}</S.Logo>
             <S.Stext>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</S.Stext>
           </S.Box1>
           <S.Box2>
@@ -31,10 +31,10 @@ const Footer = () => {
           </S.Box3>
         </S.TextBox>
         <S.SnsBox>
-          <S.Snslogo>{TwitterSVG('#fff')}</S.Snslogo>
-          <S.Snslogo>{FacebookSVG('#fff')}</S.Snslogo>
-          <S.Snslogo>{TitokSVG('#fff')}</S.Snslogo>
-          <S.Snslogo>{InstagramSVG('#fff', '#000')}</S.Snslogo>
+          <S.Snslogo>{TwitterSVG({ color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{FacebookSVG({ color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{TitokSVG({ color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{InstagramSVG({ color: '#fff', color2: '#000' })}</S.Snslogo>
         </S.SnsBox>
       </div>
     </S.Wrapper>
