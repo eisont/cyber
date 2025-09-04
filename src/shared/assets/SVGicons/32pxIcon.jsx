@@ -82,3 +82,13 @@ export const BagSVG = ({ color }) => (
     />
   </svg>
 );
+export const Search32pxSVG = ({ color }) => (
+  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path
+      d='M22.5692 22.7198L27.2 27.1998M15.2 9.5998C17.851 9.5998 20 11.7488 20 14.3998M25.7067 15.2531C25.7067 21.0264 21.0266 25.7065 15.2534 25.7065C9.48017 25.7065 4.80005 21.0264 4.80005 15.2531C4.80005 9.47992 9.48017 4.7998 15.2534 4.7998C21.0266 4.7998 25.7067 9.47992 25.7067 15.2531Z'
+      stroke={color}
+      stroke-width='2'
+      stroke-linecap='round'
+    />
+  </svg>
+);

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 export const FlexBox = styled(FlexBetween)``;
@@ -40,18 +40,19 @@ export const Input = styled.input`
 export const MenuBox = styled(FlexBetween)`
   width: 351px;
 `;
-export const LinkSt = styled(Link)`
-  :hover {
-    cursor: pointer;
-  }
-`;
 export const IconBox = styled(FlexBetween)`
-  width: 144px;
-  justify-content: flex-end;
+  width: 100px;
+  justify-content: space-around;
 `;
-export const Icon = styled(FlexCenter)`
-  font-size: 320px;
+export const Icon = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-decoration: none; */
+  transition: 0.1s;
+
   :hover {
+    scale: 1.2;
     cursor: pointer;
   }
 `;
