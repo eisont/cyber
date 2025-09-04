@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useCategroy, useFilterOptions } from '../../../commons/api/filterApi';
-import { productIdSlice } from '../../../redux/redux';
-import ProductItem from '../ProductItem';
+import { useCategroy, useFilterOptions } from '@/shared/hooks/useApiHooks';
+import { productIdSlice } from '@/redux/redux';
+import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductGrid.styled';
 
 const ProductGrid = () => {

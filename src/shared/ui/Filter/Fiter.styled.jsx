@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColAround, FlexCenter } from '../../assets/styled/CommonStyled';
+import { FlexBetween, FlexColAround, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 256px;

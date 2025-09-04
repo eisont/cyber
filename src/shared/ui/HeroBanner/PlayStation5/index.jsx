@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FlexBetween } from '../../../assets/styled/CommonStyled';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexBetween)`
   position: relative;
@@ -35,7 +35,7 @@ const Playstation5Img = styled.img`
 const PlayStation5 = () => {
   return (
     <Wrapper>
-      <Playstation5Img src='../../../../../public/img/HeroBanner/PlayStation5.webp' alt='PlayStation5' />
+      <Playstation5Img src='img/HeroBanner/PlayStation5.webp' alt='PlayStation5' />
       <Playstation5TextBox>
         <TitleText>Playstation 5</TitleText>
         <SubText>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</SubText>

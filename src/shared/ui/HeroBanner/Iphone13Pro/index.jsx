@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { productIdSlice } from '../../../../redux/redux';
-import { FlexBetween } from '../../../assets/styled/CommonStyled';
+import { productIdSlice } from '@/redux/redux';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexBetween)`
   width: 1120px;
@@ -65,7 +65,7 @@ const Iphone13Pro = () => {
           <Botton>Shop Now</Botton>
         </Linkst>
       </Iphone13ProTextBox>
-      <Iphone13ProImg src='../../../../../public/img/HeroBanner/Iphone14pro.webp' alt='Iphone13pro' />
+      <Iphone13ProImg src='img/HeroBanner/Iphone14pro.webp' alt='Iphone13pro' />
     </Wrapper>
   );
 };

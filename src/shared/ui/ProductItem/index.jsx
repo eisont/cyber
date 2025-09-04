@@ -1,7 +1,7 @@
-import { FavoritesSVG } from '../../assets/SVGicons/32pxIcon';
+import { FavoritesSVG } from '@/shared/assets/SVGicons/32pxIcon';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { FlexBt, FlexCenter, FlexColBetween } from '../../assets/styled/CommonStyled';
+import { FlexBt, FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexCenter)`
   margin: 10px 0;

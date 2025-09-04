@@ -1,4 +1,4 @@
-import { FlexCenter, FlexColAround } from '../../assets/styled/CommonStyled';
+import { FlexCenter, FlexColAround } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 export const Wrapper = styled(FlexCenter)``;
