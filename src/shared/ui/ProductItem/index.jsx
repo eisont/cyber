@@ -2,6 +2,7 @@ import { FavoritesSVG } from '@/shared/assets/SVGicons/32pxIcon';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FlexBt, FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const Wrapper = styled(FlexCenter)`
   margin: 10px 0;
@@ -57,12 +58,14 @@ const Button = styled(FlexBt)`
 `;
 
 const ProductItem = (pr) => {
+  const { ref } = useIntersectionObserver();
+
   return (
     <Wrapper>
       <MainBox>
         <IconBox>{/* {<LikeIcon>{FavoritesSVG({color:'#919191'})}</LikeIcon>} */}</IconBox>
         <Linkst to={`/category/${pr.product.id}`}>
-          <ImgBox src={pr.product.thumbnail} alt='thumbnail' />
+          <ImgBox ref={ref} data-src={pr.product.thumbnail} src='#' alt='thumbnail' />
         </Linkst>
 
         <Title>{pr.product.title}</Title>
