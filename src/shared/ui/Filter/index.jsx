@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import useFetch from '@/shared/hooks/useFetch';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons/24pxIcon';
-import { useDispatch, useSelector } from 'react-redux';
-import * as S from './Fiter.styled';
 import { productIdSlice } from '@/redux/redux';
 import { ToUpper } from '@/shared/lib';
-import useFetch from '@/shared/hooks/useFetch';
+import { useDispatch, useSelector } from 'react-redux';
+import * as S from './Fiter.styled';
 
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
