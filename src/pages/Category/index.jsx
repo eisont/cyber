@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
-import { ArrowSVG } from '@/shared/assets/SVGicons/24pxIcon';
+import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
 import { ToUpper } from '@/shared/lib';
 import Filter from '@/shared/ui/Filter';
 import ProductGrid from '@/shared/ui/ProductGrid';
@@ -23,16 +23,16 @@ const Category = () => {
       <S.MainWrapper>
         <S.Category>
           <S.CategoryMenu to='/'>Home</S.CategoryMenu>
-          <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
+          <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
           <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
-          <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
+          <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
           <S.ProductAllMenu to='/category' params={params.id}>
             {!Itemdata.Category && ToUpper(productId)}
           </S.ProductAllMenu>
 
           {pathname === `/category/${params.id}` && (
             <>
-              <S.Arrow>{ArrowSVG({ color: '#a4a4a4' })}</S.Arrow>
+              <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
               <S.ProductItemMenu params={params.id}>{Itemdata.title}</S.ProductItemMenu>
             </>
           )}

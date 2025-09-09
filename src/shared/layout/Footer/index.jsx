@@ -1,5 +1,5 @@
-import { FacebookSVG, InstagramSVG, TitokSVG, TwitterSVG } from '@/shared/assets/SVGicons/16pxIcon';
-import { LogoSVG } from '@/shared/assets/SVGicons/logo';
+import { FacebookSVG, InstagramSVG, TitokSVG, TwitterSVG } from '@/shared/assets/SVGicons';
+import { LogoSVG } from '@/shared/assets/SVGicons';
 import * as S from './Footer.styled';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         <S.TextBox>
           <S.Box1>
-            <S.Logo>{LogoSVG({ color: '#fff' })}</S.Logo>
+            <S.Logo>{LogoSVG({ width: '96', height: '32', color: '#fff' })}</S.Logo>
             <S.Stext>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</S.Stext>
           </S.Box1>
           <S.Box2>
@@ -31,10 +31,10 @@ const Footer = () => {
           </S.Box3>
         </S.TextBox>
         <S.SnsBox>
-          <S.Snslogo>{TwitterSVG({ color: '#fff' })}</S.Snslogo>
-          <S.Snslogo>{FacebookSVG({ color: '#fff' })}</S.Snslogo>
-          <S.Snslogo>{TitokSVG({ color: '#fff' })}</S.Snslogo>
-          <S.Snslogo>{InstagramSVG({ color: '#fff', color2: '#000' })}</S.Snslogo>
+          <S.Snslogo>{TwitterSVG({ size: '16', color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{FacebookSVG({ size: '16', color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{TitokSVG({ size: '16', color: '#fff' })}</S.Snslogo>
+          <S.Snslogo>{InstagramSVG({ size: '16', color: '#fff', color2: '#000' })}</S.Snslogo>
         </S.SnsBox>
       </div>
     </S.Wrapper>

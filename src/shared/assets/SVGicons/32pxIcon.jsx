@@ -12,45 +12,6 @@ export const CartSVG = ({ color }) => (
   </svg>
 );
 
-export const FavoritesSVG = ({ color }) => (
-  // stroke = #919191
-
-  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <path
-      d='M11 7C8.239 7 6 9.216 6 11.95C6 14.157 6.875 19.395 15.488 24.69C15.6423 24.7839 15.8194 24.8335 16 24.8335C16.1806 24.8335 16.3577 24.7839 16.512 24.69C25.125 19.395 26 14.157 26 11.95C26 9.216 23.761 7 21 7C18.239 7 16 10 16 10C16 10 13.761 7 11 7Z'
-      stroke={color}
-      strokeWidth='1.5'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    />
-  </svg>
-);
-
-export const UserSVG = ({ color }) => (
-  // stroke = #191919"
-
-  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <path
-      d='M24 27V24.3333C24 22.9188 23.5224 21.5623 22.6722 20.5621C21.8221 19.5619 20.669 19 19.4667 19H11.5333C10.331 19 9.17795 19.5619 8.32778 20.5621C7.47762 21.5623 7 22.9188 7 24.3333V27M21 9.5C21 11.9853 18.9853 14 16.5 14C14.0147 14 12 11.9853 12 9.5C12 7.01472 14.0147 5 16.5 5C18.9853 5 21 7.01472 21 9.5Z'
-      stroke={color}
-      strokeWidth='1.5'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    />
-  </svg>
-);
-
-export const ArrowSVG = ({ color }) => (
-  // fill='#2E2E2E'
-
-  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <path
-      d='M21.3333 27.6667C21.0678 27.6679 20.8131 27.5622 20.6266 27.3733L9.95993 16.7067C9.57 16.3162 9.57 15.6838 9.95993 15.2933L20.6266 4.62667C21.0206 4.25952 21.6346 4.27035 22.0154 4.65117C22.3962 5.03199 22.4071 5.64599 22.0399 6.04L12.0799 16L22.0399 25.96C22.4299 26.3504 22.4299 26.9829 22.0399 27.3733C21.8534 27.5622 21.5987 27.6679 21.3333 27.6667Z'
-      fill={color}
-    />
-  </svg>
-);
-
 export const LikeSVG = ({ color }) => (
   // stroke = '#919191'
 
@@ -60,35 +21,6 @@ export const LikeSVG = ({ color }) => (
       stroke={color}
       strokeOpacity='0.77'
       strokeWidth='1.4'
-    />
-  </svg>
-);
-export const BagSVG = ({ color }) => (
-  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <path d='M11.7467 2.66663L6.92001 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
-    <path d='M20.2533 2.66663L25.08 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
-    <path
-      d='M2.66666 10.4667C2.66666 8.00005 3.98666 7.80005 5.62666 7.80005H26.3733C28.0133 7.80005 29.3333 8.00005 29.3333 10.4667C29.3333 13.3334 28.0133 13.1334 26.3733 13.1334H5.62666C3.98666 13.1334 2.66666 13.3334 2.66666 10.4667Z'
-      stroke='#292D32'
-      strokeWidth='1.5'
-    />
-    <path d='M13.0133 18.6666V23.4' stroke={color} strokeWidth='1.5' strokeLinecap='round' />
-    <path d='M19.1467 18.6666V23.4' stroke={color} strokeWidth='1.5' strokeLinecap='round' />
-    <path
-      d='M4.66666 13.3334L6.54666 24.8534C6.97332 27.44 7.99999 29.3334 11.8133 29.3334H19.8533C24 29.3334 24.6133 27.52 25.0933 25.0134L27.3333 13.3334'
-      stroke='#292D32'
-      strokeWidth='1.5'
-      strokeLinecap='round'
-    />
-  </svg>
-);
-export const Search32pxSVG = ({ color }) => (
-  <svg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
-    <path
-      d='M22.5692 22.7198L27.2 27.1998M15.2 9.5998C17.851 9.5998 20 11.7488 20 14.3998M25.7067 15.2531C25.7067 21.0264 21.0266 25.7065 15.2534 25.7065C9.48017 25.7065 4.80005 21.0264 4.80005 15.2531C4.80005 9.47992 9.48017 4.7998 15.2534 4.7998C21.0266 4.7998 25.7067 9.47992 25.7067 15.2531Z'
-      stroke={color}
-      strokeWidth='2'
-      strokeLinecap='round'
     />
   </svg>
 );
