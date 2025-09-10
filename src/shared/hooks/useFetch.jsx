@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useFetch = ({ query, id = '', enabled = true }) => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!enabled) {
@@ -10,11 +11,13 @@ const useFetch = ({ query, id = '', enabled = true }) => {
 
     try {
       const url = query + id;
+      setIsLoading(true);
       const fetchData = async () => {
         const res = await fetch(url);
         const json = await res.json();
 
         setData(json);
+        setIsLoading(false);
       };
 
       fetchData();
@@ -23,7 +26,7 @@ const useFetch = ({ query, id = '', enabled = true }) => {
     }
   }, [query, id, enabled]);
 
-  return data;
+  return [data, isLoading];
 };
 
 export default useFetch;

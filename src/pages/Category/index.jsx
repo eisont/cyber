@@ -10,7 +10,7 @@ import * as S from './Category.styled';
 
 const Category = () => {
   const params = useParams();
-  const Itemdata = useFetch({ query: 'https://dummyjson.com/products/', id: params.id });
+  const [Itemdata] = useFetch({ query: 'https://dummyjson.com/products/', id: params.id });
 
   const location = useLocation();
   const pathname = location.pathname;

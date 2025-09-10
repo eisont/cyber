@@ -25,14 +25,14 @@ export const MainBox = styled(FlexCenter)`
 
 const SearchProducts = () => {
   const searchData = useSelector((state) => state.setSearchData);
-  const data = useFetch({ query: `https://dummyjson.com/products/search?q=${searchData}` });
-  const ProductsData = data.products;
+  const [data, ProductListisLoading] = useFetch({ query: `https://dummyjson.com/products/search?q=${searchData}` });
+  const ProductListData = data.products;
 
   return (
     <Wrapper>
       <MainBox>
-        {ProductsData?.map((el) => (
-          <ProductItem key={el.id} product={el} />
+        {ProductListData?.map((el) => (
+          <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
         ))}
       </MainBox>
     </Wrapper>
