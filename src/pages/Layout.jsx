@@ -24,7 +24,7 @@ const Layout = () => {
           element={
             <>
               {/* <HeroBanner /> */}
-              {/* <CategoryHighlight /> */}
+              <CategoryHighlight />
               <ProductGrid />
               <CategoryPromoBanner />
               <SeasonalSaleBanner />
