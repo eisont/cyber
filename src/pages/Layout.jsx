@@ -1,4 +1,4 @@
-// 스켈렙톤 구현, 무한스크롤, debounce, Ref 구현, 찜한 목록, 반응형 구현
+// 무한스크롤, Ref 구현, 찜한 목록, 반응형 구현
 
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer } from '@/shared/layout';

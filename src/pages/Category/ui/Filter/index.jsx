@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useFetch from '@/shared/hooks/useFetch';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons';
 import { productIdSlice } from '@/redux';
 import { ToUpper } from '@/shared/lib';

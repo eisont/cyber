@@ -5,7 +5,7 @@ import { ToUpper } from '@/shared/lib';
 import { Filter, ProductItemDetail } from '@/pages/Category/ui';
 import ProductGrid from '@/shared/ui/ProductGrid';
 import ProductsBox from '@/shared/ui/ProductsBox';
-import useFetch from '@/shared/hooks/useFetch';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 import * as S from './Category.styled';
 
 const Category = () => {
