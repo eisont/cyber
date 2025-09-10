@@ -1,16 +1,10 @@
-// 스켈렙톤 구현, 무한스크롤, trottle, Ref 구현
+// 스켈렙톤 구현, 무한스크롤, debounce, Ref 구현, 찜한 목록, 반응형 구현
 
 import { Route, Routes } from 'react-router-dom';
-import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
-import CategoryHighlight from '@/shared/ui/CategoryHighlight';
-import CategoryPromoBanner from '@/shared/ui/CategoryPromoBanner';
+import { Header, Footer } from '@/shared/layout';
+import { HeroBanner, ProductGrid, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner, SearchProducts } from '@/shared/ui';
 import Category from '@/pages/Category';
-import HeroBanner from '@/shared/ui/HeroBanner';
-import ProductGrid from '@/shared/ui/ProductGrid';
-import SeasonalSaleBanner from '@/shared/ui/SeasonalSaleBanner';
-import SearchProducts from '@/shared/ui/SearchProducts';
-import Header from '@/shared/layout/Header';
-import Footer from '@/shared/layout/Footer';
+import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 
 const Wrapper = styled(FlexColBetween)`
@@ -35,8 +29,8 @@ const Layout = () => {
             </>
           }
         />
-        <Route path='/category' element={<Category />} />
-        <Route path='/category/:id' element={<Category />} />
+
+        <Route path='/category/:id?' element={<Category />} />
 
         <Route path='/products' element={<SearchProducts />} />
       </Routes>

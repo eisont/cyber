@@ -1,9 +1,9 @@
-import { LogoSVG } from '@/shared/assets/SVGicons/logo';
-import { SearchSVG } from '@/shared/assets/SVGicons/24pxIcon';
+import { LogoSVG } from '@/shared/assets/SVGicons';
+import { SearchSVG } from '@/shared/assets/SVGicons';
 import * as S from './Header.styled';
-import { BagSVG, Search32pxSVG } from '@/shared/assets/SVGicons/32pxIcon';
+import { BagSVG } from '@/shared/assets/SVGicons';
 import { useDispatch } from 'react-redux';
-import { searchSlice } from '../../../redux/redux';
+import { searchSlice } from '@/redux';
 import { useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -15,11 +15,11 @@ const Header = () => {
     <S.Wrapper>
       <S.TotalBox>
         <S.FlexBox>
-          <S.Icon to='/'>{LogoSVG({ color: '#000' })}</S.Icon>
+          <S.Icon to='/'>{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.Icon>
           {pathname === '/products' && (
             <S.InputBox>
               <S.SearchIcon>
-                <S.Icon>{SearchSVG({ color: '#989898' })}</S.Icon>
+                <S.Icon>{SearchSVG({ size: '24', color: '#989898' })}</S.Icon>
               </S.SearchIcon>
               <S.Input placeholder='Search' onChange={(e) => dispatch(searchSlice.actions.setSearchData(e.target.value))} />
             </S.InputBox>
@@ -27,14 +27,14 @@ const Header = () => {
         </S.FlexBox>
         <S.IconBox>
           {/* <S.LinkSt to='/favorites'> */}
-          {/* <S.Icon>{FavoritesSVG({ color: '#191919' })}</S.Icon> */}
+          {/* <S.Icon>{FavoritesSVG({ size: '32', color: '#191919' })}</S.Icon> */}
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/cart'> */}
-          <S.Icon to={'./products'}>{Search32pxSVG({ color: '#191919' })}</S.Icon>
-          <S.Icon>{BagSVG({ color: '#191919' })}</S.Icon>
+          <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>
+          <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/user'> */}
-          {/* <S.Icon>{UserSVG({ color: '#191919' })}</S.Icon> */}
+          {/* <S.Icon>{UserSVG({ size: '32', color: '#191919' })}</S.Icon> */}
           {/* </S.LinkSt> */}
         </S.IconBox>
       </S.TotalBox>

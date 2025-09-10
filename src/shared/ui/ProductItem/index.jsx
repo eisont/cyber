@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
-import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons/24pxIcon';
+import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
 import { useState } from 'react';
 
 const Wrapper = styled(FlexCenter)`
@@ -78,7 +78,13 @@ const ProductItem = (pr) => {
   return (
     <Wrapper>
       <MainBox>
-        <IconBox>{<CartIcon onClick={() => setToggle((pr) => !pr)}>{toggle ? <>{AddToCartSVG({ color: '#292d32' })} </> : <> {EmptyCartSVG({ color: '#292d32' })} </>}</CartIcon>}</IconBox>
+        <IconBox>
+          {
+            <CartIcon onClick={() => setToggle((pr) => !pr)}>
+              {toggle ? <>{AddToCartSVG({ size: '24', color: '#292d32', insideColor: 'yellowgreen' })} </> : <> {EmptyCartSVG({ size: '24', color: '#292d32' })} </>}
+            </CartIcon>
+          }
+        </IconBox>
         <Img ref={ref} data-src={pr.product.thumbnail} src='#' alt='thumbnail' />
 
         <Title>{pr.product.title}</Title>
