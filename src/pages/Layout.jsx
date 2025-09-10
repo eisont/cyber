@@ -2,10 +2,12 @@
 
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer } from '@/shared/layout';
-import { HeroBanner, ProductGrid, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner, SearchProducts } from '@/shared/ui';
+import { HeroBanner, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner } from '@/pages/ui';
 import Category from '@/pages/Category';
 import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
+import ProductGrid from '@/shared/ui/ProductGrid';
+import SearchProducts from '@/shared/ui/SearchProducts';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
