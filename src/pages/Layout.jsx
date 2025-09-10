@@ -35,8 +35,8 @@ const Layout = () => {
         <Route path='/category/:id?' element={<Category />} />
 
         <Route path='/products' element={<SearchProducts />} />
-      </Routes> 
-      <Footer />*/}
+      </Routes> */}
+      <Footer />
     </Wrapper>
   );
 };
