@@ -25,7 +25,7 @@ const Layout = () => {
             <>
               {/* <HeroBanner /> */}
               {/* <CategoryHighlight /> */}
-              {/* <ProductGrid /> */}
+              <ProductGrid />
               <CategoryPromoBanner />
               <SeasonalSaleBanner />
             </>

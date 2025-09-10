@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from './breakpoints';
 
 export const DumBox = styled.div`
   width: 100%;
@@ -20,6 +21,11 @@ export const DumImg = styled.div`
   background: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: pulse 1.5s infinite ease-in-out;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 104px;
+    height: 104px;
+  }
 `;
 export const DumText = styled.div`
   width: 160px;
@@ -27,4 +33,9 @@ export const DumText = styled.div`
   background: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: pulse 1.5s infinite ease-in-out;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 104px;
+    height: 10px;
+  }
 `;
