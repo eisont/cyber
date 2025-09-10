@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useFetch from '@/shared/hooks/useFetch';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons';
-import { productIdSlice } from '@/redux/redux';
+import { productIdSlice } from '@/redux';
 import { ToUpper } from '@/shared/lib';
 import { useDispatch, useSelector } from 'react-redux';
 import * as S from './Fiter.styled';

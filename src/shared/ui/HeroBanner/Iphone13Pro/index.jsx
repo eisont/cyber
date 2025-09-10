@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { productIdSlice } from '@/redux/redux';
+import { productIdSlice } from '@/redux';
 import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexBetween)`
