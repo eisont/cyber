@@ -1,4 +1,4 @@
-import useFetch from '@/shared/hooks/useFetch';
+import { useSearchFetch } from '@/shared/hooks/useFetchHooks';
 import styled from '@emotion/styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
@@ -26,17 +26,25 @@ export const MainBox = styled(FlexCenter)`
 
 const SearchProducts = () => {
   const searchData = useSelector((state) => state.setSearchData);
-  const [data, ProductListisLoading] = useFetch({ query: `https://dummyjson.com/products/search?q=${searchData}` });
+  const [data, ProductListisLoading] = useSearchFetch({ query: `https://dummyjson.com/products/search?q=${searchData}` });
   const ProductListData = data.products;
 
   return (
     <Wrapper>
       <MainBox>
-        {ProductListData?.length ? (
+        {ProductListData?.length && !ProductListisLoading ? (
           <>
             {ProductListData?.map((el) => (
               <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
             ))}
+          </>
+        ) : ProductListData?.length || ProductListisLoading ? (
+          <>
+            {Array(4)
+              .fill('')
+              .map((_, i) => (
+                <ProductItem key={i} isLoading={ProductListisLoading} />
+              ))}
           </>
         ) : (
           <DumBox>검색 결과 없습니다.</DumBox>
