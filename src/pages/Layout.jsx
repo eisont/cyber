@@ -11,14 +11,14 @@ import SearchProducts from '@/shared/ui/SearchProducts';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Layout = () => {
   return (
     <Wrapper>
       <Header />
-      <Routes>
+      {/* <Routes>
         <Route
           path='/'
           element={
@@ -35,8 +35,8 @@ const Layout = () => {
         <Route path='/category/:id?' element={<Category />} />
 
         <Route path='/products' element={<SearchProducts />} />
-      </Routes>
-      <Footer />
+      </Routes> 
+      <Footer />*/}
     </Wrapper>
   );
 };

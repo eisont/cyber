@@ -1,20 +1,42 @@
 import { Link } from 'react-router-dom';
-import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
+import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
-export const FlexBox = styled(FlexBetween)``;
-
-export const Wrapper = styled(FlexBetween)`
-  width: 100vw;
+export const Wrapper = styled.div`
+  width: 100%;
   height: 88px;
   background-color: #fff;
   border-bottom: 1px solid #b5b5b5;
 
+  display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100%;
+    height: 35px;
+  }
 `;
-export const TotalBox = styled(FlexBetween)`
-  width: 1120px;
+
+export const TotalBox = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 10px;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 90%;
+  }
 `;
+
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const InputBox = styled(FlexBetween)`
   margin: 0 20px;
   width: 433px;
@@ -37,22 +59,33 @@ export const Input = styled.input`
   background: rgba(0, 0, 0, 0);
 `;
 
-export const MenuBox = styled(FlexBetween)`
-  width: 351px;
-`;
 export const IconBox = styled(FlexBetween)`
   width: 100px;
   justify-content: space-around;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 30px;
+  }
 `;
+
 export const Icon = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-decoration: none; */
   transition: 0.1s;
 
   :hover {
     scale: 1.2;
     cursor: pointer;
+  }
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: none;
+  }
+`;
+export const MobileIcon = styled(Icon)`
+  display: none;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: inline-block;
   }
 `;
