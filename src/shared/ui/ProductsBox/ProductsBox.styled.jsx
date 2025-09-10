@@ -39,13 +39,3 @@ export const ProductsBox = styled.div`
   gap: 16px;
   flex-wrap: wrap;
 `;
-
-export const EmptyData = styled(FlexCenter)`
-  width: 831px;
-  height: 432px;
-
-  color: #afafaf;
-
-  border-radius: 10px;
-  background: #f6f6f6;
-`;

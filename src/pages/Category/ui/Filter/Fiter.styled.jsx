@@ -67,7 +67,6 @@ export const BrandInBox = styled.div`
   justify-content: start;
   align-items: center;
 `;
-export const CheckBox = styled.input``;
 export const Brand = styled.div`
   font-size: ${(pr) => (pr.name === pr.productId ? '18px' : '14px')};
   color: ${(pr) => (pr.name === pr.productId ? '#000' : '#A4A4A4')};
@@ -78,4 +77,3 @@ export const Brand = styled.div`
     color: #000;
   }
 `;
-export const Number = styled.div``;
