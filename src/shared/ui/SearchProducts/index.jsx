@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { useSelector } from 'react-redux';
-import { DumBox } from '@/shared/styled/skelepton';
+import { DumBox } from '@/shared/assets/styled/skelepton';
 
 const Wrapper = styled.div`
   display: flex;

@@ -5,7 +5,7 @@ import { productIdSlice } from '@/redux';
 import { ToUpper } from '@/shared/lib';
 import { useDispatch, useSelector } from 'react-redux';
 import * as S from './Fiter.styled';
-import { DumText } from '@/shared/styled/skelepton';
+import { DumText } from '@/shared/assets/styled/skelepton';
 
 const Filter = () => {
   const [toggle, setToggle] = useState(true);

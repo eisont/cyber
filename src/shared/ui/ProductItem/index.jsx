@@ -2,7 +2,7 @@ import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver'
 import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
 import { useState } from 'react';
 import * as S from './ProductItem.styled';
-import { DumImg, DumText } from '@/shared/styled/skelepton';
+import { DumImg, DumText } from '@/shared/assets/styled/skelepton';
 
 const ProductItem = (pr) => {
   const [toggle, setToggle] = useState(false);
