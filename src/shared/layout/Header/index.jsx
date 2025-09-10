@@ -1,5 +1,5 @@
 import { LogoSVG } from '@/shared/assets/SVGicons';
-import { SearchSVG } from '@/shared/assets/SVGicons';
+import { SearchSVG, CloseSVG } from '@/shared/assets/SVGicons';
 import * as S from './Header.styled';
 import { BagSVG } from '@/shared/assets/SVGicons';
 import { useDispatch } from 'react-redux';
@@ -30,7 +30,8 @@ const Header = () => {
           {/* <S.Icon>{FavoritesSVG({ size: '32', color: '#191919' })}</S.Icon> */}
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/cart'> */}
-          <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>
+
+          {pathname === '/products' ? <S.Icon to={'./'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
           <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
           {/* </S.LinkSt> */}
           {/* <S.LinkSt to='/user'> */}
