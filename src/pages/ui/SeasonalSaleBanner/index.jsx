@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 const Wrapper = styled(FlexCenter)`
   width: 100%;
@@ -11,10 +12,22 @@ const Background = styled(FlexCenter)`
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('img/HeroBanner/SeasonalSaleBanner.webp');
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    padding: 90px 0;
+    height: auto;
+    background: url('img/mobile/Banner.webp');
+    background-size: cover;
+    background-position: center center;
+  }
 `;
 const Banner2TextBox = styled.div`
   text-align: center;
   cursor: default;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 70%;
+  }
 `;
 
 const TitleText = styled.div`
@@ -22,10 +35,19 @@ const TitleText = styled.div`
   font-weight: 500;
   letter-spacing: -1px;
   color: #fff;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    font-size: 50px;
+    margin: 10px 0;
+  }
 `;
 const SubText = styled.div`
   font-size: 16px;
   color: rgba(100, 100, 100, 0.4);
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    margin: 20px 0;
+  }
 `;
 const Botton = styled.button`
   margin: 20px 0 0 0;

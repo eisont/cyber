@@ -18,24 +18,24 @@ const Layout = () => {
   return (
     <Wrapper>
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route
           path='/'
           element={
             <>
-              <HeroBanner />
-              <CategoryHighlight />
-              <ProductGrid />
-              <CategoryPromoBanner />
+              {/* <HeroBanner /> */}
+              {/* <CategoryHighlight /> */}
+              {/* <ProductGrid /> */}
+              {/* <CategoryPromoBanner /> */}
               <SeasonalSaleBanner />
             </>
           }
         />
 
-        <Route path='/category/:id?' element={<Category />} />
+        {/* <Route path='/category/:id?' element={<Category />} /> */}
 
-        <Route path='/products' element={<SearchProducts />} />
-      </Routes> */}
+        {/* <Route path='/products' element={<SearchProducts />} /> */}
+      </Routes>
       <Footer />
     </Wrapper>
   );
