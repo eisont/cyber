@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import ProductItem from '@/shared/ui/ProductItem';
 import * as S from './ProductsBox.styled';
-import useFetch from '@/shared/hooks/useFetch';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
-  const data = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+  const [data] = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
   const ProductListData = data.products;
 
   return (
@@ -21,14 +21,12 @@ const ProductsBox = () => {
       </S.FlexBox>
 
       <S.ProductsBox>
-        {ProductListData ? (
+        {ProductListData && (
           <>
             {ProductListData.map((el) => (
-              <ProductItem key={el.id} product={el} />
+              <ProductItem key={el.id} itemData={el} />
             ))}
           </>
-        ) : (
-          <S.EmptyData>ⓧ</S.EmptyData>
         )}
       </S.ProductsBox>
     </S.Wrapper>

@@ -1,0 +1,30 @@
+import styled from '@emotion/styled';
+
+export const DumBox = styled.div`
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.5em;
+
+  background: rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+`;
+
+export const DumImg = styled.div`
+  width: 160px;
+  height: 160px;
+  background: rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+`;
+export const DumText = styled.div`
+  width: 160px;
+  height: 15px;
+  background: rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+`;
