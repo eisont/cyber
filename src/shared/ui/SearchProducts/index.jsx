@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { useSelector } from 'react-redux';
+import { DumBox } from '@/shared/styled/skelepton';
 
 const Wrapper = styled.div`
   display: flex;
@@ -31,9 +32,15 @@ const SearchProducts = () => {
   return (
     <Wrapper>
       <MainBox>
-        {ProductListData?.map((el) => (
-          <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
-        ))}
+        {ProductListData?.length ? (
+          <>
+            {ProductListData?.map((el) => (
+              <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
+            ))}
+          </>
+        ) : (
+          <DumBox>검색 결과 없습니다.</DumBox>
+        )}
       </MainBox>
     </Wrapper>
   );
