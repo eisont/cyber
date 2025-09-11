@@ -23,7 +23,7 @@ const Layout = () => {
           path='/'
           element={
             <>
-              {/* <HeroBanner /> */}
+              <HeroBanner />
               <CategoryHighlight />
               <ProductGrid />
               <CategoryPromoBanner />
