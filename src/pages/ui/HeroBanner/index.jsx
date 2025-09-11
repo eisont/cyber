@@ -75,7 +75,7 @@ const HeroBanner = () => {
         <AirpodMax />
         <VisionPro />
         <PlayStation5 />
-        {/* <MacbookPro14 /> */}
+        <MacbookPro14 />
       </MobileBox>
     </Wrapper>
   );
