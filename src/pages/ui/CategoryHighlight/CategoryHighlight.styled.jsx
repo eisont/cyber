@@ -1,9 +1,14 @@
 import styled from '@emotion/styled';
 import { FlexBetween, FlexColBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { Link } from 'react-router-dom';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled(FlexCenter)`
   height: 352px;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100vw;
+    height: 550px;
+  }
 `;
 
 export const TotalBox = styled(FlexCenter)`
@@ -11,6 +16,11 @@ export const TotalBox = styled(FlexCenter)`
   height: 352px;
 
   background: #fafafa;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100vw;
+    height: 550px;
+  }
 `;
 
 export const MainBox = styled(FlexColBetween)`
@@ -18,15 +28,31 @@ export const MainBox = styled(FlexColBetween)`
   height: 190px;
 
   align-items: start;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 90%;
+    height: 95%;
+    justify-content: space-around;
+  }
 `;
 export const Top = styled.div`
   cursor: default;
   font-weight: 500;
   font-size: 24px;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    font-size: 20px;
+  }
 `;
 export const Categories = styled(FlexBetween)`
   width: 1120px;
   height: 128px;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100%;
+    height: 90%;
+
+    flex-wrap: wrap;
+  }
 `;
 
 export const ItemBox = styled(Link)`
@@ -47,6 +73,9 @@ export const ItemBox = styled(Link)`
     cursor: pointer;
     background: rgb(0, 0, 0, 0.2);
   }
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+  }
 `;
 export const CategoryImg = styled.div``;
 
@@ -55,4 +84,7 @@ export const Title = styled.div`
   font-weight: 500;
   font-size: 18px;
   text-align: center;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    font-size: 14px;
+  }
 `;

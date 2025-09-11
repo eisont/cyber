@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 import { FlexBetween, FlexColAround, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled.div`
   width: 256px;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: none;
+  }
 `;
 
 export const CategoryBox = styled.div`

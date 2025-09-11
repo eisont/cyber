@@ -5,6 +5,7 @@ import { BagSVG } from '@/shared/assets/SVGicons';
 import { useDispatch } from 'react-redux';
 import { searchSlice } from '@/redux';
 import { useLocation } from 'react-router-dom';
+import { MenuSVG } from '@/shared/assets/SVGicons';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,8 @@ const Header = () => {
       <S.TotalBox>
         <S.FlexBox>
           <S.Icon to='/'>{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.Icon>
+          <S.MobileIcon to='/'>{LogoSVG({ width: '54', height: '18', color: '#000' })}</S.MobileIcon>
+
           {pathname === '/products' && (
             <S.InputBox>
               <S.SearchIcon>
@@ -25,18 +28,11 @@ const Header = () => {
             </S.InputBox>
           )}
         </S.FlexBox>
-        <S.IconBox>
-          {/* <S.LinkSt to='/favorites'> */}
-          {/* <S.Icon>{FavoritesSVG({ size: '32', color: '#191919' })}</S.Icon> */}
-          {/* </S.LinkSt> */}
-          {/* <S.LinkSt to='/cart'> */}
 
+        <S.IconBox>
           {pathname === '/products' ? <S.Icon to={'./'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
           <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
-          {/* </S.LinkSt> */}
-          {/* <S.LinkSt to='/user'> */}
-          {/* <S.Icon>{UserSVG({ size: '32', color: '#191919' })}</S.Icon> */}
-          {/* </S.LinkSt> */}
+          <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>
         </S.IconBox>
       </S.TotalBox>
     </S.Wrapper>

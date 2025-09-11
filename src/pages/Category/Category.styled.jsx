@@ -1,14 +1,22 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100vw;
+  }
 `;
 
 export const MainWrapper = styled.div`
   width: 1120px;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 95%;
+  }
 `;
 
 export const Category = styled.div`
@@ -16,6 +24,9 @@ export const Category = styled.div`
   height: 104px;
   display: flex;
   align-items: center;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: none;
+  }
 `;
 export const CategoryMenu = styled(Link)`
   margin: 0 20px 0 0;

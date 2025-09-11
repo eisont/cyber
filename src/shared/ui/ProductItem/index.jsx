@@ -15,6 +15,9 @@ const ProductItem = (pr) => {
           <S.CartIcon onClick={() => setToggle((pr) => !pr)}>
             {toggle ? <>{AddToCartSVG({ size: '24', color: '#292d32', insideColor: 'yellowgreen' })} </> : <> {EmptyCartSVG({ size: '24', color: '#292d32' })} </>}
           </S.CartIcon>
+          <S.MobileCartIcon onClick={() => setToggle((pr) => !pr)}>
+            {toggle ? <>{AddToCartSVG({ size: '20', color: '#292d32', insideColor: 'yellowgreen' })} </> : <> {EmptyCartSVG({ size: '20', color: '#292d32' })} </>}
+          </S.MobileCartIcon>
         </S.IconBox>
         {pr.isLoading ? (
           <>

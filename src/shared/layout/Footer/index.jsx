@@ -5,10 +5,11 @@ import * as S from './Footer.styled';
 const Footer = () => {
   return (
     <S.Wrapper>
-      <div>
+      <S.TotalBox>
         <S.TextBox>
           <S.Box1>
             <S.Logo>{LogoSVG({ width: '96', height: '32', color: '#fff' })}</S.Logo>
+            <S.MobileLogo>{LogoSVG({ width: '54', height: '18', color: '#fff' })}</S.MobileLogo>
             <S.Stext>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</S.Stext>
           </S.Box1>
           <S.Box2>
@@ -36,7 +37,7 @@ const Footer = () => {
           <S.Snslogo>{TitokSVG({ size: '16', color: '#fff' })}</S.Snslogo>
           <S.Snslogo>{InstagramSVG({ size: '16', color: '#fff', color2: '#000' })}</S.Snslogo>
         </S.SnsBox>
-      </div>
+      </S.TotalBox>
     </S.Wrapper>
   );
 };
