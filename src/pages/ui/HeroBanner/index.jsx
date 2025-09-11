@@ -72,9 +72,9 @@ const HeroBanner = () => {
 
       <MobileBox>
         <Iphone13Pro />
-        {/* <PlayStation5 /> */}
         {/* <AirpodMax /> */}
         {/* <VisionPro /> */}
+        <PlayStation5 />
         {/* <MacbookPro14 /> */}
       </MobileBox>
     </Wrapper>
