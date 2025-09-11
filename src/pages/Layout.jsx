@@ -1,4 +1,5 @@
-// 무한스크롤, Ref 구현, 찜한 목록, 반응형 구현
+// 무한스크롤, Ref 구현, 찜한 목록,
+// 모바일 반응형 구현 (상품 디테일, 카테고리>필터, header_모달 )
 
 import { Route, Routes } from 'react-router-dom';
 import { Header, Footer } from '@/shared/layout';
@@ -8,10 +9,14 @@ import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 import ProductGrid from '@/shared/ui/ProductGrid';
 import SearchProducts from '@/shared/ui/SearchProducts';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
   width: 100%;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100vw;
+  }
 `;
 
 const Layout = () => {
@@ -32,9 +37,9 @@ const Layout = () => {
           }
         />
 
-        {/* <Route path='/category/:id?' element={<Category />} /> */}
+        <Route path='/category/:id?' element={<Category />} />
 
-        {/* <Route path='/products' element={<SearchProducts />} /> */}
+        <Route path='/products' element={<SearchProducts />} />
       </Routes>
       <Footer />
     </Wrapper>

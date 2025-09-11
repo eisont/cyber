@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled.div`
   width: 831px;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    width: 100vw;
+  }
 `;
 export const FlexBox = styled(FlexBetween)``;
 
@@ -12,10 +16,14 @@ export const ProductsCount = styled.div`
   color: #6c6c6c;
 
   cursor: default;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    margin: 10px 0 0 0;
+  }
 `;
 export const Count = styled.div`
+  margin: 0 0 0 5px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
 `;
 
@@ -38,4 +46,7 @@ export const ProductsBox = styled.div`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    padding: 0;
+  }
 `;
