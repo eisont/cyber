@@ -31,7 +31,10 @@ const Header = () => {
 
         <S.IconBox>
           {pathname === '/products' ? <S.Icon to={'./'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
-          <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+
+          <S.Bt to={'./login'}>로그인</S.Bt>
+          <S.Bt to={'./signup'}>회원가입</S.Bt>
+          {/* <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon> */}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>
         </S.IconBox>
       </S.TotalBox>
