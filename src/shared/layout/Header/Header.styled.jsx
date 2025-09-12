@@ -60,7 +60,7 @@ export const Input = styled.input`
 `;
 
 export const IconBox = styled(FlexBetween)`
-  width: 250px;
+  width: 200px;
   justify-content: space-around;
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
@@ -91,7 +91,7 @@ export const MobileIcon = styled(Icon)`
 `;
 
 export const Bt = styled(Link)`
-  padding: 15px 20px;
+  padding: 15px;
   border: 1px solid gray;
   border-radius: 5px;
   transition: 0.2s;
@@ -101,6 +101,15 @@ export const Bt = styled(Link)`
     background: rgb(0, 0, 0, 0.5);
     color: #fff;
     font-weight: 500;
+    cursor: pointer;
+  }
+`;
+export const Img = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  &:hover {
     cursor: pointer;
   }
 `;

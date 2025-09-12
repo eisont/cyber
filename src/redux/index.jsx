@@ -20,10 +20,69 @@ export const searchSlice = createSlice({
     },
   },
 });
+export const userTokenSlice = createSlice({
+  name: 'user',
+  initialState: {},
+  reducers: {
+    setUser: (_, { payload }) => payload, // 전체 객체 교체
+    clearUser: () => ({
+      accessToken: '',
+      email: '',
+      firstName: '',
+      gender: '',
+      id: null,
+      image: '',
+      lastName: '',
+      username: '',
+    }),
+  },
+});
+
+export const userInfoSlice = createSlice({
+  name: 'userInfo',
+  initialState: {},
+  reducers: {
+    setUserInfo: (_, { payload }) => payload, // 전체 객체 교체
+    clearUserInfo: () => ({
+      address: null,
+      age: null,
+      bank: null,
+      birthDate: '',
+      bloodGroup: '',
+      company: null,
+      crypto: null,
+      ein: '',
+      email: '',
+      eyeColor: '',
+      firstName: '',
+      gender: '',
+      hair: null,
+      height: null,
+      id: null,
+      image: '',
+      ip: '',
+      lastName: '',
+      macAddress: '',
+      maidenName: '',
+      password: '',
+      phone: '',
+      role: '',
+      ssn: '',
+      university: '',
+      userAgent: '',
+      username: '',
+      weight: null,
+    }),
+  },
+});
 
 export const store = configureStore({
   reducer: {
     productId: productIdSlice.reducer,
     setSearchData: searchSlice.reducer,
+    setUser: userTokenSlice.reducer,
+    clearUser: userTokenSlice.reducer,
+    setUserInfo: userInfoSlice.reducer,
+    clearUserInfo: userInfoSlice.reducer,
   },
 });
