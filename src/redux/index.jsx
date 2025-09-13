@@ -30,10 +30,17 @@ export const loginDataSlice = createSlice({
 });
 
 export const userTokenSlice = createSlice({
-  name: 'userInfo',
+  name: 'userToken',
   initialState: {},
   reducers: {
     setUserToken: (_, { payload }) => payload, // 전체 객체 교체
+  },
+});
+export const userInfoSlice = createSlice({
+  name: 'userInfo',
+  initialState: '',
+  reducers: {
+    setUserInfo: (_, { payload }) => payload, // 전체 객체 교체
   },
 });
 
@@ -43,5 +50,6 @@ export const store = configureStore({
     setSearchData: searchSlice.reducer,
     loginData: loginDataSlice.reducer,
     userToken: userTokenSlice.reducer,
+    userInfo: userInfoSlice.reducer,
   },
 });

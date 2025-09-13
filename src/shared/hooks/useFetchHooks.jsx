@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userTokenSlice } from '@/redux';
 
@@ -7,27 +7,24 @@ export const useFetch = ({ query, id = '', enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (!enabled) {
-      return;
-    }
+  const url = useMemo(() => query + id, [query, id]);
 
+  const fetchData = useCallback(async () => {
+    setIsLoading(true);
     try {
-      const url = query + id;
-      setIsLoading(true);
-      const fetchData = async () => {
-        const res = await fetch(url);
-        const json = await res.json();
+      const { data } = await axios.get(url);
 
-        setData(json);
-        setIsLoading(false);
-      };
-
-      fetchData();
+      setData(data);
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
-  }, [query, id, enabled]);
+  }, [url]);
+  useEffect(() => {
+    if (!enabled) return;
+    fetchData();
+  }, [enabled, fetchData]);
 
   return [data, isLoading];
 };
@@ -36,29 +33,29 @@ export const useSearchFetch = ({ query, enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (!enabled) {
-      return;
+  const debounceTimer = useCallback(() => {
+    try {
+      setIsLoading(true);
+      const fetchData = async () => {
+        const { data } = await axios.get(query);
+
+        setData(data);
+        setIsLoading(false);
+      };
+
+      fetchData();
+    } catch (err) {
+      console.error(err);
     }
+  }, [query]);
 
-    const debounceTimer = setTimeout(() => {
-      try {
-        setIsLoading(true);
-        const fetchData = async () => {
-          const res = await fetch(query);
-          const json = await res.json();
-
-          setData(json);
-          setIsLoading(false);
-        };
-
-        fetchData();
-      } catch (err) {
-        console.error(err);
-      }
+  useEffect(() => {
+    if (!enabled) return;
+    setTimeout(() => {
+      debounceTimer();
     }, 1000);
     return () => clearTimeout(debounceTimer);
-  }, [query, enabled]);
+  }, [debounceTimer, enabled]);
 
   return [data, isLoading];
 };
