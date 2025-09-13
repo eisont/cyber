@@ -2,17 +2,18 @@ import { LogoSVG } from '@/shared/assets/SVGicons';
 import { SearchSVG, CloseSVG } from '@/shared/assets/SVGicons';
 import * as S from './Header.styled';
 import { BagSVG } from '@/shared/assets/SVGicons';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { searchSlice } from '@/redux';
 import { Link, useLocation } from 'react-router-dom';
 import { MenuSVG } from '@/shared/assets/SVGicons';
+import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks/useFetchHooks';
 
 const Header = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const pathname = location.pathname;
-  const userInfo = useSelector((state) => state.setUserInfo);
-  console.log(userInfo);
+  useTokenFetch({ enabled: true });
+  const [userInfo, _] = useUserInfoFetch({ enabled: true });
 
   return (
     <S.Wrapper>
@@ -34,14 +35,17 @@ const Header = () => {
         <S.IconBox>
           {pathname === '/products' ? <S.Icon to={'./'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'./products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
 
-          {!userInfo?.image ? (
+          {!userInfo ? (
             <S.Bt to={'./selectuser'}>유저 선택</S.Bt>
           ) : (
-            <Link to={'./selectuser'}>
-              <S.Img src={userInfo.image} alt={userInfo.username} />
-            </Link>
+            <>
+              <Link to={'./selectuser'}>
+                <S.Img src={userInfo.image} alt={userInfo.username} />
+              </Link>
+
+              <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+            </>
           )}
-          {/* <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon> */}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>
         </S.IconBox>
       </S.TotalBox>

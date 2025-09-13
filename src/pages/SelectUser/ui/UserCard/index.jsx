@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { userTokenSlice } from '@/redux';
+import { useDispatch } from 'react-redux';
+import { loginDataSlice } from '@/redux';
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -36,33 +34,13 @@ const HiddenBox = styled(Link)`
   transition: opacity 0.3s ease;
   text-decoration: none;
 `;
+
 const UserCard = (pr) => {
   const dispatch = useDispatch();
-  const [loginData, setLoginData] = useState();
-
-  const fetchUserAndNavigate = () => {
-    getUserData({ username: pr.user.username, password: pr.user.password, expiresInMins: 30 });
-  };
-  const getUserData = (value) => {
-    setLoginData(value);
-  };
-  useEffect(() => {
-    if (!loginData) return;
-    try {
-      const login = async () => {
-        const res = await axios.post('https://dummyjson.com/user/login', loginData);
-        dispatch(userTokenSlice.actions.setUser(res.data));
-      };
-      login();
-    } catch (err) {
-      console.error(err);
-    }
-  }, [dispatch, loginData]);
-
   return (
     <Wrapper>
       <Img src={pr.user.image} />
-      <HiddenBox onClick={() => fetchUserAndNavigate()} className='hiddenbox'>
+      <HiddenBox onClick={() => dispatch(loginDataSlice.actions.setLoginData({ username: pr.user.username, password: pr.user.password, expiresInMins: 30 }))} className='hiddenbox'>
         {pr.user.username}
       </HiddenBox>
     </Wrapper>

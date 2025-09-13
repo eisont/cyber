@@ -11,10 +11,6 @@ import ProductGrid from '@/shared/ui/ProductGrid';
 import SearchProducts from '@/shared/ui/SearchProducts';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import SelectUser from '@/pages/SelectUser';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { userInfoSlice } from '@/redux';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
@@ -25,27 +21,6 @@ const Wrapper = styled(FlexColBetween)`
 `;
 
 const Layout = () => {
-  const dispatch = useDispatch();
-  const userData = useSelector((state) => state.setUser);
-  console.log(userData);
-  useEffect(() => {
-    try {
-      const userInfo = async () => {
-        if (userData?.accessToken) {
-          const result = await axios.get('https://dummyjson.com/user/me', {
-            headers: {
-              Authorization: `Bearer ${userData.accessToken}`,
-            },
-          });
-          dispatch(userInfoSlice.actions.setUserInfo(result.data));
-        }
-      };
-      userInfo();
-    } catch (err) {
-      console.error(err);
-    }
-  }, [userData.accessToken, dispatch]);
-
   return (
     <Wrapper>
       <Header />

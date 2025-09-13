@@ -1,4 +1,7 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { userTokenSlice } from '@/redux';
 
 export const useFetch = ({ query, id = '', enabled = true }) => {
   const [data, setData] = useState([]);
@@ -58,4 +61,49 @@ export const useSearchFetch = ({ query, enabled = true }) => {
   }, [query, enabled]);
 
   return [data, isLoading];
+};
+
+export const useTokenFetch = ({ enabled = true }) => {
+  const loginData = useSelector((state) => state.loginData);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!enabled || !loginData.username) return;
+    try {
+      const fetchData = async () => {
+        const res = await axios.post('https://dummyjson.com/user/login', loginData);
+        dispatch(userTokenSlice.actions.setUserToken(res.data));
+      };
+      fetchData();
+    } catch (err) {
+      console.error(err);
+    }
+  }, [dispatch, loginData, enabled]);
+};
+
+export const useUserInfoFetch = ({ enabled = true }) => {
+  const token = useSelector((s) => s.userToken?.accessToken);
+  const [userInfo, setUserInfo] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!enabled || !token) return;
+    try {
+      const userInfo = async () => {
+        setIsLoading(true);
+        const res = await axios.get('https://dummyjson.com/user/me', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setUserInfo(res.data);
+        setIsLoading(false);
+      };
+      userInfo();
+    } catch (err) {
+      console.error(err);
+    }
+  }, [enabled, token]);
+
+  return [userInfo, isLoading];
 };
