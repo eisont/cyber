@@ -21,9 +21,27 @@ export const searchSlice = createSlice({
   },
 });
 
+export const loginDataSlice = createSlice({
+  name: 'loginData',
+  initialState: {},
+  reducers: {
+    setLoginData: (_, { payload }) => payload,
+  },
+});
+
+export const userTokenSlice = createSlice({
+  name: 'userInfo',
+  initialState: {},
+  reducers: {
+    setUserToken: (_, { payload }) => payload, // 전체 객체 교체
+  },
+});
+
 export const store = configureStore({
   reducer: {
     productId: productIdSlice.reducer,
     setSearchData: searchSlice.reducer,
+    loginData: loginDataSlice.reducer,
+    userToken: userTokenSlice.reducer,
   },
 });

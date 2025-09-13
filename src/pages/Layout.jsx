@@ -10,6 +10,7 @@ import styled from '@emotion/styled';
 import ProductGrid from '@/shared/ui/ProductGrid';
 import SearchProducts from '@/shared/ui/SearchProducts';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import SelectUser from '@/pages/SelectUser';
 
 const Wrapper = styled(FlexColBetween)`
   align-items: stretch;
@@ -40,6 +41,8 @@ const Layout = () => {
         <Route path='/category/:id?' element={<Category />} />
 
         <Route path='/products' element={<SearchProducts />} />
+
+        <Route path='/selectuser' element={<SelectUser />} />
       </Routes>
       <Footer />
     </Wrapper>
