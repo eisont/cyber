@@ -41,7 +41,7 @@ const Header = () => {
                 <S.Img src={userInfo.image} alt={userInfo.username} />
               </Link>
 
-              <S.Icon to={`./${userInfo.username}/cart`}>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+              <S.Icon to={`./${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
             </>
           )}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>

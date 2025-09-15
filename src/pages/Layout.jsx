@@ -11,7 +11,7 @@ import ProductGrid from '@/shared/ui/ProductGrid';
 import SearchProducts from '@/shared/ui/SearchProducts';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import SelectUser from '@/pages/SelectUser';
-import UserPage from './User';
+import MyPage from './Mypage';
 import { useSelector } from 'react-redux';
 
 const Wrapper = styled(FlexColBetween)`
@@ -48,7 +48,7 @@ const Layout = () => {
 
         <Route path='/selectuser' element={<SelectUser />} />
 
-        <Route path={`/${userInfo.username}/cart`} element={<UserPage />} />
+        <Route path={`/${userInfo.username}`} element={<MyPage />} />
       </Routes>
       <Footer />
     </Wrapper>
