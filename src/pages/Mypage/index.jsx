@@ -29,7 +29,7 @@ const MyPage = () => {
               <SystemCard user={userInfo} />
             </>
           )}
-          {!toggle && <CartCard />}
+          {!toggle && <CartCard user={userInfo} />}
         </div>
       </S.Grid>
     </S.Wrapper>
