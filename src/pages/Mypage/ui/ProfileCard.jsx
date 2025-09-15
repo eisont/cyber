@@ -1,6 +1,6 @@
 // ProfileCard.jsx
 import * as S from '../MyPage.styled';
-export default function ProfileCard({ user }) {
+export default function ProfileCard({ user, setToggle }) {
   return (
     <S.Card>
       <S.Stack>
@@ -16,6 +16,11 @@ export default function ProfileCard({ user }) {
           </div>
         </div>
       </S.Stack>
+
+      <S.NavButtons>
+        <S.Button onClick={() => setToggle(true)}>마이페이지</S.Button>
+        <S.Button onClick={() => setToggle(false)}>장바구니</S.Button>
+      </S.NavButtons>
     </S.Card>
   );
 }

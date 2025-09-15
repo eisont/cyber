@@ -7,24 +7,29 @@ import FinanceCard from '@/pages/Mypage/ui/FinanceCard';
 import SystemCard from '@/pages/Mypage/ui/SystemCard';
 import { useSelector } from 'react-redux';
 import CartCard from '@/pages/Mypage/ui/Cart';
+import { useState } from 'react';
 
 // props로 user 주입 or 전역(store)에서 select
 const MyPage = () => {
   const userInfo = useSelector((state) => state.userInfo);
-
+  const [toggle, setToggle] = useState(false);
   return (
     <S.Wrapper>
       <S.Grid>
         <div>
-          <ProfileCard user={userInfo} />
+          <ProfileCard user={userInfo} setToggle={setToggle} />
         </div>
         <div>
-          <PersonalCard user={userInfo} />
-          <AddressCard user={userInfo} />
-          <WorkEduCard user={userInfo} />
-          <FinanceCard user={userInfo} />
-          <SystemCard user={userInfo} />
-          <CartCard />
+          {toggle && (
+            <>
+              <PersonalCard user={userInfo} />
+              <AddressCard user={userInfo} />
+              <WorkEduCard user={userInfo} />
+              <FinanceCard user={userInfo} />
+              <SystemCard user={userInfo} />
+            </>
+          )}
+          {!toggle && <CartCard />}
         </div>
       </S.Grid>
     </S.Wrapper>
