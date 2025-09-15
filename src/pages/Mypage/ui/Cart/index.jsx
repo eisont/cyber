@@ -40,21 +40,21 @@ const Summary = styled.div`
 `;
 
 export default function CartCard() {
-  const [data] = useFetch({ query: `https://dummyjson.com/carts/${1}`, enabled: true });
+  const [data] = useFetch({ query: `https://dummyjson.com/carts/${9}`, enabled: true });
   const itemList = data?.products;
 
-  const totalQty = itemList.reduce((sum, it) => sum + (it.qty ?? 1), 0);
-  const totalPrice = itemList.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
+  const totalQty = itemList?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
+  const totalPrice = itemList?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
 
   return (
     <S.Card>
       <S.Title>장바구니</S.Title>
 
-      {itemList.length === 0 ? (
+      {itemList?.length === 0 ? (
         <div>장바구니가 비어 있어요.</div>
       ) : (
         <>
-          {itemList.map((it) => (
+          {itemList?.map((it) => (
             <ItemRow key={it.id}>
               <Thumb src={it.thumbnail} alt={it.title} />
               <div>
@@ -63,13 +63,13 @@ export default function CartCard() {
                   수량 {it.qty ?? 1} · 개당 ${it.price?.toLocaleString?.() ?? it.price}
                 </div>
               </div>
-              <Price>${((it.price ?? 0) * (it.qty ?? 1)).toLocaleString()}</Price>
+              <Price>${((it.price ?? 0) * (it.qty ?? 1))?.toLocaleString()}</Price>
             </ItemRow>
           ))}
 
           <Summary>
             <div>총 {totalQty}개</div>
-            <div>${totalPrice.toLocaleString()}</div>
+            <div>${totalPrice?.toLocaleString()}</div>
           </Summary>
         </>
       )}
