@@ -68,8 +68,14 @@ npm run build
 ```
 ---
 ## 📸 스크린샷
+<img width="600" alt="mainpage" src="https://github.com/user-attachments/assets/7729f3cf-a795-4891-a538-3f67afb58de8" />
+<img width="500" alt="categorypage" src="https://github.com/user-attachments/assets/15bb4aed-941a-4c1f-ba4c-1b0818fa0e4b" />
+<img width="500" alt="productdetail" src="https://github.com/user-attachments/assets/88e09292-53e8-4ccd-b1cd-80fd0a2aa9c2" />
+<img width="500" alt="search" src="https://github.com/user-attachments/assets/abeaeea5-1fe2-4bc4-a042-c26f0d4c0a4b" />
+<img width="500" alt="userselect" src="https://github.com/user-attachments/assets/7e104f15-1ce2-4e12-9b88-79bf5c2ca44f" />
+<img width="500" alt="mypage" src="https://github.com/user-attachments/assets/2317798a-77be-44f1-bc8b-f165275ae7a3" />
+<img width="500" alt="cart" src="https://github.com/user-attachments/assets/54d48a81-16ab-4ed2-a2d6-d9b2ffdf0b82" />
 
->추후 screenshots/ 폴더에 이미지 추가 예정
 ---
 ## 🧪 버전 관리
 
