@@ -2,18 +2,16 @@ import { LogoSVG } from '@/shared/assets/SVGicons';
 import { SearchSVG, CloseSVG } from '@/shared/assets/SVGicons';
 import * as S from './Header.styled';
 import { BagSVG } from '@/shared/assets/SVGicons';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { searchSlice } from '@/redux';
 import { Link, useLocation } from 'react-router-dom';
 import { MenuSVG } from '@/shared/assets/SVGicons';
-import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks/useFetchHooks';
 
 const Header = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const pathname = location.pathname;
-  useTokenFetch({ enabled: true });
-  const [userInfo, _] = useUserInfoFetch({ enabled: true });
+  const userInfo = useSelector((state) => state.userInfo);
 
   return (
     <S.Wrapper>
@@ -43,7 +41,7 @@ const Header = () => {
                 <S.Img src={userInfo.image} alt={userInfo.username} />
               </Link>
 
-              <S.Icon>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+              <S.Icon to={`./${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
             </>
           )}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>

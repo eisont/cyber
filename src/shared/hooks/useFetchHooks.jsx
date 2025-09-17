@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userTokenSlice } from '@/redux';
 
@@ -7,27 +7,24 @@ export const useFetch = ({ query, id = '', enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (!enabled) {
-      return;
-    }
+  const url = useMemo(() => query + id, [query, id]);
 
+  const fetchData = useCallback(async () => {
+    setIsLoading(true);
     try {
-      const url = query + id;
-      setIsLoading(true);
-      const fetchData = async () => {
-        const res = await fetch(url);
-        const json = await res.json();
+      const { data } = await axios.get(url);
 
-        setData(json);
-        setIsLoading(false);
-      };
-
-      fetchData();
+      setData(data);
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
-  }, [query, id, enabled]);
+  }, [url]);
+  useEffect(() => {
+    if (!enabled) return;
+    fetchData();
+  }, [enabled, fetchData]);
 
   return [data, isLoading];
 };
@@ -36,64 +33,46 @@ export const useSearchFetch = ({ query, enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (!enabled) {
-      return;
-    }
-
-    const debounceTimer = setTimeout(() => {
-      try {
-        setIsLoading(true);
-        const fetchData = async () => {
-          const res = await fetch(query);
-          const json = await res.json();
-
-          setData(json);
-          setIsLoading(false);
-        };
-
-        fetchData();
-      } catch (err) {
-        console.error(err);
-      }
-    }, 1000);
-    return () => clearTimeout(debounceTimer);
-  }, [query, enabled]);
-
-  return [data, isLoading];
-};
-
-export const useTokenFetch = ({ enabled = true }) => {
-  const loginData = useSelector((state) => state.loginData);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (!enabled || !loginData.username) return;
+  const debounceTimer = useCallback(() => {
     try {
+      setIsLoading(true);
       const fetchData = async () => {
-        const res = await axios.post('https://dummyjson.com/user/login', loginData);
-        dispatch(userTokenSlice.actions.setUserToken(res.data));
+        const { data } = await axios.get(query);
+
+        setData(data);
+        setIsLoading(false);
       };
+
       fetchData();
     } catch (err) {
       console.error(err);
     }
-  }, [dispatch, loginData, enabled]);
+  }, [query]);
+
+  useEffect(() => {
+    if (!enabled) return;
+    setTimeout(() => {
+      debounceTimer();
+    }, 1000);
+    return () => clearTimeout(debounceTimer);
+  }, [debounceTimer, enabled]);
+
+  return [data, isLoading];
 };
 
 export const useUserInfoFetch = ({ enabled = true }) => {
-  const token = useSelector((s) => s.userToken?.accessToken);
+  const accessToken = useSelector((s) => s.userToken?.accessToken);
   const [userInfo, setUserInfo] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!enabled || !token) return;
+    if (!enabled || !accessToken) return;
     try {
       const userInfo = async () => {
         setIsLoading(true);
         const res = await axios.get('https://dummyjson.com/user/me', {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${accessToken}`,
           },
         });
         setUserInfo(res.data);
@@ -103,7 +82,24 @@ export const useUserInfoFetch = ({ enabled = true }) => {
     } catch (err) {
       console.error(err);
     }
-  }, [enabled, token]);
+  }, [enabled, accessToken]);
 
   return [userInfo, isLoading];
+};
+
+export const useTokenFetch = ({ query, body, enabled = true }) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!enabled || !body) return;
+    try {
+      const fetchData = async () => {
+        const res = await axios.post(query, body);
+        dispatch(userTokenSlice.actions.setUserToken(res.data));
+      };
+      fetchData();
+    } catch (err) {
+      console.error(err);
+    }
+  }, [body, query, dispatch, enabled]);
 };
