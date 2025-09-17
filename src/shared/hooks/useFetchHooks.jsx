@@ -60,37 +60,19 @@ export const useSearchFetch = ({ query, enabled = true }) => {
   return [data, isLoading];
 };
 
-export const useTokenFetch = ({ enabled = true }) => {
-  const loginData = useSelector((state) => state.loginData);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (!enabled || !loginData.username) return;
-    try {
-      const fetchData = async () => {
-        const res = await axios.post('https://dummyjson.com/user/login', loginData);
-        dispatch(userTokenSlice.actions.setUserToken(res.data));
-      };
-      fetchData();
-    } catch (err) {
-      console.error(err);
-    }
-  }, [dispatch, loginData, enabled]);
-};
-
 export const useUserInfoFetch = ({ enabled = true }) => {
-  const token = useSelector((s) => s.userToken?.accessToken);
+  const accessToken = useSelector((s) => s.userToken?.accessToken);
   const [userInfo, setUserInfo] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!enabled || !token) return;
+    if (!enabled || !accessToken) return;
     try {
       const userInfo = async () => {
         setIsLoading(true);
         const res = await axios.get('https://dummyjson.com/user/me', {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${accessToken}`,
           },
         });
         setUserInfo(res.data);
@@ -100,7 +82,24 @@ export const useUserInfoFetch = ({ enabled = true }) => {
     } catch (err) {
       console.error(err);
     }
-  }, [enabled, token]);
+  }, [enabled, accessToken]);
 
   return [userInfo, isLoading];
+};
+
+export const useTokenFetch = ({ query, body, enabled = true }) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!enabled || !body) return;
+    try {
+      const fetchData = async () => {
+        const res = await axios.post(query, body);
+        dispatch(userTokenSlice.actions.setUserToken(res.data));
+      };
+      fetchData();
+    } catch (err) {
+      console.error(err);
+    }
+  }, [body, query, dispatch, enabled]);
 };

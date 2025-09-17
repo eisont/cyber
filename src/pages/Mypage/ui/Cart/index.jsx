@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import * as S from '@/pages/Mypage/MyPage.styled';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ItemRow = styled.div`
   display: grid;
@@ -39,20 +40,21 @@ const Summary = styled.div`
 `;
 
 export default function CartCard() {
-  const items = [];
+  const [data] = useFetch({ query: `https://dummyjson.com/carts/${9}`, enabled: true });
+  const itemList = data?.products;
 
-  const totalQty = items.reduce((sum, it) => sum + (it.qty ?? 1), 0);
-  const totalPrice = items.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
+  const totalQty = itemList?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
+  const totalPrice = itemList?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
 
   return (
     <S.Card>
       <S.Title>장바구니</S.Title>
 
-      {items.length === 0 ? (
+      {itemList?.length === 0 ? (
         <div>장바구니가 비어 있어요.</div>
       ) : (
         <>
-          {items.map((it) => (
+          {itemList?.map((it) => (
             <ItemRow key={it.id}>
               <Thumb src={it.thumbnail} alt={it.title} />
               <div>
@@ -61,38 +63,16 @@ export default function CartCard() {
                   수량 {it.qty ?? 1} · 개당 ${it.price?.toLocaleString?.() ?? it.price}
                 </div>
               </div>
-              <Price>${((it.price ?? 0) * (it.qty ?? 1)).toLocaleString()}</Price>
+              <Price>${((it.price ?? 0) * (it.qty ?? 1))?.toLocaleString()}</Price>
             </ItemRow>
           ))}
 
           <Summary>
             <div>총 {totalQty}개</div>
-            <div>${totalPrice.toLocaleString()}</div>
+            <div>${totalPrice?.toLocaleString()}</div>
           </Summary>
         </>
       )}
     </S.Card>
   );
 }
-
-// const addCart = async () => {
-//   try {
-//     // 장바구니 추가
-//     const fetchData = await axios.post('https://dummyjson.com/carts/add', {
-//       userId: userInfo.id,
-//       products: [
-//         {
-//           id: 144,
-//           quantity: 4,
-//         },
-//       ],
-//     });
-//     // 장바구니 조회
-//     const userCart = await axios.get(`https://dummyjson.com/carts/user/${userInfo.id}`);
-//     setTest(userCart);
-//     fetchData();
-//   } catch (err) {
-//     console.error(err);
-//   }
-//   console.log('test', test);
-// };
