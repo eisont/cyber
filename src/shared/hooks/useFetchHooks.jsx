@@ -91,7 +91,7 @@ export const useTokenFetch = ({ query, body, enabled = true }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!enabled || !body) return;
+    if (!enabled || !body.username) return;
     try {
       const fetchData = async () => {
         const res = await axios.post(query, body);
