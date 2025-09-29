@@ -2,8 +2,11 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)`
+  position: relative;
+
   margin: 10px 0;
   width: 266px;
   height: 432px;
@@ -16,6 +19,24 @@ export const Wrapper = styled(FlexCenter)`
     width: 163px;
     height: 322px;
   }
+`;
+export const SoldOutBox = styled.div`
+  position: absolute;
+
+  width: 266px;
+  height: 432px;
+  border-radius: 10px;
+  background: rgb(246, 246, 246, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  cursor: default;
+
+  left: 0;
+  top: 0;
 `;
 
 export const MainBox = styled(FlexColBetween)`
@@ -31,13 +52,17 @@ export const IconBox = styled.div`
   width: 234px;
   height: 32px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
     width: 90%;
     height: 20px;
   }
 `;
+
+export const FlexBox = styled(FlexBetween)``;
+
 export const CartIcon = styled(FlexCenter)`
   transition: 0.3s;
 
@@ -68,6 +93,7 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.div`
+  font-size: 18px;
   font-weight: 500;
   cursor: default;
 
@@ -75,9 +101,20 @@ export const Title = styled.div`
     font-size: 12px;
   }
 `;
+export const PriceBox = styled.div`
+  display: flex;
+`;
+export const DiscountPercent = styled.div`
+  margin: 0 5px 0 0;
+  color: gray;
+  font-size: 18px;
+`;
 export const Price = styled.div`
+  text-decoration: line-through;
+`;
+export const DiscountedPrice = styled.div`
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
   cursor: default;
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
@@ -88,7 +125,7 @@ export const Price = styled.div`
 export const Button = styled(Link)`
   width: 188px;
   height: 48px;
-  font-size: 14px;
+  font-size: 16px;
 
   border-radius: 8px;
   background: #000;
