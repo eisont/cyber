@@ -10,7 +10,7 @@ import * as S from './Category.styled';
 
 const Category = () => {
   const params = useParams();
-  const [Itemdata] = useFetch({ query: 'https://dummyjson.com/products/', id: params.id });
+  const [ItemData] = useFetch({ query: 'https://dummyjson.com/products/', id: params.id });
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -26,13 +26,13 @@ const Category = () => {
           <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
           <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
           <S.ProductAllMenu to='/category' params={params.id}>
-            {!Itemdata.Category && ToUpper(productId)}
+            {!ItemData.Category && ToUpper(productId)}
           </S.ProductAllMenu>
 
           {pathname === `/category/${params.id}` && (
             <>
               <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-              <S.ProductItemMenu params={params.id}>{Itemdata.title}</S.ProductItemMenu>
+              <S.ProductItemMenu params={params.id}>{ItemData.title}</S.ProductItemMenu>
             </>
           )}
         </S.Category>
@@ -47,7 +47,7 @@ const Category = () => {
 
           {pathname === `/category/${params.id}` && (
             <S.SideItem>
-              <ProductItemDetail data={Itemdata} />
+              <ProductItemDetail ItemData={ItemData} />
               <ProductGrid />
             </S.SideItem>
           )}

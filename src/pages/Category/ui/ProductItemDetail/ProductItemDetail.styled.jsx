@@ -44,11 +44,31 @@ export const SubTitle = styled.div`
 `;
 
 export const ContentBox = styled.div`
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const ImgBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const ProductImg = styled.img`
+  padding: 20px;
+  transform: scale(1.2);
+  /* background: rgb(128, 128, 128, 0.1); */
+
+  height: 500px;
+`;
+export const SubBox = styled.div`
   display: flex;
   align-items: center;
 `;
-export const ProductImg = styled.img`
-  height: 500px;
+export const SubImg = styled.img`
+  height: 100px;
+  border: 1px solid red;
 `;
 
 // ============================================
