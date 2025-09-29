@@ -33,7 +33,7 @@ const ProductItem = (pr) => {
           </>
         )}
 
-        <S.Button to={`/category/${pr.itemData?.id}`}>Buy Now</S.Button>
+        <S.Button to={`/category/${pr.itemData?.id}`}>Detail</S.Button>
       </S.MainBox>
     </S.Wrapper>
   );

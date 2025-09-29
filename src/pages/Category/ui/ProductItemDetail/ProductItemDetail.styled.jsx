@@ -95,9 +95,6 @@ const Bt = styled(FlexCenter)`
     font-weight: 600;
   }
 `;
-export const SellBt = styled(Bt)`
-  margin: 0 20px 0 0;
-`;
 export const CartBt = styled(Bt)``;
 
 export const Description = styled.div`
