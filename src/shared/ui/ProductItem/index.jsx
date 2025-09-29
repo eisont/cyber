@@ -10,6 +10,7 @@ const ProductItem = (pr) => {
 
   return (
     <S.Wrapper>
+      {pr.itemData.stock === 0 && <S.SoldOutBox>SoldOut</S.SoldOutBox>}
       <S.MainBox>
         <S.IconBox>
           <S.CartIcon onClick={() => setToggle((pr) => !pr)}>

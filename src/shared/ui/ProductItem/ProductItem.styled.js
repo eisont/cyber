@@ -4,6 +4,8 @@ import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled'
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled(FlexCenter)`
+  position: relative;
+
   margin: 10px 0;
   width: 266px;
   height: 432px;
@@ -16,6 +18,24 @@ export const Wrapper = styled(FlexCenter)`
     width: 163px;
     height: 322px;
   }
+`;
+export const SoldOutBox = styled.div`
+  position: absolute;
+
+  width: 266px;
+  height: 432px;
+  border-radius: 10px;
+  background: rgb(246, 246, 246, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+  cursor: default;
+
+  left: 0;
+  top: 0;
 `;
 
 export const MainBox = styled(FlexColBetween)`
