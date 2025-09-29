@@ -6,10 +6,10 @@ const Wrapper = styled(FlexCenter)`
   width: 100%;
 `;
 const Background = styled(FlexCenter)`
-  width: 1440px;
+  width: 90%;
   height: 447px;
 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url('img/HeroBanner/SeasonalSaleBanner.webp');
 

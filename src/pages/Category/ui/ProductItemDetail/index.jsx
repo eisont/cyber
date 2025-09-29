@@ -55,7 +55,6 @@ const ProductItemDetail = (pr) => {
               <S.Tt>보증정보: {pr.data.warrantyInformation}</S.Tt>
             </div>
             <S.FlexBox>
-              <S.SellBt>구매하기</S.SellBt>
               <S.CartBt>장바구니 담기</S.CartBt>
             </S.FlexBox>
           </S.RBox>
