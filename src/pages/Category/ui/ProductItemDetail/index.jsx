@@ -1,61 +1,67 @@
 import { OriginalPrice } from '@/shared/lib';
 import * as S from './ProductItemDetail.styled';
+import { useParams } from 'react-router-dom';
+import { useProductFetch } from '@/shared/hooks/useFetchHooks';
 
-const ProductItemDetail = (pr) => {
+const ProductItemDetail = () => {
+  const params = useParams();
+
+  const [ItemData] = useProductFetch({ endPoint: params.id, enabled: true });
+
   return (
     <S.Wrapper>
       <S.MainBox>
-        <S.Title>{pr.ItemData.title}</S.Title>
+        <S.Title>{ItemData.title}</S.Title>
         <S.TagsBox>
-          {pr.ItemData.tags?.map((el) => (
+          {ItemData.tags?.map((el) => (
             <S.Tags key={el}>#{el}</S.Tags>
           ))}
         </S.TagsBox>
         <S.SubTitleBox>
           <S.SubTitle>
-            <S.Text>브랜드:</S.Text> {pr.ItemData.brand || '없음'}
+            <S.Text>브랜드:</S.Text> {ItemData.brand || '없음'}
           </S.SubTitle>
           <S.SubTitle>
-            <S.Text>카테고리:</S.Text> {pr.ItemData.category}
+            <S.Text>카테고리:</S.Text> {ItemData.category}
           </S.SubTitle>
           <S.SubTitle>
-            <S.Text>SKU:</S.Text> {pr.ItemData.sku}
+            <S.Text>SKU:</S.Text> {ItemData.sku}
           </S.SubTitle>
         </S.SubTitleBox>
 
         <S.ContentBox>
           <S.ImgBox>
-            <S.ProductImg src={pr.ItemData.thumbnail} alt='thumbnail' />
-            <S.SubBox>{pr.ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox>
+            <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />
+            <S.SubBox>{ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox>
           </S.ImgBox>
 
           <S.RBox>
             <div>
               <S.FlexBox>
-                <S.OriginalPrice>${OriginalPrice(pr.ItemData)}</S.OriginalPrice>
-                <S.DiscountPercentage>-{pr.ItemData.discountPercentage}%</S.DiscountPercentage>
+                <S.OriginalPrice>${OriginalPrice({ price: ItemData.price, discountPercentage: ItemData.discountPercentage })}</S.OriginalPrice>
+                <S.DiscountPercentage>-{ItemData.discountPercentage}%</S.DiscountPercentage>
               </S.FlexBox>
-              <S.Price>${pr.ItemData.price}</S.Price>
+              <S.Price>${ItemData.price}</S.Price>
               <S.FlexBox>
                 <S.Tt>
-                  <S.Text>재고:</S.Text> {pr.ItemData.stock}
+                  <S.Text>재고:</S.Text> {ItemData.stock}
                 </S.Tt>
                 <S.Tt>
-                  <S.Text>상태:</S.Text> {pr.ItemData.availabilityStatus}
+                  <S.Text>상태:</S.Text> {ItemData.availabilityStatus}
                 </S.Tt>
               </S.FlexBox>
               <S.Tt>
-                <S.Text>평점:</S.Text>⭐️ {pr.ItemData.rating}
+                <S.Text>평점:</S.Text>⭐️ {ItemData.rating}
               </S.Tt>
 
-              <S.Description>{pr.ItemData.description}</S.Description>
+              <S.Description>{ItemData.description}</S.Description>
               <S.Tt>
-                크기: W: {pr.ItemData.dimensions?.width} x H: {pr.ItemData.dimensions?.height} x D: {pr.ItemData.dimensions?.depth}
+                크기: W: {ItemData.dimensions?.width} x H: {ItemData.dimensions?.height} x D: {ItemData.dimensions?.depth}
               </S.Tt>
-              <S.Tt>무게: {pr.ItemData.weight}kg</S.Tt>
-              <S.Tt>배송정보: {pr.ItemData.shippingInformation}</S.Tt>
-              <S.Tt>반품정보: {pr.ItemData.returnPolicy}</S.Tt>
-              <S.Tt>보증정보: {pr.ItemData.warrantyInformation}</S.Tt>
+              <S.Tt>무게: {ItemData.weight}kg</S.Tt>
+              <S.Tt>배송정보: {ItemData.shippingInformation}</S.Tt>
+              <S.Tt>반품정보: {ItemData.returnPolicy}</S.Tt>
+              <S.Tt>보증정보: {ItemData.warrantyInformation}</S.Tt>
             </div>
             <S.FlexBox>
               <S.CartBt>장바구니 담기</S.CartBt>
