@@ -29,9 +29,11 @@ export const useFetch = ({ resource, endPoint = '', suffix = '?&select=', params
   return [data, isLoading];
 };
 
-export const useSearchFetch = ({ query, enabled = true }) => {
+export const useSearchFetch = ({ searchData, enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const query = `https://dummyjson.com/products/search?q=${searchData}`;
 
   const debounceTimer = useCallback(() => {
     try {

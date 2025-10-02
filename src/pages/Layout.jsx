@@ -8,7 +8,7 @@ import Category from '@/pages/Category';
 import { FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 import ProductGrid from '@/shared/ui/ProductGrid';
-import SearchProducts from '@/shared/ui/SearchProducts';
+import SearchProducts from '@/pages/SearchProducts';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import SelectUser from '@/pages/SelectUser';
 import MyPage from './Mypage';

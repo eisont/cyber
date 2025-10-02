@@ -26,7 +26,7 @@ export const MainBox = styled(FlexCenter)`
 
 const SearchProducts = () => {
   const searchData = useSelector((state) => state.setSearchData);
-  const [data, ProductListisLoading] = useSearchFetch({ query: `https://dummyjson.com/products/search?q=${searchData}` });
+  const [data, ProductListisLoading] = useSearchFetch({ searchData, enabled: true });
   const ProductListData = data.products;
 
   return (
@@ -35,7 +35,7 @@ const SearchProducts = () => {
         {ProductListData?.length && !ProductListisLoading ? (
           <>
             {ProductListData?.map((el) => (
-              <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
+              <ProductItem key={el.id} ItemData={el} isLoading={ProductListisLoading} />
             ))}
           </>
         ) : ProductListData?.length || ProductListisLoading ? (
