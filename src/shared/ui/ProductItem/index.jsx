@@ -11,12 +11,12 @@ const ProductItem = (pr) => {
 
   return (
     <S.Wrapper>
-      {pr.itemData.stock === 0 && <S.SoldOutBox>SoldOut</S.SoldOutBox>}
+      {pr.ItemData?.stock === 0 && <S.SoldOutBox>SoldOut</S.SoldOutBox>}
       <S.MainBox>
         <S.IconBox>
           <S.FlexBox>
-            <div>⭐️{pr.itemData.rating}</div>
-            <div style={{ marginLeft: '10px' }}>({pr.itemData.reviews.length})</div>
+            <div>⭐️{pr.ItemData?.rating}</div>
+            <div style={{ marginLeft: '10px' }}>({pr.ItemData?.reviews.length})</div>
           </S.FlexBox>
           <S.CartIcon onClick={() => setToggle((pr) => !pr)}>
             {toggle ? <>{AddToCartSVG({ size: '24', color: '#292d32', insideColor: 'yellowgreen' })} </> : <> {EmptyCartSVG({ size: '24', color: '#292d32' })} </>}
@@ -33,17 +33,17 @@ const ProductItem = (pr) => {
           </>
         ) : (
           <>
-            <S.Img ref={ref} data-src={pr.itemData?.thumbnail} src={pr.itemData?.thumbnail} alt='thumbnail' />
-            <S.Title>{pr.itemData.title}</S.Title>
+            <S.Img ref={ref} data-src={pr.ItemData?.thumbnail} src={pr.ItemData?.thumbnail} alt='thumbnail' />
+            <S.Title>{pr.ItemData?.title}</S.Title>
             <S.PriceBox>
-              <S.DiscountPercent>{pr.itemData.discountPercentage}%</S.DiscountPercent>
-              <S.Price>${OriginalPrice(pr.itemData)}</S.Price>
+              <S.DiscountPercent>{pr.ItemData?.discountPercentage}%</S.DiscountPercent>
+              <S.Price>{OriginalPrice({ price: pr.ItemData?.price, discountPercentage: pr.ItemData?.discountPercentage })}</S.Price>
             </S.PriceBox>
-            <S.DiscountedPrice>$ {pr.itemData.price}</S.DiscountedPrice>
+            <S.DiscountedPrice>$ {pr.ItemData?.price}</S.DiscountedPrice>
           </>
         )}
 
-        <S.Button to={`/category/${pr.itemData?.id}`}>Detail</S.Button>
+        <S.Button to={`/category/${pr.ItemData?.id}`}>Detail</S.Button>
       </S.MainBox>
     </S.Wrapper>
   );

@@ -5,7 +5,7 @@ import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
-  const [data] = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+  const [data] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
   const ProductListData = data.products;
 
   return (
@@ -14,17 +14,13 @@ const ProductsBox = () => {
         <S.ProductsCount>
           Selected Products: <S.Count>{ProductListData ? ProductListData.length : 0}</S.Count>
         </S.ProductsCount>
-
-        {/* <S.SeleteBox name='Dropdown'>
-          <option value=''>By rating</option>
-        </S.SeleteBox> */}
       </S.FlexBox>
 
       <S.ProductsBox>
         {ProductListData && (
           <>
             {ProductListData.map((el) => (
-              <ProductItem key={el.id} itemData={el} />
+              <ProductItem key={el.id} ItemData={el} />
             ))}
           </>
         )}
