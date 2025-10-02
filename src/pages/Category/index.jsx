@@ -7,6 +7,7 @@ import ProductGrid from '@/shared/ui/ProductGrid';
 import ProductsBox from '@/shared/ui/ProductsBox';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import * as S from './Category.styled';
+import { DumText } from '@/shared/assets/styled/skelepton';
 
 const Category = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const Category = () => {
 
   const params = useParams();
 
-  const [ItemTitleData] = useFetch({ resource: 'products', endPoint: params.id, params: 'title', enabled: true });
+  const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: params.id, params: 'title', enabled: true });
 
   const productId = useSelector((state) => state.productId);
 
@@ -30,7 +31,12 @@ const Category = () => {
             {ToUpper(productId)}
           </S.ProductAllMenu>
 
-          {pathname === `/category/${params.id}` && (
+          {isLoading && pathname === `/category/${params.id}` ? (
+            <>
+              <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
+              <DumText width='160px' height='10px' />
+            </>
+          ) : (
             <>
               <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
               <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>

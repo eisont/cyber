@@ -16,8 +16,8 @@ export const DumBox = styled.div`
 `;
 
 export const DumImg = styled.div`
-  width: 160px;
-  height: 160px;
+  width: ${(pr) => pr.width};
+  height: ${(pr) => pr.height};
   background: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: pulse 1.5s infinite ease-in-out;
@@ -28,8 +28,8 @@ export const DumImg = styled.div`
   }
 `;
 export const DumText = styled.div`
-  width: 160px;
-  height: 15px;
+  width: ${(pr) => pr.width};
+  height: ${(pr) => pr.height};
   background: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
   animation: pulse 1.5s infinite ease-in-out;

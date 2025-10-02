@@ -27,9 +27,9 @@ const ProductItem = (pr) => {
         </S.IconBox>
         {pr.isLoading ? (
           <>
-            <DumImg />
-            <DumText />
-            <DumText style={{ width: '100px' }} />
+            <DumImg width='160px' height='160px' />
+            <DumText width='160px' height='15px' />
+            <DumText width='100px' height='15px' />
           </>
         ) : (
           <>
