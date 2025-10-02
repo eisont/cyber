@@ -39,22 +39,22 @@ const Summary = styled.div`
   font-weight: 700;
 `;
 
-export default function CartCard() {
-  const [data] = useFetch({ query: `https://dummyjson.com/carts/${9}`, enabled: true });
-  const itemList = data?.products;
+const CartCard = () => {
+  const [data] = useFetch({ resource: 'cart', endPoint: 9, enabled: true });
+  const ItemData = data?.products;
 
-  const totalQty = itemList?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
-  const totalPrice = itemList?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
+  const totalQty = ItemData?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
+  const totalPrice = ItemData?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
 
   return (
     <S.Card>
       <S.Title>장바구니</S.Title>
 
-      {itemList?.length === 0 ? (
+      {ItemData?.length === 0 ? (
         <div>장바구니가 비어 있어요.</div>
       ) : (
         <>
-          {itemList?.map((it) => (
+          {ItemData?.map((it) => (
             <ItemRow key={it.id}>
               <Thumb src={it.thumbnail} alt={it.title} />
               <div>
@@ -75,4 +75,6 @@ export default function CartCard() {
       )}
     </S.Card>
   );
-}
+};
+
+export default CartCard;

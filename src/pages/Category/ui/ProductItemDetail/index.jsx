@@ -1,12 +1,12 @@
 import { OriginalPrice } from '@/shared/lib';
 import * as S from './ProductItemDetail.styled';
 import { useParams } from 'react-router-dom';
-import { useProductFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductItemDetail = () => {
   const params = useParams();
 
-  const [ItemData] = useProductFetch({ endPoint: params.id, enabled: true });
+  const [ItemData] = useFetch({ resource: 'products', endPoint: params.id, enabled: true });
 
   return (
     <S.Wrapper>

@@ -6,10 +6,10 @@ import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { ToUpper } from '@/shared/lib';
 
 const ProductGrid = () => {
-  const [CategoryListData] = useFetch({ query: 'https://dummyjson.com/products/category-list' });
-
   const productId = useSelector((state) => state.productId);
-  const [data, ProductListisLoading] = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+
+  const [CategoryListData] = useFetch({ resource: 'products', endPoint: 'category-list', suffix: '', enabled: true });
+  const [data, ProductListisLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
   const ProductListData = data.products;
 
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const ProductGrid = () => {
 
           <S.ProductsItemsBox>
             {ProductListData?.map((el) => (
-              <ProductItem key={el.id} itemData={el} isLoading={ProductListisLoading} />
+              <ProductItem key={el.id} ItemData={el} isLoading={ProductListisLoading} />
             ))}
           </S.ProductsItemsBox>
         </S.MainBox>

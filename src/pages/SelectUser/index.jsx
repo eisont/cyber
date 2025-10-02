@@ -3,7 +3,7 @@ import * as S from './SelectUser.styled';
 import UserCard from '@/pages/SelectUser/ui/UserCard';
 
 const SelectUser = () => {
-  const [data, isLoading] = useFetch({ query: 'https://dummyjson.com/users' });
+  const [data, isLoading] = useFetch({ resource: 'users', enabled: true });
   const usersData = data?.users;
 
   return (

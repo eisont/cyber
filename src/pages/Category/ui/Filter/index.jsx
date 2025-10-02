@@ -10,7 +10,7 @@ import { DumText } from '@/shared/assets/styled/skelepton';
 const Filter = () => {
   const [toggle, setToggle] = useState(true);
 
-  const [CategoryListData, isLoading] = useFetch({ query: 'https://dummyjson.com/products/category-list' });
+  const [CategoryListData, isLoading] = useFetch({ resource: 'products', endPoint: 'category-list', suffix: '', enabled: true });
 
   const productId = useSelector((state) => state.productId);
 

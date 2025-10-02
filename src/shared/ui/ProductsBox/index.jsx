@@ -5,7 +5,7 @@ import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
-  const [data] = useFetch({ query: 'https://dummyjson.com/products/category/', id: productId });
+  const [data] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
   const ProductListData = data.products;
 
   return (

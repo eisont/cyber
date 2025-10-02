@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userTokenSlice } from '@/redux';
 
-export const useFetch = ({ query, id = '', enabled = true }) => {
+export const useFetch = ({ resource, endPoint = '', suffix = '?&select=', params = '', enabled }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = useMemo(() => query + id, [query, id]);
+  const url = `https://dummyjson.com/${resource}/${endPoint}${suffix}${params}`;
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
