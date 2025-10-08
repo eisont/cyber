@@ -1,13 +1,16 @@
+import { lazy, Suspense } from 'react';
+import * as S from './Category.styled';
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
 import { ToUpper } from '@/shared/lib';
-import { Filter, ProductItemDetail } from '@/pages/Category/ui';
-import ProductGrid from '@/shared/ui/ProductGrid';
-import ProductsBox from '@/shared/ui/ProductsBox';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
-import * as S from './Category.styled';
 import { DumText } from '@/shared/assets/styled/skelepton';
+import Filter from '@/pages/Category/ui/Filter';
+import ProductsBox from '@/shared/ui/ProductsBox';
+import SkeleptonProductItemDetail from '@/shared/assets/skelepton/ProductItemDetail';
+const ProductItemDetail = lazy(() => import('@/pages/Category/ui/ProductItemDetail'));
+const ProductGrid = lazy(() => import('@/shared/ui/ProductGrid'));
 
 const Category = () => {
   const location = useLocation();
@@ -31,15 +34,10 @@ const Category = () => {
             {ToUpper(productId)}
           </S.ProductAllMenu>
 
-          {isLoading && pathname === `/category/${params.id}` ? (
+          {pathname === `/category/${params.id}` && (
             <>
               <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-              <DumText width='160px' height='10px' />
-            </>
-          ) : (
-            <>
-              <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-              <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>
+              {isLoading ? <DumText width='160px' height='10px' /> : <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>}
             </>
           )}
         </S.Category>
@@ -53,10 +51,18 @@ const Category = () => {
           )}
 
           {pathname === `/category/${params.id}` && (
-            <S.SideItem>
-              <ProductItemDetail />
-              <ProductGrid />
-            </S.SideItem>
+            <Suspense
+              fallback={
+                <S.SideItem>
+                  <SkeleptonProductItemDetail />
+                </S.SideItem>
+              }
+            >
+              <S.SideItem>
+                <ProductItemDetail />
+                <ProductGrid />
+              </S.SideItem>
+            </Suspense>
           )}
         </S.FlexBox>
       </S.MainWrapper>
