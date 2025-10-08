@@ -32,7 +32,7 @@ const Filter = () => {
                     .fill('')
                     .map((_, i) => (
                       <S.BrandInBox key={Number(new Date() * i)}>
-                        <DumText />
+                        <DumText width='160px' height='15px' />
                       </S.BrandInBox>
                     ))}
                 </>

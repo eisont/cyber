@@ -41,6 +41,7 @@ export const Text = styled.span`
 `;
 export const SubTitle = styled.div`
   margin: 0 12px 0 0;
+  display: flex;
 `;
 
 export const ContentBox = styled.div`
@@ -56,10 +57,7 @@ export const ImgBox = styled.div`
 `;
 
 export const ProductImg = styled.img`
-  padding: 20px;
-  transform: scale(1.2);
-  /* background: rgb(128, 128, 128, 0.1); */
-
+  margin: 20px;
   height: 500px;
 `;
 export const SubBox = styled.div`
@@ -85,18 +83,26 @@ export const Price = styled.div`
   margin: 10px 0;
   font-size: 40px;
   font-weight: 900;
+  display: flex;
+  align-items: center;
 `;
 
 export const Tt = styled.div`
   margin: 10px 10px 10px 0;
+  display: flex;
+  align-items: center;
 `;
 export const DiscountPercentage = styled.div`
   color: red;
+  display: flex;
+  align-items: center;
 `;
 export const OriginalPrice = styled.div`
   margin: 0 20px 0 0;
   font-size: 25px;
   text-decoration: line-through;
+  display: flex;
+  align-items: center;
 `;
 
 export const Stock = styled.div``;
