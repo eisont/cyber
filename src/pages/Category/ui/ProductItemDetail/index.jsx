@@ -12,17 +12,12 @@ const ProductItemDetail = () => {
   return (
     <S.Wrapper>
       <S.MainBox>
-        <S.Title>{isLoading ? <DumText width='400px' height='40px' /> : <>{ItemData.title}</>}</S.Title>
+        <S.Title>{isLoading ? <DumText width='400px' height='46px' /> : <>{ItemData.title}</>}</S.Title>
         <S.TagsBox>
           {isLoading ? (
-            <>
-              <S.Tags>
-                <DumText width='50px' height='15px' />
-              </S.Tags>
-              <S.Tags>
-                <DumText width='50px' height='15px' />
-              </S.Tags>
-            </>
+            <S.Tags>
+              <DumText width='50px' height='17px' />
+            </S.Tags>
           ) : (
             <>
               {ItemData.tags?.map((el) => (
@@ -48,7 +43,7 @@ const ProductItemDetail = () => {
         <S.ContentBox>
           <S.ImgBox>
             {isLoading ? <DumImg width='500px' height='500px' /> : <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />}
-            <S.SubBox>{ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox>
+            {/* <S.SubBox>{ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox> */}
           </S.ImgBox>
 
           <S.RBox>

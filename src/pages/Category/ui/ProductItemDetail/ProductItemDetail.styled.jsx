@@ -57,10 +57,7 @@ export const ImgBox = styled.div`
 `;
 
 export const ProductImg = styled.img`
-  padding: 20px;
-  transform: scale(1.2);
-  /* background: rgb(128, 128, 128, 0.1); */
-
+  margin: 20px;
   height: 500px;
 `;
 export const SubBox = styled.div`
