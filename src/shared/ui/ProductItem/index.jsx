@@ -36,8 +36,8 @@ const ProductItem = (pr) => {
             <S.Img ref={ref} data-src={pr.ItemData?.thumbnail} src={pr.ItemData?.thumbnail} alt='thumbnail' />
             <S.Title>{pr.ItemData?.title}</S.Title>
             <S.PriceBox>
+              <S.Price>${OriginalPrice({ price: pr.ItemData?.price, discountPercentage: pr.ItemData?.discountPercentage })}</S.Price>
               <S.DiscountPercent>{pr.ItemData?.discountPercentage}%</S.DiscountPercent>
-              <S.Price>{OriginalPrice({ price: pr.ItemData?.price, discountPercentage: pr.ItemData?.discountPercentage })}</S.Price>
             </S.PriceBox>
             <S.DiscountedPrice>$ {pr.ItemData?.price}</S.DiscountedPrice>
           </>

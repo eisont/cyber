@@ -107,14 +107,14 @@ export const PriceBox = styled.div`
 export const DiscountPercent = styled.div`
   margin: 0 5px 0 0;
   color: gray;
-  font-size: 18px;
 `;
 export const Price = styled.div`
+  margin: 0 5px 0 0;
   text-decoration: line-through;
 `;
 export const DiscountedPrice = styled.div`
-  font-weight: 600;
   font-size: 26px;
+  font-weight: 600;
   cursor: default;
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
