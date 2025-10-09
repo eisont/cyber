@@ -1,38 +1,53 @@
-import { useSelector } from 'react-redux';
-import ProductItem from '@/shared/ui/ProductItem';
-import * as S from './ProductsBox.styled';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useSelector } from 'react-redux';
+import * as S from './ProductsBox.styled';
+import ProductItem from '@/shared/ui/ProductItem';
+import RecipesItem from '@/shared/ui/RecipesItem';
 
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
-  const [data, isLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
-  const ProductListData = data.products;
+
+  const [Pdata, isLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
+  const ProductListData = Pdata.products;
+
+  const [Rdata] = useFetch({ resource: 'recipes', endPoint: '?limit=50', suffix: '', enabled: true });
+  const RecipesData = Rdata.recipes;
 
   return (
     <S.Wrapper>
       <S.FlexBox>
         <S.ProductsCount>
-          Selected Products: <S.Count>{ProductListData ? ProductListData.length : 0}</S.Count>
+          Selected Products: <S.Count>{ProductListData?.length || RecipesData?.length}</S.Count>
         </S.ProductsCount>
       </S.FlexBox>
 
-      <S.ProductsBox>
-        {isLoading ? (
-          <>
-            {Array(4)
-              .fill('')
-              .map((_, i) => (
-                <ProductItem key={i} isLoading />
+      {productId !== 'recipes' && (
+        <S.ProductsBox>
+          {isLoading ? (
+            <>
+              {Array(4)
+                .fill('')
+                .map((_, i) => (
+                  <ProductItem key={i} isLoading />
+                ))}
+            </>
+          ) : (
+            <>
+              {ProductListData.map((el) => (
+                <ProductItem key={el.id} {...el} />
               ))}
-          </>
-        ) : (
-          <>
-            {ProductListData.map((el) => (
-              <ProductItem key={el.id} {...el} />
-            ))}
-          </>
-        )}
-      </S.ProductsBox>
+            </>
+          )}
+        </S.ProductsBox>
+      )}
+
+      {productId === 'recipes' && (
+        <S.ProductsBox>
+          {RecipesData?.map((el) => (
+            <RecipesItem key={el.id} {...el} />
+          ))}
+        </S.ProductsBox>
+      )}
     </S.Wrapper>
   );
 };

@@ -17,8 +17,9 @@ export const TitleBox = styled(FlexBetween)`
   width: 256px;
 
   border-bottom: 0.5px solid #b5b5b5;
+  background: ${(pr) => pr.productId === 'recipes' && '#e8e8e8'};
 
-  :hover {
+  &:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.044);
   }
@@ -27,7 +28,8 @@ export const Title = styled.div`
   margin: 10px 0;
   font-size: 18px;
   font-weight: 500;
-  :hover {
+
+  &:hover {
     cursor: default;
   }
 `;
