@@ -20,7 +20,13 @@ const ProductGrid = () => {
     <S.Wrapper>
       <S.TotalBox>
         {isLoading ? (
-          <DumImg width='1200px' height='1060px' />
+          <>
+            {Array(4)
+              .fill('')
+              .map((_, i) => (
+                <ProductItem key={i} isLoading={ProductListisLoading} />
+              ))}
+          </>
         ) : (
           <S.MainBox>
             <S.CategoryBox>
@@ -33,7 +39,7 @@ const ProductGrid = () => {
 
             <S.ProductsItemsBox>
               {ProductListData?.map((el) => (
-                <ProductItem key={el.id} ItemData={el} isLoading={ProductListisLoading} />
+                <ProductItem key={el.id} {...el} isLoading={ProductListisLoading} />
               ))}
             </S.ProductsItemsBox>
           </S.MainBox>
