@@ -35,7 +35,7 @@ const SearchProducts = () => {
         {ProductListData?.length && !ProductListisLoading ? (
           <>
             {ProductListData?.map((el) => (
-              <ProductItem key={el.id} ItemData={el} isLoading={ProductListisLoading} />
+              <ProductItem key={el.id} {...el} isLoading={ProductListisLoading} />
             ))}
           </>
         ) : ProductListData?.length || ProductListisLoading ? (
