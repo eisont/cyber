@@ -13,14 +13,13 @@ const ProductItemDetail = lazy(() => import('@/pages/Category/ui/ProductItemDeta
 const ProductGrid = lazy(() => import('@/shared/ui/ProductGrid'));
 
 const Category = () => {
+  const productId = useSelector((state) => state.productId);
+
+  const params = useParams();
   const location = useLocation();
   const pathname = location.pathname;
 
-  const params = useParams();
-
   const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: params.id, params: 'title', enabled: true });
-
-  const productId = useSelector((state) => state.productId);
 
   return (
     <S.Wrapper>
