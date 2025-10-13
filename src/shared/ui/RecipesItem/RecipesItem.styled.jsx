@@ -75,6 +75,7 @@ export const Icon = styled.div`
   &:hover {
     cursor: pointer;
     scale: 1.1;
+    transform: rotate(90deg);
   }
 `;
 export const ModalImg = styled.img`
@@ -96,6 +97,11 @@ export const ColFlexBox = styled.div`
 `;
 export const MText = styled.div`
   color: #fff;
-  padding: 10px 0;
+  padding: 10px;
   font-size: 20px;
+`;
+
+export const ListBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;

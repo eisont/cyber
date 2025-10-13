@@ -49,8 +49,6 @@ const Category = () => {
             </>
           )}
 
-          {pathname === `/recipes/${params.id}` && <></>}
-
           {pathname === `/category/${params.id}` && (
             <Suspense
               fallback={

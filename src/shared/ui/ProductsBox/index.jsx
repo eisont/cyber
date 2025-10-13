@@ -3,8 +3,11 @@ import { useSelector } from 'react-redux';
 import * as S from './ProductsBox.styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import RecipesItem from '@/shared/ui/RecipesItem';
+import { useState } from 'react';
+import Modal from '@/shared/ui/Modal';
 
 const ProductsBox = () => {
+  const [selectId, setSelectId] = useState();
   const productId = useSelector((state) => state.productId);
 
   const [Pdata, isLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
@@ -44,8 +47,9 @@ const ProductsBox = () => {
       {productId === 'recipes' && (
         <S.ProductsBox>
           {RecipesData?.map((el) => (
-            <RecipesItem key={el.id} {...el} />
+            <RecipesItem key={el.id} {...el} setSelectId={setSelectId} />
           ))}
+          {selectId && <Modal data={RecipesData.find((el) => el.id === selectId)} onClose={() => setSelectId(null)} />}
         </S.ProductsBox>
       )}
     </S.Wrapper>
