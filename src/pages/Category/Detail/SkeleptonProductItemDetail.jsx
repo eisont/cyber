@@ -1,4 +1,4 @@
-import * as S from '@/pages/Category/ui/ProductItemDetail/ProductItemDetail.styled';
+import * as S from '@/pages/Category/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
 import { DumText, DumImg } from '@/shared/assets/styled/skelepton';
 
 const SkeleptonProductItemDetail = () => {

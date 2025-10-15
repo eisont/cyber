@@ -31,8 +31,9 @@ const AppRouter = () => {
             }
           />
 
-          <Route path='/category' element={<Category />} />
-          <Route path='/category/:id' element={<CategoryDetail />} />
+          <Route path='/category' element={<Category />}>
+            <Route path=':id' element={<CategoryDetail />} />
+          </Route>
           <Route path='/products' element={<SearchProducts />} />
           <Route path='/selectuser' element={<SelectUser />} />
           <Route path={`/${userInfo.username}`} element={<MyPage />} />

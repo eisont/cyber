@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import * as S from '@/pages/Category/ui/ProductsBox/ProductsBox.styled';
 import RecipesItem from '@/pages/Category/ui/RecipesItem';
-import Modal from '@/pages/Category/ui/Modal';
 import ProductItem from '@/shared/ui/ProductItem';
+import Modal from '@/pages/Category/ui/Modal';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
