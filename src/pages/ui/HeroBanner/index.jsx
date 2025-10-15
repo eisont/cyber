@@ -1,8 +1,8 @@
-import Iphone13Pro from './Iphone13Pro';
-import PlayStation5 from './PlayStation5';
-import AirpodMax from './AirpodMax';
-import MacbookPro14 from './MacbookPro14';
-import VisionPro from './VisonPro';
+import Iphone13Pro from '@/pages/ui/HeroBanner/Iphone13Pro';
+import PlayStation5 from '@/pages/ui/HeroBanner/PlayStation5';
+import AirpodMax from '@/pages/ui/HeroBanner/AirpodMax';
+import MacbookPro14 from '@/pages/ui/HeroBanner/MacbookPro14';
+import VisionPro from '@/pages/ui/HeroBanner/VisonPro';
 import styled from '@emotion/styled';
 import { FlexBetween, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
@@ -53,6 +53,7 @@ const MobileBox = styled(FlexColBetween)`
     display: block;
   }
 `;
+
 const HeroBanner = () => {
   return (
     <Wrapper>

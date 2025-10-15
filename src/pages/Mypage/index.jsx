@@ -1,12 +1,13 @@
-import * as S from './MyPage.styled';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import CartCard from '@/pages/Mypage/ui/Cart';
 import { ProfileCard, PersonalCard, AddressCard, WorkEduCard, FinanceCard, SystemCard } from '@/pages/Mypage/ui';
+import * as S from '@/pages/Mypage/Mypage.styled';
 
 const MyPage = () => {
   const userInfo = useSelector((state) => state.userInfo);
   const [toggle, setToggle] = useState(false);
+
   return (
     <S.Wrapper>
       <S.Grid>

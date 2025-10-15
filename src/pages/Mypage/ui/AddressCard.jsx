@@ -1,6 +1,6 @@
-// AddressCard.jsx
-import * as S from '../MyPage.styled';
-export default function AddressCard({ user }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const AddressCard = ({ user }) => {
   const a = user.address || {};
   return (
     <S.Card>
@@ -25,4 +25,6 @@ export default function AddressCard({ user }) {
       </S.Row>
     </S.Card>
   );
-}
+};
+
+export default AddressCard;

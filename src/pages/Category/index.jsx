@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
-import * as S from './Category.styled';
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
+import * as S from '@/pages/Category/Category.styled';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
 import { ToUpper } from '@/shared/lib';
 import { useFetch } from '@/shared/hooks/useFetchHooks';

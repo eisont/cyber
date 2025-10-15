@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { BaseballOutlineSVG, CarSportsOulineSVG, FastFoodOutlineSVG, LaptopSVG, ManOutlineSVG, WomanOutlineSVG } from '@/shared/assets/SVGicons';
 import { productIdSlice } from '@/redux';
-import * as S from './CategoryHighlight.styled';
+import * as S from '@/pages/ui/CategoryHighlight/CategoryHighlight.styled';
 
 const CategoryHighlight = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { useSelector } from 'react-redux';
-import * as S from './ProductsBox.styled';
+import * as S from '@/shared/ui/ProductsBox/ProductsBox.styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import RecipesItem from '@/shared/ui/RecipesItem';
 import { useState } from 'react';

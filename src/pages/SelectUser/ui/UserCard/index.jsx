@@ -37,6 +37,7 @@ const HiddenBox = styled(Link)`
 
 const UserCard = (pr) => {
   const dispatch = useDispatch();
+
   return (
     <Wrapper>
       <Img src={pr.user.image} />

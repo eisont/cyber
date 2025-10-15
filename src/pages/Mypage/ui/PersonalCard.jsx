@@ -1,6 +1,6 @@
-// PersonalCard.jsx
-import * as S from '../MyPage.styled';
-export default function PersonalCard({ user }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const PersonalCard = ({ user }) => {
   return (
     <S.Card>
       <S.Title>개인 정보</S.Title>
@@ -30,4 +30,6 @@ export default function PersonalCard({ user }) {
       </S.Row>
     </S.Card>
   );
-}
+};
+
+export default PersonalCard;
