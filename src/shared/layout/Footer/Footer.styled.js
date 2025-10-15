@@ -127,7 +127,7 @@ export const SnsBox = styled(FlexBetween)`
 `;
 
 export const Snslogo = styled(FlexCenter)`
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 `;

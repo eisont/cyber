@@ -67,7 +67,7 @@ const Botton = styled.button`
   color: #fff;
   border-radius: 6px;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     background: rgba(100, 100, 100, 0.4);
   }

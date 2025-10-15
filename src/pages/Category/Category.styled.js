@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
@@ -35,7 +35,7 @@ export const CategoryMenu = styled(Link)`
 
   color: #a4a4a4;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     color: #000;
   }

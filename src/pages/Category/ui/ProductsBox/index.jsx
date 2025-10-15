@@ -1,10 +1,10 @@
-import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { useSelector } from 'react-redux';
-import * as S from '@/shared/ui/ProductsBox/ProductsBox.styled';
-import ProductItem from '@/shared/ui/ProductItem';
-import RecipesItem from '@/shared/ui/RecipesItem';
 import { useState } from 'react';
-import Modal from '@/shared/ui/Modal';
+import { useSelector } from 'react-redux';
+import * as S from '@/pages/Category/ui/ProductsBox/ProductsBox.styled';
+import RecipesItem from '@/pages/Category/ui/RecipesItem';
+import Modal from '@/pages/Category/ui/Modal';
+import ProductItem from '@/shared/ui/ProductItem';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
   const [selectId, setSelectId] = useState();

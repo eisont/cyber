@@ -35,7 +35,7 @@ export const SeleteBox = styled.select`
   border: 0.5px solid #d4d4d4;
   border-radius: 8px;
 
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 `;

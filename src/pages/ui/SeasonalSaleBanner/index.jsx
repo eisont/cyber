@@ -59,7 +59,7 @@ const Botton = styled.button`
   font-size: 16px;
   color: #fff;
   border-radius: 6px;
-  :hover {
+  &:hover {
     background: rgba(100, 100, 100, 0.4);
     cursor: pointer;
   }

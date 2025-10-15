@@ -116,7 +116,7 @@ const Bt = styled(FlexCenter)`
   border: 1px solid black;
   background: none;
   border-radius: 10px;
-  :hover {
+  &:hover {
     cursor: pointer;
     font-weight: 600;
   }
