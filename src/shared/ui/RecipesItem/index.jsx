@@ -1,6 +1,6 @@
 import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
 import { memo } from 'react';
-import * as S from '@/hared/ui/RecipesItem/RecipesItem.styled';
+import * as S from '@/shared/ui/RecipesItem/RecipesItem.styled';
 
 const RecipesItem = memo((pr) => {
   const { ref } = useIntersectionObserver();

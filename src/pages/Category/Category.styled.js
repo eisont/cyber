@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled.div`
@@ -54,7 +54,9 @@ export const Arrow = styled(FlexCenter)`
   cursor: default;
 `;
 
-export const FlexBox = styled(FlexBetween)`
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: space-between;
   align-items: start;
 `;
 
