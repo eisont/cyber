@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { BaseballOutlineSVG, CarSportsOulineSVG, FastFoodOutlineSVG, LaptopSVG, ManOutlineSVG, WomanOutlineSVG } from '@/shared/assets/SVGicons';
+import { BaseballOutlineSVG, CarSportsOutlineSVG, FastFoodOutlineSVG, LaptopSVG, ManOutlineSVG, WomanOutlineSVG } from '@/shared/assets/SVGicons';
 import { productIdSlice } from '@/redux';
-import * as S from './CategoryHighlight.styled';
+import * as S from '@/pages/ui/CategoryHighlight/CategoryHighlight.styled';
 
 const CategoryHighlight = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const CategoryHighlight = () => {
           <S.Top>Browse By Category</S.Top>
           <S.Categories>
             <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('vehicle'))}>
-              <S.CategoryImg>{CarSportsOulineSVG({ size: '48', color: '#000' })}</S.CategoryImg>
+              <S.CategoryImg>{CarSportsOutlineSVG({ size: '48', color: '#000' })}</S.CategoryImg>
               <S.Title>Vehicle</S.Title>
             </S.ItemBox>
             <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('sports-accessories'))}>
@@ -32,7 +32,7 @@ const CategoryHighlight = () => {
               <S.CategoryImg>{ManOutlineSVG({ size: '48', color: '#000' })}</S.CategoryImg>
               <S.Title>Mens Shirts</S.Title>
             </S.ItemBox>
-            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('womens-dresses'))}>
+            <S.ItemBox to='/category' onClick={() => dispatch(productIdSlice.actions.getProductId('womans-dresses'))}>
               <S.CategoryImg>{WomanOutlineSVG({ size: '48', color: '#000' })}</S.CategoryImg>
               <S.Title>Womens Dresses</S.Title>
             </S.ItemBox>

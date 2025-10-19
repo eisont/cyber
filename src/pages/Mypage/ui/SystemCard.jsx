@@ -1,6 +1,6 @@
-// SystemCard.jsx
-import * as S from '../MyPage.styled';
-export default function SystemCard({ user }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const SystemCard = ({ user }) => {
   return (
     <S.Card>
       <S.Title>시스템 정보</S.Title>
@@ -22,4 +22,6 @@ export default function SystemCard({ user }) {
       </S.Row>
     </S.Card>
   );
-}
+};
+
+export default SystemCard;

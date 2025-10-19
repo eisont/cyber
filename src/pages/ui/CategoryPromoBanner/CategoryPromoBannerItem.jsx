@@ -33,7 +33,7 @@ const ItemBt = styled.button`
   color: ${({ color }) => color};
   background: ${({ background }) => background};
 
-  :hover {
+  &:hover {
     cursor: pointer;
     background: ${({ hover }) => hover};
   }

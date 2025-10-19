@@ -15,13 +15,13 @@ const Wrapper = styled.div`
   }
 `;
 
-const VisionproImg = styled.img`
+const VisionProImg = styled.img`
   width: 139px;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     display: none;
   }
 `;
-const MobileVisionproImg = styled.img`
+const MobileVisionProImg = styled.img`
   width: 139px;
   display: none;
   @media (max-width: ${BREAKPOINTS.mobile}) {
@@ -30,7 +30,7 @@ const MobileVisionproImg = styled.img`
   }
 `;
 
-const VisionproTextBox = styled.div`
+const VisionProTextBox = styled.div`
   margin: 0 0 0 20px;
   width: 160px;
   cursor: default;
@@ -86,9 +86,9 @@ const SubText = styled.div`
 const VisionPro = () => {
   return (
     <Wrapper>
-      <VisionproImg src='img/HeroBanner/visionpro.webp' alt='visionpro' />
-      <MobileVisionproImg src='img/mobile/visionpro.webp' alt='visionpro' />
-      <VisionproTextBox>
+      <VisionProImg src='img/HeroBanner/VisionPro.webp' alt='VisionPro' />
+      <MobileVisionProImg src='img/mobile/VisionPro.webp' alt='VisionPro' />
+      <VisionProTextBox>
         <TitleText>
           <ThinTitle>
             Apple <br />
@@ -100,7 +100,7 @@ const VisionPro = () => {
           <ThinTitle>Apple Vision</ThinTitle>Pro
         </Mobile>
         <SubText>An immersive way to experience entertainment</SubText>
-      </VisionproTextBox>
+      </VisionProTextBox>
     </Wrapper>
   );
 };

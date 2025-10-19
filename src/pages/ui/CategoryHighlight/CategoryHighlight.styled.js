@@ -69,7 +69,7 @@ export const ItemBox = styled(Link)`
 
   text-decoration: none;
   color: #000;
-  :hover {
+  &:hover {
     cursor: pointer;
     background: rgb(0, 0, 0, 0.2);
   }

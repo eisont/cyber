@@ -1,7 +1,8 @@
-// WorkEduCard.jsx
-import * as S from '../MyPage.styled';
-export default function WorkEduCard({ user }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const WorkEduCard = ({ user }) => {
   const c = user.company || {};
+
   return (
     <S.Card>
       <S.Title>직장 · 학력</S.Title>
@@ -21,4 +22,6 @@ export default function WorkEduCard({ user }) {
       </S.Row>
     </S.Card>
   );
-}
+};
+
+export default WorkEduCard;

@@ -1,6 +1,6 @@
-// ProfileCard.jsx
-import * as S from '../MyPage.styled';
-export default function ProfileCard({ user, setToggle }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const ProfileCard = ({ user, setToggle }) => {
   return (
     <S.Card>
       <S.Stack>
@@ -23,4 +23,6 @@ export default function ProfileCard({ user, setToggle }) {
       </S.NavButtons>
     </S.Card>
   );
-}
+};
+
+export default ProfileCard;

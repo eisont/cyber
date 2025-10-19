@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { BREAKPOINTS } from './breakpoints';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const DumBox = styled.div`
   width: 100%;

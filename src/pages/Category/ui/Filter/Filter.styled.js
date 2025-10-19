@@ -78,7 +78,7 @@ export const Brand = styled.div`
   color: ${(pr) => (pr.name === pr.productId ? '#000' : '#A4A4A4')};
   font-weight: ${(pr) => pr.name === pr.productId && '700'};
 
-  :hover {
+  &:hover {
     cursor: pointer;
     color: #000;
   }

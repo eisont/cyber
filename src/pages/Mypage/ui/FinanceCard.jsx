@@ -1,7 +1,7 @@
-// FinanceCard.jsx
-import * as S from '../MyPage.styled';
-const mask = (num = '') => num.replace(/\d(?=\d{4})/g, '*');
-export default function FinanceCard({ user }) {
+import * as S from '@/pages/Mypage/MyPage.styled';
+
+const FinanceCard = ({ user }) => {
+  const mask = (num = '') => num.replace(/\d(?=\d{4})/g, '*');
   const b = user.bank || {};
   const k = user.crypto || {};
   return (
@@ -31,4 +31,5 @@ export default function FinanceCard({ user }) {
       </S.Row>
     </S.Card>
   );
-}
+};
+export default FinanceCard;

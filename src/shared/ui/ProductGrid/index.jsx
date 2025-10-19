@@ -1,17 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { productIdSlice } from '@/redux';
 import ProductItem from '@/shared/ui/ProductItem';
-import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
-
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { ToUpper } from '@/shared/lib';
-import { DumImg } from '@/shared/assets/styled/skelepton';
+import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
 
 const ProductGrid = () => {
   const productId = useSelector((state) => state.productId);
 
   const [CategoryListData, isLoading] = useFetch({ resource: 'products', endPoint: 'category-list', suffix: '', enabled: true });
-  const [data, ProductListisLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
+  const [data, ProductListsLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
   const ProductListData = data.products;
 
   const dispatch = useDispatch();
@@ -24,7 +22,7 @@ const ProductGrid = () => {
             {Array(4)
               .fill('')
               .map((_, i) => (
-                <ProductItem key={i} isLoading={ProductListisLoading} />
+                <ProductItem key={i} isLoading={ProductListsLoading} />
               ))}
           </>
         ) : (
@@ -39,7 +37,7 @@ const ProductGrid = () => {
 
             <S.ProductsItemsBox>
               {ProductListData?.map((el) => (
-                <ProductItem key={el.id} {...el} isLoading={ProductListisLoading} />
+                <ProductItem key={el.id} {...el} isLoading={ProductListsLoading} />
               ))}
             </S.ProductsItemsBox>
           </S.MainBox>

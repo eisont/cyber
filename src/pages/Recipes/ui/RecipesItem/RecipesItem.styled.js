@@ -24,7 +24,6 @@ export const MainBox = styled.div`
   width: 800px;
   height: 300px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
 `;
 
@@ -32,7 +31,7 @@ export const Img = styled.img`
   height: 260px;
   transition: 0.2s;
   border-radius: 10px;
-  :hover {
+  &:hover {
     scale: 1.2;
   }
 `;
@@ -84,7 +83,6 @@ export const ModalImg = styled.img`
 `;
 export const FlexBox = styled.div`
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 `;
 export const ColFlexBox = styled.div`

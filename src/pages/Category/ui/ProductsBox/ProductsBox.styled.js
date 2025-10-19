@@ -27,7 +27,7 @@ export const Count = styled.div`
   color: #000;
 `;
 
-export const SeleteBox = styled.select`
+export const SelectBox = styled.select`
   padding: 8px 16px;
   width: 256px;
   height: 40px;
@@ -35,7 +35,7 @@ export const SeleteBox = styled.select`
   border: 0.5px solid #d4d4d4;
   border-radius: 8px;
 
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 `;

@@ -49,7 +49,7 @@ export const Category = styled.div`
   color: ${(pr) => (pr.id === pr.productId ? '#000' : '#A4A4A4')};
   font-weight: ${(pr) => pr.id === pr.productId && '700'};
 
-  :hover {
+  &:hover {
     cursor: pointer;
     color: #000;
   }

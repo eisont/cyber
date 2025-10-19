@@ -14,13 +14,13 @@ const Wrapper = styled.div`
     justify-content: center;
   }
 `;
-const AirpodmaxImg = styled.img`
+const AirPodMaxImg = styled.img`
   width: 104px;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     display: none;
   }
 `;
-const MobileAirpodmaxImg = styled.img`
+const MobileAirPodMaxImg = styled.img`
   display: none;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     display: block;
@@ -28,7 +28,7 @@ const MobileAirpodmaxImg = styled.img`
   }
 `;
 
-const AirpodmaxTextBox = styled.div`
+const AirPodMaxTextBox = styled.div`
   margin: 0 0 0 40px;
   width: 160px;
   cursor: default;
@@ -70,19 +70,19 @@ const SubText = styled.div`
   }
 `;
 
-const AirpodMax = () => {
+const AirPodMax = () => {
   return (
     <Wrapper>
-      <AirpodmaxImg src='img/HeroBanner/airpodmax.webp' alt='airpodmax' />
-      <MobileAirpodmaxImg src='img/mobile/airpodmax.webp' alt='airpodmax' />
-      <AirpodmaxTextBox>
+      <AirPodMaxImg src='img/HeroBanner/AirPodMax.webp' alt='AirPodMax' />
+      <MobileAirPodMaxImg src='img/mobile/AirPodMax.webp' alt='AirPodMax' />
+      <AirPodMaxTextBox>
         <TitleText>
           <ThinTitle>Apple AirPods</ThinTitle> Max
         </TitleText>
         <SubText>Computational audio. Listen, it's powerful</SubText>
-      </AirpodmaxTextBox>
+      </AirPodMaxTextBox>
     </Wrapper>
   );
 };
 
-export default AirpodMax;
+export default AirPodMax;

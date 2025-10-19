@@ -1,69 +1,41 @@
-import { lazy, Suspense } from 'react';
-import * as S from './Category.styled';
-import { useSelector } from 'react-redux';
-import { useLocation, useParams } from 'react-router-dom';
-import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
-import { ToUpper } from '@/shared/lib';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { DumText } from '@/shared/assets/styled/skelepton';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import Filter from '@/pages/Category/ui/Filter';
-import ProductsBox from '@/shared/ui/ProductsBox';
-import SkeleptonProductItemDetail from '@/shared/assets/skelepton/ProductItemDetail';
-const ProductItemDetail = lazy(() => import('@/pages/Category/ui/ProductItemDetail'));
-const ProductGrid = lazy(() => import('@/shared/ui/ProductGrid'));
+import ProductsBox from '@/pages/Category/ui/ProductsBox';
+import Breadcrumb from '@/pages/Category/ui/Breadcrumb';
+import * as S from '@/pages/Category/Category.styled';
+import Recipes from '@/pages/Recipes';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useSelector } from 'react-redux';
 
 const Category = () => {
-  const productId = useSelector((state) => state.productId);
-
   const params = useParams();
   const location = useLocation();
-  const pathname = location.pathname;
+  const productId = useSelector((state) => state.productId);
 
-  const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: params.id, params: 'title', enabled: true });
+  const [Pdata] = useFetch({ resource: 'products', endPoint: 'category/', suffix: productId || 'beauty', params: '?&select=id', enabled: true });
+  const ProductListData = Pdata.products;
+
+  const [Rdata] = useFetch({ resource: 'recipes', endPoint: '?limit=50', suffix: '&select=id', enabled: true });
+  const RecipesData = Rdata.recipes;
 
   return (
     <S.Wrapper>
       <S.MainWrapper>
-        <S.Category>
-          <S.CategoryMenu to='/'>Home</S.CategoryMenu>
-          <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-          <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
-          <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-          <S.ProductAllMenu to='/category' params={params.id}>
-            {ToUpper(productId)}
-          </S.ProductAllMenu>
+        <Breadcrumb />
+        {!params.id ? (
+          <S.FlexBox>
+            <Filter />
+            <S.FlexColBox>
+              <S.ProductsCount>
+                Selected Products: <S.Count>{location.pathname === '/recipes' ? RecipesData?.length || 0 : ProductListData?.length || 0}</S.Count>
+              </S.ProductsCount>
 
-          {pathname === `/category/${params.id}` && (
-            <>
-              <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-              {isLoading ? <DumText width='160px' height='10px' /> : <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>}
-            </>
-          )}
-        </S.Category>
-
-        <S.FlexBox>
-          {pathname === '/category' && (
-            <>
-              <Filter />
-              <ProductsBox />
-            </>
-          )}
-
-          {pathname === `/category/${params.id}` && (
-            <Suspense
-              fallback={
-                <S.SideItem>
-                  <SkeleptonProductItemDetail />
-                </S.SideItem>
-              }
-            >
-              <S.SideItem>
-                <ProductItemDetail />
-                <ProductGrid />
-              </S.SideItem>
-            </Suspense>
-          )}
-        </S.FlexBox>
+              {location.pathname !== '/recipes' ? <ProductsBox /> : <Recipes />}
+            </S.FlexColBox>
+          </S.FlexBox>
+        ) : (
+          <Outlet />
+        )}
       </S.MainWrapper>
     </S.Wrapper>
   );

@@ -66,7 +66,7 @@ export const FlexBox = styled(FlexBetween)``;
 export const CartIcon = styled(FlexCenter)`
   transition: 0.3s;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     scale: 1.2;
   }
@@ -84,7 +84,7 @@ export const MobileCartIcon = styled(CartIcon)`
 export const Img = styled.img`
   height: 160px;
   transition: 0.2s;
-  :hover {
+  &:hover {
     scale: 1.2;
   }
   @media (max-width: ${BREAKPOINTS.mobile}) {
@@ -137,7 +137,7 @@ export const Button = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  :hover {
+  &:hover {
     cursor: pointer;
     background: gray;
   }

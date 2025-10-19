@@ -1,7 +1,7 @@
 export const ToUpper = (word) => {
   return word
     .split('-')
-    .map((el) => el.replace(el.split('')[0], el.split('')[0].toUpperCase()))
+    .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
     .join(' ');
 };
 

@@ -16,7 +16,7 @@ const Wrapper = styled(FlexBetween)`
     justify-content: center;
   }
 `;
-const Macbookpro14TextBox = styled.div`
+const MacBookPro14TextBox = styled.div`
   margin: 0 0 0 50px;
   width: 341px;
   height: 272px;
@@ -60,12 +60,12 @@ const SubText = styled.div`
     text-align: center;
   }
 `;
-const Linkst = styled(Link)`
+const LinkSt = styled(Link)`
   outline: none;
   text-decoration: none;
   color: #fff;
 `;
-const Botton = styled.button`
+const Button = styled.button`
   margin: 20px 0 0 0;
   width: 191px;
   height: 56px;
@@ -75,7 +75,7 @@ const Botton = styled.button`
   color: #000;
   border-radius: 6px;
 
-  :hover {
+  &:hover {
     background: rgba(100, 100, 100, 0.2);
     cursor: pointer;
   }
@@ -85,13 +85,13 @@ const Botton = styled.button`
   }
 `;
 
-const Macbookpro14Img = styled.img`
+const MacBookPro14Img = styled.img`
   width: 292px;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     display: none;
   }
 `;
-const MobileMacbookpro14Img = styled.img`
+const MobileMacBookPro14Img = styled.img`
   display: none;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     width: 330px;
@@ -99,23 +99,23 @@ const MobileMacbookpro14Img = styled.img`
   }
 `;
 
-const MacbookPro14 = () => {
+const MacBookPro14 = () => {
   const dispatch = useDispatch();
   return (
     <Wrapper>
-      <MobileMacbookpro14Img src='img/mobile/MacBookPro14.webp' alt='MacBookPro14' />
-      <Macbookpro14TextBox>
+      <MobileMacBookPro14Img src='img/mobile/MacBookPro14.webp' alt='MacBookPro14' />
+      <MacBookPro14TextBox>
         <TitleText>
           Macbook<BoldTitle> Pro</BoldTitle> 14
         </TitleText>
         <SubText>The new 14‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</SubText>
-        <Linkst to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
-          <Botton>Shop Now</Botton>
-        </Linkst>
-      </Macbookpro14TextBox>
-      <Macbookpro14Img src='img/HeroBanner/MacBookPro14.webp' alt='MacBookPro14' />
+        <LinkSt to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
+          <Button>Shop Now</Button>
+        </LinkSt>
+      </MacBookPro14TextBox>
+      <MacBookPro14Img src='img/HeroBanner/MacBookPro14.webp' alt='MacBookPro14' />
     </Wrapper>
   );
 };
 
-export default MacbookPro14;
+export default MacBookPro14;

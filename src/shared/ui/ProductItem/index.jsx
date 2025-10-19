@@ -1,13 +1,14 @@
 import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
 import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
 import { memo, useState } from 'react';
-import * as S from './ProductItem.styled';
-import { DumImg, DumText } from '@/shared/assets/styled/skelepton';
+import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
+import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
 import { OriginalPrice } from '@/shared/lib';
 
 const ProductItem = memo((pr) => {
   const [toggle, setToggle] = useState(false);
   const { ref } = useIntersectionObserver();
+
   return (
     <S.Wrapper>
       {pr?.stock === 0 && <S.SoldOutBox>SoldOut</S.SoldOutBox>}

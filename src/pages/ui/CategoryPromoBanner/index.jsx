@@ -1,6 +1,6 @@
 import { GetMonkCategoryPromoItems } from '@/shared/monks/categories.monk';
 import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
-import CategoryPromoBannerItem from './CategoryPromoBannerItem';
+import CategoryPromoBannerItem from '@/pages/ui/CategoryPromoBanner/CategoryPromoBannerItem';
 import styled from '@emotion/styled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { useSelector } from 'react-redux';
-import { DumBox } from '@/shared/assets/styled/skelepton';
+import { DumBox } from '@/shared/assets/styled/skeleton';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,24 +26,24 @@ export const MainBox = styled(FlexCenter)`
 
 const SearchProducts = () => {
   const searchData = useSelector((state) => state.setSearchData);
-  const [data, ProductListisLoading] = useSearchFetch({ searchData, enabled: true });
+  const [data, ProductListsLoading] = useSearchFetch({ searchData, enabled: true });
   const ProductListData = data.products;
 
   return (
     <Wrapper>
       <MainBox>
-        {ProductListData?.length && !ProductListisLoading ? (
+        {ProductListData?.length && !ProductListsLoading ? (
           <>
             {ProductListData?.map((el) => (
-              <ProductItem key={el.id} {...el} isLoading={ProductListisLoading} />
+              <ProductItem key={el.id} {...el} isLoading={ProductListsLoading} />
             ))}
           </>
-        ) : ProductListData?.length || ProductListisLoading ? (
+        ) : ProductListData?.length || ProductListsLoading ? (
           <>
             {Array(4)
               .fill('')
               .map((_, i) => (
-                <ProductItem key={i} isLoading={ProductListisLoading} />
+                <ProductItem key={i} isLoading={ProductListsLoading} />
               ))}
           </>
         ) : (

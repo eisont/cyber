@@ -74,7 +74,7 @@ export const Icon = styled(Link)`
   align-items: center;
   transition: 0.1s;
 
-  :hover {
+  &:hover {
     scale: 1.2;
     cursor: pointer;
   }
