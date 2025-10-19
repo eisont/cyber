@@ -1,7 +1,7 @@
 import { OriginalPrice } from '@/shared/lib';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { DumText, DumImg } from '@/shared/assets/styled/skelepton';
+import { DumText, DumImg } from '@/shared/assets/styled/skeleton';
 import * as S from '@/pages/Category/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
 
 const ProductItemDetail = () => {

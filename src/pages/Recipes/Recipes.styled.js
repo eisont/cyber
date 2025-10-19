@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
 export const Wrapper = styled.div`
@@ -8,7 +7,12 @@ export const Wrapper = styled.div`
     width: 100vw;
   }
 `;
-export const FlexBox = styled(FlexBetween)``;
+
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+`;
 
 export const ProductsCount = styled.div`
   display: flex;

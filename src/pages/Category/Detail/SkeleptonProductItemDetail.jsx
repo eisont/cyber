@@ -1,7 +1,7 @@
 import * as S from '@/pages/Category/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
-import { DumText, DumImg } from '@/shared/assets/styled/skelepton';
+import { DumText, DumImg } from '@/shared/assets/styled/skeleton';
 
-const SkeleptonProductItemDetail = () => {
+const SkeletonProductItemDetail = () => {
   return (
     <S.Wrapper>
       <S.MainBox>
@@ -87,4 +87,4 @@ const SkeleptonProductItemDetail = () => {
   );
 };
 
-export default SkeleptonProductItemDetail;
+export default SkeletonProductItemDetail;

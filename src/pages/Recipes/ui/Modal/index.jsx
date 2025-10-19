@@ -1,5 +1,5 @@
 import { CloseSVG } from '@/shared/assets/SVGicons';
-import * as S from '@/pages/Category/ui/RecipesItem/RecipesItem.styled';
+import * as S from '@/pages/Recipes/ui/RecipesItem/RecipesItem.styled';
 import { memo } from 'react';
 
 const Modal = memo((pr) => {

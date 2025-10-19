@@ -9,6 +9,7 @@ const SelectUser = lazy(() => import('@/pages/SelectUser'));
 const MyPage = lazy(() => import('@/pages/MyPage'));
 import ProductGrid from '@/shared/ui/ProductGrid';
 import { HeroBanner, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner } from '@/pages/ui';
+const Recipes = lazy(() => import('@/pages/Recipes'));
 const CategoryDetail = lazy(() => import('@/pages/Category/Detail'));
 
 const AppRouter = () => {
@@ -34,6 +35,7 @@ const AppRouter = () => {
           <Route path='/category' element={<Category />}>
             <Route path=':id' element={<CategoryDetail />} />
           </Route>
+          <Route path='/recipes' element={<Category />} />
           <Route path='/products' element={<SearchProducts />} />
           <Route path='/selectuser' element={<SelectUser />} />
           <Route path={`/${userInfo.username}`} element={<MyPage />} />
