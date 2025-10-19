@@ -37,7 +37,7 @@ const AppRouter = () => {
           </Route>
           <Route path='/recipes' element={<Category />} />
           <Route path='/products' element={<SearchProducts />} />
-          <Route path='/selectuser' element={<SelectUser />} />
+          <Route path='/selectUser' element={<SelectUser />} />
           <Route path={`/${userInfo.username}`} element={<MyPage />} />
         </Routes>
       </Suspense>

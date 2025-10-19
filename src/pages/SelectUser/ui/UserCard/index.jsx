@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   display: inline-block;
   position: relative;
 
-  &:hover .hiddenbox {
+  &:hover .hiddenBox {
     opacity: 1;
   }
 `;
@@ -41,7 +41,7 @@ const UserCard = (pr) => {
   return (
     <Wrapper>
       <Img src={pr.user.image} />
-      <HiddenBox onClick={() => dispatch(loginDataSlice.actions.setLoginData({ username: pr.user.username, password: pr.user.password, expiresInMins: 30 }))} className='hiddenbox'>
+      <HiddenBox onClick={() => dispatch(loginDataSlice.actions.setLoginData({ username: pr.user.username, password: pr.user.password, expiresInMins: 30 }))} className='hiddenBox'>
         {pr.user.username}
       </HiddenBox>
     </Wrapper>

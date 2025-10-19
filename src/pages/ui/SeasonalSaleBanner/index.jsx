@@ -49,7 +49,7 @@ const SubText = styled.div`
     margin: 20px 0;
   }
 `;
-const Botton = styled.button`
+const Button = styled.button`
   margin: 20px 0 0 0;
   width: 191px;
   height: 56px;
@@ -74,7 +74,7 @@ const SeasonalSaleBanner = () => {
             <span style={{ fontWeight: '100' }}>Big Summer </span> Sale
           </TitleText>
           <SubText>Commodo fames vitae vitae leo mauris in. Eu consequat.</SubText>
-          <Botton>Shop Now</Botton>
+          <Button>Shop Now</Button>
         </Banner2TextBox>
       </Background>
     </Wrapper>

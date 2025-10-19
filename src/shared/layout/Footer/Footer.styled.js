@@ -96,7 +96,7 @@ export const Box3 = styled(FlexColBetween)`
     height: auto;
   }
 `;
-export const Stitle = styled.div`
+export const STitle = styled.div`
   cursor: default;
   font-size: 16px;
 
@@ -104,7 +104,7 @@ export const Stitle = styled.div`
     margin: 5px 0;
   }
 `;
-export const Stext = styled.li`
+export const SText = styled.li`
   font-weight: 100;
   font-size: 14px;
   list-style: none;
@@ -126,7 +126,7 @@ export const SnsBox = styled(FlexBetween)`
   }
 `;
 
-export const Snslogo = styled(FlexCenter)`
+export const SnsLogo = styled(FlexCenter)`
   &:hover {
     cursor: pointer;
   }

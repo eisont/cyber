@@ -1,8 +1,8 @@
 import Iphone13Pro from '@/pages/ui/HeroBanner/Iphone13Pro';
 import PlayStation5 from '@/pages/ui/HeroBanner/PlayStation5';
-import AirpodMax from '@/pages/ui/HeroBanner/AirpodMax';
-import MacbookPro14 from '@/pages/ui/HeroBanner/MacbookPro14';
-import VisionPro from '@/pages/ui/HeroBanner/VisonPro';
+import AirPodMax from '@/pages/ui/HeroBanner/AirPodMax';
+import MacBookPro14 from '@/pages/ui/HeroBanner/MacBookPro14';
+import VisionPro from '@/pages/ui/HeroBanner/VisionPro';
 import styled from '@emotion/styled';
 import { FlexBetween, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
@@ -64,19 +64,19 @@ const HeroBanner = () => {
         <SmallBannerBox>
           <PlayStation5 />
           <ToSmallBox>
-            <AirpodMax />
+            <AirPodMax />
             <VisionPro />
           </ToSmallBox>
         </SmallBannerBox>
-        <MacbookPro14 />
+        <MacBookPro14 />
       </SideBannerBox>
 
       <MobileBox>
         <Iphone13Pro />
-        <AirpodMax />
+        <AirPodMax />
         <VisionPro />
         <PlayStation5 />
-        <MacbookPro14 />
+        <MacBookPro14 />
       </MobileBox>
     </Wrapper>
   );

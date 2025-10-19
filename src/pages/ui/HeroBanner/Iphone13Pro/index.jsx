@@ -52,12 +52,12 @@ const SubText = styled.div`
     font-size: 14px;
   }
 `;
-const Linkst = styled(Link)`
+const LinkSt = styled(Link)`
   outline: none;
   text-decoration: none;
   color: #fff;
 `;
-const Botton = styled.button`
+const Button = styled.button`
   margin: 20px 0 0 0;
   width: 191px;
   height: 56px;
@@ -103,9 +103,9 @@ const Iphone13Pro = () => {
           <span style={{ fontWeight: '100' }}>IPhone 13</span> Pro
         </TitleText>
         <SubText>Created to change everything for the better. For everyone</SubText>
-        <Linkst to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('smartphones'))}>
-          <Botton>Shop Now</Botton>
-        </Linkst>
+        <LinkSt to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('smartphones'))}>
+          <Button>Shop Now</Button>
+        </LinkSt>
       </Iphone13ProTextBox>
       <Iphone13ProImg src='img/HeroBanner/Iphone14pro.webp' alt='Iphone13pro' />
       <MobileIphone13ProImg src='img/mobile/Iphone14pro.webp' alt='Iphone13pro' />
