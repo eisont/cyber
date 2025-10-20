@@ -6,8 +6,7 @@ import { useFetch } from '@/shared/hooks/useFetchHooks';
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
 
-  const [Pdata, isLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
-  const ProductListData = Pdata.products;
+  const [{ products: ProductListData }, isLoading] = useFetch({ resource: 'products', path: 'category', endPoint: [productId], enabled: true });
 
   return (
     <S.Wrapper>
@@ -22,7 +21,7 @@ const ProductsBox = () => {
           </>
         ) : (
           <>
-            {ProductListData.map((el) => (
+            {ProductListData?.map((el) => (
               <ProductItem key={el.id} {...el} />
             ))}
           </>

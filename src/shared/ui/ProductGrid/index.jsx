@@ -8,9 +8,8 @@ import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
 const ProductGrid = () => {
   const productId = useSelector((state) => state.productId);
 
-  const [CategoryListData, isLoading] = useFetch({ resource: 'products', endPoint: 'category-list', suffix: '', enabled: true });
-  const [data, ProductListsLoading] = useFetch({ resource: 'products', endPoint: 'category', suffix: '/', params: productId, enabled: true });
-  const ProductListData = data.products;
+  const [CategoryListData, isLoading] = useFetch({ resource: 'products', path: 'category-list', enabled: true });
+  const [{ products: ProductListData }, ProductListsLoading] = useFetch({ resource: 'products', endPoint: ['category', productId], enabled: true });
 
   const dispatch = useDispatch();
 

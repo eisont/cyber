@@ -7,8 +7,7 @@ import Modal from '@/pages/Recipes/ui/Modal';
 const Recipes = () => {
   const [selectId, setSelectId] = useState();
 
-  const [Rdata] = useFetch({ resource: 'recipes', endPoint: '?limit=50', suffix: '', enabled: true });
-  const RecipesData = Rdata.recipes;
+  const [{ recipes: RecipesData }] = useFetch({ resource: 'recipes', query: { limit: 50 }, enabled: true });
 
   return (
     <S.Wrapper>
