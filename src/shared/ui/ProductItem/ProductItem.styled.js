@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { FlexBetween } from '@/shared/assets/styled/CommonStyled';

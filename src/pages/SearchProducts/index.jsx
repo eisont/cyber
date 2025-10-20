@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export const MainBox = styled(FlexCenter)`
+export const MainBox = styled.div`
   padding: 30px 0;
   width: 1140px;
   height: 100vh;
@@ -18,6 +18,7 @@ export const MainBox = styled(FlexCenter)`
 
   overflow-y: auto;
 
+  display: flex;
   align-items: start;
   justify-content: start;
 

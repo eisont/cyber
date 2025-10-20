@@ -105,11 +105,6 @@ export const OriginalPrice = styled.div`
   align-items: center;
 `;
 
-export const Stock = styled.div``;
-export const AvailabilityStatus = styled.div``;
-
-export const Rating = styled.div``;
-
 const Bt = styled(FlexCenter)`
   padding: 15px 20px;
 

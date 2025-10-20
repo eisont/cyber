@@ -41,10 +41,7 @@ const ProductItemDetail = () => {
         </S.SubTitleBox>
 
         <S.ContentBox>
-          <S.ImgBox>
-            {isLoading ? <DumImg width='500px' height='500px' /> : <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />}
-            {/* <S.SubBox>{ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox> */}
-          </S.ImgBox>
+          <S.ImgBox>{isLoading ? <DumImg width='500px' height='500px' /> : <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />}</S.ImgBox>
 
           <S.RBox>
             <div>
