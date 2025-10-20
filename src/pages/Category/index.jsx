@@ -18,7 +18,7 @@ const Category = () => {
 
   return (
     <S.Wrapper>
-      <S.MainWrapper>
+      <S.MainBox>
         <Breadcrumb />
         {!params.id ? (
           <S.FlexBox>
@@ -34,7 +34,7 @@ const Category = () => {
         ) : (
           <Outlet />
         )}
-      </S.MainWrapper>
+      </S.MainBox>
     </S.Wrapper>
   );
 };
