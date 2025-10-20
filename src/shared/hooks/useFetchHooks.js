@@ -3,11 +3,16 @@ import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { userTokenSlice } from '@/redux';
 
-export const useFetch = ({ resource, endPoint = '', suffix = '?&select=', params = '', enabled }) => {
+export const useFetch = ({ resource, path = '', endPoint = [], query = {}, enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const url = `https://dummyjson.com/${resource}/${endPoint}${suffix}${params}`;
+  const endPointString = endPoint.length ? '/' + endPoint.map((el) => el).join('/') : '';
+  const queryString = Object.entries(query)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&');
+
+  const url = `https://dummyjson.com/${resource}/${path}${endPointString}?${queryString}`;
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);

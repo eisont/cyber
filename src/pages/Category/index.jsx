@@ -12,11 +12,9 @@ const Category = () => {
   const location = useLocation();
   const productId = useSelector((state) => state.productId);
 
-  const [Pdata] = useFetch({ resource: 'products', endPoint: 'category/', suffix: productId || 'beauty', params: '?&select=id', enabled: true });
-  const ProductListData = Pdata.products;
+  const [{ products: ProductListData }] = useFetch({ resource: 'products', path: 'category', endPoint: [productId || 'beauty'], query: { select: 'id' }, enabled: true });
 
-  const [Rdata] = useFetch({ resource: 'recipes', endPoint: '?limit=50', suffix: '&select=id', enabled: true });
-  const RecipesData = Rdata.recipes;
+  const [{ recipes: RecipesData }] = useFetch({ resource: 'recipes', query: { limit: 50 }, enabled: true });
 
   return (
     <S.Wrapper>

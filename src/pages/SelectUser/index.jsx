@@ -3,8 +3,7 @@ import UserCard from '@/pages/SelectUser/ui/UserCard';
 import * as S from '@/pages/SelectUser/SelectUser.styled';
 
 const SelectUser = () => {
-  const [data, isLoading] = useFetch({ resource: 'users', enabled: true });
-  const usersData = data?.users;
+  const [{ users: usersData }, isLoading] = useFetch({ resource: 'users', enabled: true });
 
   return (
     <S.Wrapper>

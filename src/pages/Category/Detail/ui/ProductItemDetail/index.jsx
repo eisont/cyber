@@ -7,7 +7,7 @@ import * as S from '@/pages/Category/Detail/ui/ProductItemDetail/ProductItemDeta
 const ProductItemDetail = () => {
   const params = useParams();
 
-  const [ItemData, isLoading] = useFetch({ resource: 'products', endPoint: params.id, enabled: true });
+  const [ItemData, isLoading] = useFetch({ resource: 'products', endPoint: [params.id], enabled: true });
 
   return (
     <S.Wrapper>

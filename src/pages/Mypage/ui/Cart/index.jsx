@@ -40,8 +40,7 @@ const Summary = styled.div`
 `;
 
 const CartCard = () => {
-  const [data] = useFetch({ resource: 'cart', endPoint: 9, enabled: true });
-  const ItemData = data?.products;
+  const [{ products: ItemData }] = useFetch({ resource: 'cart', path: 9, enabled: true });
 
   const totalQty = ItemData?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
   const totalPrice = ItemData?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);

@@ -10,7 +10,8 @@ const Breadcrumb = () => {
   const params = useParams();
   const location = useLocation();
   const productId = useSelector((state) => state.productId);
-  const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: params.id, params: 'title', enabled: true });
+
+  const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: [params.id], query: { select: 'title' }, enabled: true });
 
   return (
     <S.Category>

@@ -15,7 +15,7 @@ const Filter = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const [ProductsCategoryListData, isLoading] = useFetch({ resource: 'products', endPoint: 'category-list', suffix: '', enabled: true });
+  const [ProductsCategoryListData, isLoading] = useFetch({ resource: 'products', path: 'category-list', enabled: true });
 
   const handleItemSelect = (id, type) => {
     dispatch(productIdSlice.actions.getProductId(id));
