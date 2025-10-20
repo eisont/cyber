@@ -4,10 +4,20 @@ import { memo, useState } from 'react';
 import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
 import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
 import { OriginalPrice } from '@/shared/lib';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { productIdSlice } from '@/redux';
 
 const ProductItem = memo((pr) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const { ref } = useIntersectionObserver();
+
+  const handleItemSelect = (id, type) => {
+    dispatch(productIdSlice.actions.getProductId(id));
+    navigate(`/category/${type}`);
+  };
 
   return (
     <S.Wrapper>
@@ -43,7 +53,7 @@ const ProductItem = memo((pr) => {
           </>
         )}
 
-        <S.Button to={`/category/${pr?.id}`}>Detail</S.Button>
+        <S.Button onClick={() => handleItemSelect(pr.category, pr.id)}>Detail</S.Button>
       </S.MainBox>
     </S.Wrapper>
   );

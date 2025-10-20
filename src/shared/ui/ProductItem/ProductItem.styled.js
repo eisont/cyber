@@ -122,7 +122,7 @@ export const DiscountedPrice = styled.div`
   }
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.div`
   width: 188px;
   height: 48px;
   font-size: 16px;

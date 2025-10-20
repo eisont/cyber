@@ -25,7 +25,7 @@ const Filter = () => {
   return (
     <S.Wrapper>
       <S.CategoryBox>
-        <S.TitleBox productId={productId} onClick={() => handleItemSelect('beauty', '/recipes')}>
+        <S.TitleBox productId={productId} onClick={() => handleItemSelect('', '/recipes')}>
           <S.Title>Recipes</S.Title>
         </S.TitleBox>
         <S.TitleBox onClick={() => setToggle((prev) => !prev)}>
