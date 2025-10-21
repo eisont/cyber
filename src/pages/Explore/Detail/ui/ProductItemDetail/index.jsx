@@ -2,7 +2,7 @@ import { OriginalPrice } from '@/shared/lib';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { DumText, DumImg } from '@/shared/assets/styled/skeleton';
-import * as S from '@/pages/Category/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
+import * as S from '@/pages/Explore/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
 
 const ProductItemDetail = () => {
   const params = useParams();
@@ -32,7 +32,7 @@ const ProductItemDetail = () => {
           </S.SubTitle>
           <S.SubTitle>
             <S.Text>카테고리:</S.Text>
-            {isLoading ? <DumText width='50px' height='15px' /> : <>{ItemData.category}</>}
+            {isLoading ? <DumText width='50px' height='15px' /> : <>{ItemData.Explore}</>}
           </S.SubTitle>
           <S.SubTitle>
             <S.Text>SKU:</S.Text>
@@ -41,10 +41,7 @@ const ProductItemDetail = () => {
         </S.SubTitleBox>
 
         <S.ContentBox>
-          <S.ImgBox>
-            {isLoading ? <DumImg width='500px' height='500px' /> : <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />}
-            {/* <S.SubBox>{ItemData.images?.filter((el, i) => i > 0 && <S.SubImg src={el} key={i} />)}</S.SubBox> */}
-          </S.ImgBox>
+          <S.ImgBox>{isLoading ? <DumImg width='500px' height='500px' /> : <S.ProductImg src={ItemData.thumbnail} alt='thumbnail' />}</S.ImgBox>
 
           <S.RBox>
             <div>

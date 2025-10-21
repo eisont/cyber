@@ -77,7 +77,7 @@ export const ItemBox = styled(Link)`
   @media (max-width: ${BREAKPOINTS.mobile}) {
   }
 `;
-export const CategoryImg = styled.div``;
+export const CategoryImg = styled(FlexCenter)``;
 
 export const Title = styled.div`
   margin: 10px 0 0 0;

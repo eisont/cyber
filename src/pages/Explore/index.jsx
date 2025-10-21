@@ -1,13 +1,13 @@
 import { Outlet, useLocation, useParams } from 'react-router-dom';
-import Filter from '@/pages/Category/ui/Filter';
-import ProductsBox from '@/pages/Category/ui/ProductsBox';
-import Breadcrumb from '@/pages/Category/ui/Breadcrumb';
-import * as S from '@/pages/Category/Category.styled';
+import Filter from '@/pages/Explore/ui/Filter';
+import ProductsBox from '@/pages/Explore/ui/ProductsBox';
+import Breadcrumb from '@/pages/Explore/ui/Breadcrumb';
+import * as S from '@/pages/Explore/Explore.styled';
 import Recipes from '@/pages/Recipes';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { useSelector } from 'react-redux';
 
-const Category = () => {
+const Explore = () => {
   const params = useParams();
   const location = useLocation();
   const productId = useSelector((state) => state.productId);
@@ -18,7 +18,7 @@ const Category = () => {
 
   return (
     <S.Wrapper>
-      <S.MainWrapper>
+      <S.MainBox>
         <Breadcrumb />
         {!params.id ? (
           <S.FlexBox>
@@ -34,9 +34,9 @@ const Category = () => {
         ) : (
           <Outlet />
         )}
-      </S.MainWrapper>
+      </S.MainBox>
     </S.Wrapper>
   );
 };
 
-export default Category;
+export default Explore;

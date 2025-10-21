@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
-import * as S from '@/pages/Category/Category.styled';
+import * as S from '@/pages/Explore/ui/Breadcrumb/Breadcrumb.styled';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
 import { ToUpper } from '@/shared/lib';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
@@ -14,16 +14,16 @@ const Breadcrumb = () => {
   const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: [params.id], query: { select: 'title' }, enabled: true });
 
   return (
-    <S.Category>
-      <S.CategoryMenu to='/'>Home</S.CategoryMenu>
+    <S.Wrapper>
+      <S.Menu to='/'>Home</S.Menu>
       <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
       {location.pathname === '/recipes' ? (
         <S.ProductItemMenu params={'true'}>Recipes</S.ProductItemMenu>
       ) : (
         <>
-          <S.CategoryMenu to='/category'>Category</S.CategoryMenu>
+          <S.Menu to='/Explore'>Products</S.Menu>
           <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-          <S.ProductAllMenu to='/category' params={params.id}>
+          <S.ProductAllMenu to='/Explore' params={params.id}>
             {ToUpper(productId)}
           </S.ProductAllMenu>
 
@@ -35,7 +35,7 @@ const Breadcrumb = () => {
           )}
         </>
       )}
-    </S.Category>
+    </S.Wrapper>
   );
 };
 

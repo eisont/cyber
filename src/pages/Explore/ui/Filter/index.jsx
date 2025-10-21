@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import * as S from '@/pages/Category/ui/Filter/Filter.styled';
+import * as S from '@/pages/Explore/ui/Filter/Filter.styled';
 import { productIdSlice } from '@/redux';
 import { ToUpper } from '@/shared/lib';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons';
@@ -25,11 +25,11 @@ const Filter = () => {
   return (
     <S.Wrapper>
       <S.CategoryBox>
-        <S.TitleBox productId={productId} onClick={() => handleItemSelect('beauty', '/recipes')}>
+        <S.TitleBox productId={productId} onClick={() => handleItemSelect('', '/recipes')}>
           <S.Title>Recipes</S.Title>
         </S.TitleBox>
         <S.TitleBox onClick={() => setToggle((prev) => !prev)}>
-          <S.Title>Category</S.Title>
+          <S.Title>Products</S.Title>
           <S.Arrow toggle={toggle}>{ExpandDownSVG({ size: '24', color: '#191919' })}</S.Arrow>
         </S.TitleBox>
 
@@ -49,7 +49,7 @@ const Filter = () => {
               <>
                 {ProductsCategoryListData.map((el) => (
                   <S.BrandInBox key={Number(new Date()) + el}>
-                    <S.Brand onClick={() => handleItemSelect(el, '/category')} productId={ToUpper(productId)} name={ToUpper(el)}>
+                    <S.Brand onClick={() => handleItemSelect(el, '/Explore')} productId={ToUpper(productId)} name={ToUpper(el)}>
                       {ToUpper(el)}
                     </S.Brand>
                   </S.BrandInBox>

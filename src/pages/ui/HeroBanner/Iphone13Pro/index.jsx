@@ -103,7 +103,7 @@ const Iphone13Pro = () => {
           <span style={{ fontWeight: '100' }}>IPhone 13</span> Pro
         </TitleText>
         <SubText>Created to change everything for the better. For everyone</SubText>
-        <LinkSt to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('smartphones'))}>
+        <LinkSt to='explore' onClick={() => dispatch(productIdSlice.actions.getProductId('smartphones'))}>
           <Button>Shop Now</Button>
         </LinkSt>
       </Iphone13ProTextBox>

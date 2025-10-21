@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
@@ -122,7 +121,7 @@ export const DiscountedPrice = styled.div`
   }
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.div`
   width: 188px;
   height: 48px;
   font-size: 16px;

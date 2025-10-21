@@ -28,9 +28,9 @@ const ProductGrid = () => {
           <S.MainBox>
             <S.CategoryBox>
               {CategoryListData?.map((el) => (
-                <S.Category key={Number(new Date()) + el} id={el} productId={productId} onClick={() => dispatch(productIdSlice.actions.getProductId(el))}>
+                <S.Explore key={Number(new Date()) + el} id={el} productId={productId} onClick={() => dispatch(productIdSlice.actions.getProductId(el))}>
                   {ToUpper(el)}
-                </S.Category>
+                </S.Explore>
               ))}
             </S.CategoryBox>
 
