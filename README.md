@@ -1,1 +1,1 @@
-# [dummy-mart](https://dummyjson.com/) api 활용한 프로젝트
+# (https://dummyjson.com/) api 활용한 프로젝트
