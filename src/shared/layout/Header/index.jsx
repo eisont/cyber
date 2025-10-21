@@ -31,7 +31,7 @@ const Header = () => {
         </S.FlexBox>
 
         <S.IconBox>
-          {pathname === '/products' ? <S.Icon to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'/products'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
+          {pathname === '/search' ? <S.Icon to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
 
           {!userInfo ? (
             <S.Bt to={'/selectUser'}>유저 선택</S.Bt>

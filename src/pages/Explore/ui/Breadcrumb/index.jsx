@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
-import * as S from '@/pages/Category/ui/Breadcrumb/Breadcrumb.styled';
+import * as S from '@/pages/Explore/ui/Breadcrumb/Breadcrumb.styled';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
 import { ToUpper } from '@/shared/lib';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
@@ -21,9 +21,9 @@ const Breadcrumb = () => {
         <S.ProductItemMenu params={'true'}>Recipes</S.ProductItemMenu>
       ) : (
         <>
-          <S.Menu to='/category'>Category</S.Menu>
+          <S.Menu to='/Explore'>Products</S.Menu>
           <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-          <S.ProductAllMenu to='/category' params={params.id}>
+          <S.ProductAllMenu to='/Explore' params={params.id}>
             {ToUpper(productId)}
           </S.ProductAllMenu>
 

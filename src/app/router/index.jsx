@@ -3,14 +3,14 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 import Layout from '@/pages/Layout';
-const Category = lazy(() => import('@/pages/Category'));
+const Explore = lazy(() => import('@/pages/Explore'));
 const SearchProducts = lazy(() => import('@/pages/SearchProducts'));
 const SelectUser = lazy(() => import('@/pages/SelectUser'));
 const MyPage = lazy(() => import('@/pages/MyPage'));
 import ProductGrid from '@/shared/ui/ProductGrid';
 import { HeroBanner, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner } from '@/pages/ui';
 const Recipes = lazy(() => import('@/pages/Recipes'));
-const CategoryDetail = lazy(() => import('@/pages/Category/Detail'));
+const ProductDetail = lazy(() => import('@/pages/Explore/Detail'));
 
 const AppRouter = () => {
   const userInfo = useSelector((state) => state.userInfo);
@@ -32,11 +32,11 @@ const AppRouter = () => {
             }
           />
 
-          <Route path='/category' element={<Category />}>
-            <Route path=':id' element={<CategoryDetail />} />
+          <Route path='/explore' element={<Explore />}>
+            <Route path=':id' element={<ProductDetail />} />
           </Route>
-          <Route path='/recipes' element={<Category />} />
-          <Route path='/products' element={<SearchProducts />} />
+          <Route path='/recipes' element={<Explore />} />
+          <Route path='/search' element={<SearchProducts />} />
           <Route path='/selectUser' element={<SelectUser />} />
           <Route path={`/${userInfo.username}`} element={<MyPage />} />
         </Routes>

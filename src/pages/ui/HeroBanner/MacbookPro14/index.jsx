@@ -109,7 +109,7 @@ const MacBookPro14 = () => {
           Macbook<BoldTitle> Pro</BoldTitle> 14
         </TitleText>
         <SubText>The new 14‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</SubText>
-        <LinkSt to='category' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
+        <LinkSt to='explore' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
           <Button>Shop Now</Button>
         </LinkSt>
       </MacBookPro14TextBox>

@@ -40,7 +40,7 @@ export const CategoryBox = styled.div`
     height: 40px;
   }
 `;
-export const Category = styled.div`
+export const Explore = styled.div`
   margin: 0 20px 0 0;
   font-weight: 500;
   text-align: center;

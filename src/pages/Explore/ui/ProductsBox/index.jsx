@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import * as S from '@/pages/Category/ui/ProductsBox/ProductsBox.styled';
+import * as S from '@/pages/Explore/ui/ProductsBox/ProductsBox.styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 

@@ -14,9 +14,9 @@ const ProductItem = memo((pr) => {
   const [toggle, setToggle] = useState(false);
   const { ref } = useIntersectionObserver();
 
-  const handleItemSelect = (id, type) => {
-    dispatch(productIdSlice.actions.getProductId(id));
-    navigate(`/category/${type}`);
+  const handleItemSelect = (productId, id) => {
+    dispatch(productIdSlice.actions.getProductId(productId));
+    navigate(`/explore/${id}`);
   };
 
   return (

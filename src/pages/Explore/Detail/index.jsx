@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
-import SkeletonProductItemDetail from '@/pages/Category/Detail/SkeletonProductItemDetail';
+import SkeletonProductItemDetail from '@/pages/Explore/Detail/SkeletonProductItemDetail';
 import styled from '@emotion/styled';
-const ProductItemDetail = lazy(() => import('@/pages/Category/Detail/ui/ProductItemDetail'));
+const ProductItemDetail = lazy(() => import('@/pages/Explore/Detail/ui/ProductItemDetail'));
 const ProductGrid = lazy(() => import('@/shared/ui/ProductGrid'));
 
 const SideItem = styled.div`
@@ -11,7 +11,7 @@ const SideItem = styled.div`
   align-items: center;
 `;
 
-const CategoryDetail = () => {
+const ProductDetail = () => {
   return (
     <Suspense fallback={<SkeletonProductItemDetail />}>
       <SideItem>
@@ -22,4 +22,4 @@ const CategoryDetail = () => {
   );
 };
 
-export default CategoryDetail;
+export default ProductDetail;
