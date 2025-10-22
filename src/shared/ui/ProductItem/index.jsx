@@ -4,12 +4,12 @@ import { memo, useState } from 'react';
 import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
 import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
 import { OriginalPrice } from '@/shared/lib';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { useNavigate } from 'react-router-dom';
 import { productIdSlice } from '@/redux';
 
 const ProductItem = memo((pr) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
   const { ref } = useIntersectionObserver();

@@ -2,7 +2,7 @@ import { useSearchFetch } from '@/shared/hooks/useFetchHooks';
 import styled from '@emotion/styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 import { DumBox } from '@/shared/assets/styled/skeleton';
 
 const Wrapper = styled.div`
@@ -26,7 +26,7 @@ export const MainBox = styled.div`
 `;
 
 const SearchProducts = () => {
-  const searchData = useSelector((state) => state.setSearchData);
+  const searchData = useAppSelector((state) => state.setSearchData);
   const [{ products: ProductListData }, ProductListsLoading] = useSearchFetch({ searchData, enabled: true });
 
   return (

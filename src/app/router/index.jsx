@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
@@ -13,7 +13,7 @@ const Recipes = lazy(() => import('@/pages/Recipes'));
 const ProductDetail = lazy(() => import('@/pages/Explore/Detail'));
 
 const AppRouter = () => {
-  const userInfo = useSelector((state) => state.userInfo);
+  const userInfo = useAppSelector((state) => state.userInfo);
 
   return (
     <Layout>

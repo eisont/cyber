@@ -1,10 +1,10 @@
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 import * as S from '@/pages/Explore/ui/ProductsBox/ProductsBox.styled';
 import ProductItem from '@/shared/ui/ProductItem';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ProductsBox = () => {
-  const productId = useSelector((state) => state.productId);
+  const productId = useAppSelector((state) => state.productId);
 
   const [{ products: ProductListData }, isLoading] = useFetch({ resource: 'products', path: 'category', endPoint: [productId || 'beauty'], enabled: true });
 

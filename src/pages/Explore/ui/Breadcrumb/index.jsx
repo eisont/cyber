@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 import { useLocation, useParams } from 'react-router-dom';
 import * as S from '@/pages/Explore/ui/Breadcrumb/Breadcrumb.styled';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
@@ -9,7 +9,7 @@ import { DumText } from '@/shared/assets/styled/skeleton';
 const Breadcrumb = () => {
   const params = useParams();
   const location = useLocation();
-  const productId = useSelector((state) => state.productId);
+  const productId = useAppSelector((state) => state.productId);
 
   const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: [params.id], query: { select: 'title' }, enabled: true });
 

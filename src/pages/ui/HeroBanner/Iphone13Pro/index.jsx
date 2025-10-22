@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { productIdSlice } from '@/redux';
@@ -93,7 +93,7 @@ const MobileIphone13ProImg = styled.img`
 `;
 
 const Iphone13Pro = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <Wrapper>

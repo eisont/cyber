@@ -5,12 +5,12 @@ import Breadcrumb from '@/pages/Explore/ui/Breadcrumb';
 import * as S from '@/pages/Explore/Explore.styled';
 import Recipes from '@/pages/Recipes';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 
 const Explore = () => {
   const params = useParams();
   const location = useLocation();
-  const productId = useSelector((state) => state.productId);
+  const productId = useAppSelector((state) => state.productId);
 
   const [{ products: ProductListData }] = useFetch({ resource: 'products', path: 'category', endPoint: [productId || 'beauty'], query: { select: 'id' }, enabled: true });
 

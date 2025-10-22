@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { userTokenSlice } from '@/redux';
 import { useAppSelector } from '@/redux/hooks';
 
@@ -108,7 +108,7 @@ type tokenFetchPros = {
 };
 
 export const useTokenFetch = ({ query, body, enabled = true }: tokenFetchPros) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (!enabled || !body.username) return;

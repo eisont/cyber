@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { Link } from 'react-router-dom';
 import { productIdSlice } from '@/redux';
 import styled from '@emotion/styled';
@@ -100,7 +100,7 @@ const MobileMacBookPro14Img = styled.img`
 `;
 
 const MacBookPro14 = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   return (
     <Wrapper>
       <MobileMacBookPro14Img src='img/mobile/MacBookPro14.webp' alt='MacBookPro14' />

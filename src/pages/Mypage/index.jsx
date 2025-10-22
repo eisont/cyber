@@ -1,11 +1,11 @@
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '@/redux/hooks';
 import { useState } from 'react';
 import CartCard from '@/pages/MyPage/ui/Cart';
 import { ProfileCard, PersonalCard, AddressCard, WorkEduCard, FinanceCard, SystemCard } from '@/pages/MyPage/ui';
 import * as S from '@/pages/MyPage/MyPage.styled';
 
 const MyPage = () => {
-  const userInfo = useSelector((state) => state.userInfo);
+  const userInfo = useAppSelector((state) => state.userInfo);
   const [toggle, setToggle] = useState(false);
 
   return (

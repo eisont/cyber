@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { loginDataSlice } from '@/redux';
 
 const Wrapper = styled.div`
@@ -36,7 +36,7 @@ const HiddenBox = styled(Link)`
 `;
 
 const UserCard = (pr) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <Wrapper>

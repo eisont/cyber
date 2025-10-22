@@ -1,10 +1,10 @@
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '@/redux/hooks';
 import { BaseballOutlineSVG, CarSportsOutlineSVG, FastFoodOutlineSVG, LaptopSVG, ManOutlineSVG, WomanOutlineSVG } from '@/shared/assets/SVGicons';
 import { productIdSlice } from '@/redux';
 import * as S from '@/pages/ui/CategoryHighlight/CategoryHighlight.styled';
 
 const CategoryHighlight = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <S.Wrapper>

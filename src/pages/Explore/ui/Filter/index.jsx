@@ -1,4 +1,3 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import * as S from '@/pages/Explore/ui/Filter/Filter.styled';
 import { productIdSlice } from '@/redux';
@@ -7,10 +6,11 @@ import { ExpandDownSVG } from '@/shared/assets/SVGicons';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { DumText } from '@/shared/assets/styled/skeleton';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const Filter = () => {
-  const productId = useSelector((state) => state.productId);
-  const dispatch = useDispatch();
+  const productId = useAppSelector((state) => state.productId);
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const [toggle, setToggle] = useState(false);

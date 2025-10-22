@@ -1,17 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { productIdSlice } from '@/redux';
 import ProductItem from '@/shared/ui/ProductItem';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { ToUpper } from '@/shared/lib';
 import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const ProductGrid = () => {
-  const productId = useSelector((state) => state.productId);
+  const productId = useAppSelector((state) => state.productId);
+  const dispatch = useAppDispatch();
 
   const [CategoryListData, isLoading] = useFetch({ resource: 'products', path: 'category-list', enabled: true });
   const [{ products: ProductListData }, ProductListsLoading] = useFetch({ resource: 'products', endPoint: ['category', productId], enabled: true });
-
-  const dispatch = useDispatch();
 
   return (
     <S.Wrapper>
