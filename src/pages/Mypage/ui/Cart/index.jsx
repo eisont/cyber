@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import * as S from '@/pages/Mypage/MyPage.styled';
+import * as S from '@/pages/MyPage/MyPage.styled';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const ItemRow = styled.div`

@@ -1,4 +1,4 @@
-import * as S from '@/pages/Mypage/MyPage.styled';
+import * as S from '@/pages/MyPage/MyPage.styled';
 
 const FinanceCard = ({ user }) => {
   const mask = (num = '') => num.replace(/\d(?=\d{4})/g, '*');

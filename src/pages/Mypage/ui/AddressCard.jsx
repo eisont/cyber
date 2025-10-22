@@ -1,4 +1,4 @@
-import * as S from '@/pages/Mypage/MyPage.styled';
+import * as S from '@/pages/MyPage/MyPage.styled';
 
 const AddressCard = ({ user }) => {
   const a = user.address || {};
