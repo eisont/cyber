@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    /* === 기본 설정 === */
+    "target": "ES2022", // 최신 JS 기능 지원
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // 브라우저 + 최신 JS API 사용 가능
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react", // Emotion styled 사용 시 필수
+    "allowJs": true, // JS 파일도 TypeScript 컴파일러(tsc)가 인식하고 처리하도록 허용하는 옵션2
+
+    /* === 경로 설정 === */
+    "baseUrl": ".", // 절대경로 기준
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["src/shared/*"],
+      "@pages/*": ["src/pages/*"],
+      "@app/*": ["src/app/*"]
+    },
+
+    /* === 타입 검사 강화 === */
+    "strict": true, // 모든 엄격 모드 켜기
+    "noImplicitAny": true, // any 방지
+    "noUnusedLocals": true, // 사용 안 하는 변수 경고
+    "noUnusedParameters": true, // 사용 안 하는 매개변수 경고
+    "noImplicitReturns": true, // 모든 코드 경로 return 검사
+    "noFallthroughCasesInSwitch": true, // switch문 fallthrough 방지
+    "forceConsistentCasingInFileNames": true, // 대소문자 파일명 일관성
+
+    /* === 모듈 관련 === */
+    "skipLibCheck": true, // 라이브러리 타입 검사 생략 (속도 ↑)
+    "esModuleInterop": true, // CommonJS 호환
+    "resolveJsonModule": true, // JSON import 가능
+    "isolatedModules": true, // Vite 환경에서 필수
+    "verbatimModuleSyntax": true, // import/export 일관성 유지
+
+    /* === 타입 경로 === */
+    "types": ["vite/client", "@emotion/react/types/css-prop"]
+  },
+
+  /* === 포함 / 제외 경로 === */
+  "include": ["src/**/*", "vite-env.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
