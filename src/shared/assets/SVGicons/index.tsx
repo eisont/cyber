@@ -1,5 +1,20 @@
 // Logo
-export const LogoSVG = ({ width, height, color }) => (
+type SVGProps1 = {
+  width: string;
+  height: string;
+  color: string;
+};
+type SVGProps2 = {
+  color: string;
+  size: string;
+};
+type SVGProps3 = {
+  color: string;
+  size: string;
+  insideColor: string;
+};
+
+export const LogoSVG = ({ width, height, color }: SVGProps1) => (
   <svg width={width} height={height} viewBox='0 0 96 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M5.42812 9.39935L8.91177 7.39026L6.96725 4.02409H25.2549L16.114 19.862L14.1695 16.49L10.6859 18.505L16.114 27.9044L32.2221 0H0L5.42812 9.39935Z' fill={color} />
     <path
@@ -23,7 +38,7 @@ export const LogoSVG = ({ width, height, color }) => (
 );
 
 // Footer
-export const TiktokSVG = ({ size, color }) => (
+export const TiktokSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M11.8836 3.358C11.2243 2.59144 10.8788 1.60104 10.9063 0.592723L8.4425 0.533203C8.4425 0.533203 8.4425 0.638323 8.4425 0.780083V10.6602C8.4769 13.786 3.53834 13.7102 3.92906 10.2551C4.16794 8.88136 5.6441 8.03592 6.95578 8.51384V5.99992C4.1001 5.50264 1.39386 7.7756 1.42234 10.6713C1.67194 16.9513 10.6793 16.9521 10.9292 10.6713C10.8663 10.4465 10.9015 6.26152 10.8926 5.90856C12.0129 6.60568 13.3164 6.95416 14.6366 6.90952V4.3132C13.4161 4.3132 12.4847 3.98872 11.8836 3.358Z'
@@ -32,7 +47,7 @@ export const TiktokSVG = ({ size, color }) => (
   </svg>
 );
 
-export const FacebookSVG = ({ size, color }) => (
+export const FacebookSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M8.84757 3.81794C8.84757 3.98169 8.84757 4.51541 8.84757 5.27366H11.4546L11.1719 7.59763H8.84757C8.84757 11.1816 8.84757 15.9843 8.84757 15.9843H5.76238C5.76238 15.9843 5.76238 11.2452 5.76238 7.59763H4.15479V5.27366H5.76238C5.76238 4.35204 5.76238 3.69669 5.76238 3.51422C5.76238 2.64485 5.69688 2.23235 6.06629 1.55866C6.43588 0.885005 7.47838 -0.00543266 9.28147 0.0160048C11.085 0.0382236 11.8452 0.211724 11.8452 0.211724L11.4546 2.6885C11.4546 2.6885 10.3029 2.38441 9.73763 2.49279C9.1731 2.60119 8.84757 2.94894 8.84757 3.81794Z'
@@ -41,7 +56,7 @@ export const FacebookSVG = ({ size, color }) => (
   </svg>
 );
 
-export const InstagramSVG = ({ size, color, color2 }) => (
+export const InstagramSVG = ({ size, color, insideColor }: SVGProps3) => (
   <svg width={size} height={size} viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <g clipPath='url(#clip0_1_5763)'>
       <path
@@ -53,7 +68,7 @@ export const InstagramSVG = ({ size, color, color2 }) => (
       <path
         d='M7.99992 11.3333C9.47268 11.3333 10.6666 10.1394 10.6666 8.66667C10.6666 7.19391 9.47268 6 7.99992 6C6.52716 6 5.33325 7.19391 5.33325 8.66667C5.33325 10.1394 6.52716 11.3333 7.99992 11.3333Z'
         fill={color}
-        stroke={color2}
+        stroke={insideColor}
         strokeWidth='2'
       />
       <path d='M11.25 5.5C11.6642 5.5 12 5.16421 12 4.75C12 4.33579 11.6642 4 11.25 4C10.8358 4 10.5 4.33579 10.5 4.75C10.5 5.16421 10.8358 5.5 11.25 5.5Z' fill='black' />
@@ -66,7 +81,7 @@ export const InstagramSVG = ({ size, color, color2 }) => (
   </svg>
 );
 
-export const TwitterSVG = ({ size, color }) => (
+export const TwitterSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       fillRule='evenodd'
@@ -77,7 +92,7 @@ export const TwitterSVG = ({ size, color }) => (
   </svg>
 );
 
-export const SearchSVG = ({ size, color }) => (
+export const SearchSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M22.5692 22.7198L27.2 27.1998M15.2 9.5998C17.851 9.5998 20 11.7488 20 14.3998M25.7067 15.2531C25.7067 21.0264 21.0266 25.7065 15.2534 25.7065C9.48017 25.7065 4.80005 21.0264 4.80005 15.2531C4.80005 9.47992 9.48017 4.7998 15.2534 4.7998C21.0266 4.7998 25.7067 9.47992 25.7067 15.2531Z'
@@ -87,7 +102,7 @@ export const SearchSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const Arrow24pxSVG = ({ size, color }) => (
+export const Arrow24pxSVG = ({ size, color }: SVGProps2) => (
   // stroke='#A4A4A4'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -95,7 +110,7 @@ export const Arrow24pxSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ExpandDownSVG = ({ size, color }) => (
+export const ExpandDownSVG = ({ size, color }: SVGProps2) => (
   // stroke='#191919'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -103,7 +118,7 @@ export const ExpandDownSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ViewSVG = ({ size, color }) => (
+export const ViewSVG = ({ size, color }: SVGProps2) => (
   // stroke='#979797'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -115,7 +130,7 @@ export const ViewSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ToEditSVG = ({ size, color }) => (
+export const ToEditSVG = ({ size, color }: SVGProps2) => (
   // fill = '#222222'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -128,7 +143,7 @@ export const ToEditSVG = ({ size, color }) => (
   </svg>
 );
 
-export const SmartWatchesSVG = ({ size, color }) => (
+export const SmartWatchesSVG = ({ size, color }: SVGProps2) => (
   // fill = '#2E2E2E'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -170,7 +185,7 @@ export const SmartWatchesSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const PlusSVG = ({ size, color }) => (
+export const PlusSVG = ({ size, color }: SVGProps2) => (
   // fill='#222222'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -182,7 +197,7 @@ export const PlusSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const PhonesSVG = ({ size, color }) => (
+export const PhonesSVG = ({ size, color }: SVGProps2) => (
   // fill='#2E2E2E'
 
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -193,7 +208,7 @@ export const PhonesSVG = ({ size, color }) => (
   </svg>
 );
 
-export const EmptyCartSVG = ({ size, color }) => (
+export const EmptyCartSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001'
@@ -215,7 +230,7 @@ export const EmptyCartSVG = ({ size, color }) => (
     <path d='M8.49451 12H8.50349' stroke={color} strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
   </svg>
 );
-export const AddToCartSVG = ({ size, color, insideColor }) => (
+export const AddToCartSVG = ({ size, color, insideColor }: SVGProps3) => (
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M9.62 16L11.12 17.5L14.37 14.5' stroke={insideColor} strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
     <path d='M8.81 2L5.19 5.63' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
@@ -229,7 +244,7 @@ export const AddToCartSVG = ({ size, color, insideColor }) => (
   </svg>
 );
 
-export const FavoritesSVG = ({ size, color }) => (
+export const FavoritesSVG = ({ size, color }: SVGProps2) => (
   // stroke = #919191
 
   <svg width={size} height={size} viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -243,7 +258,7 @@ export const FavoritesSVG = ({ size, color }) => (
   </svg>
 );
 
-export const UserSVG = ({ size, color }) => (
+export const UserSVG = ({ size, color }: SVGProps2) => (
   // stroke = #191919"
 
   <svg width={size} height={size} viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -257,7 +272,7 @@ export const UserSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ArrowSVG = ({ size, color }) => (
+export const ArrowSVG = ({ size, color }: SVGProps2) => (
   // fill='#2E2E2E'
 
   <svg width={size} height={size} viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -268,7 +283,7 @@ export const ArrowSVG = ({ size, color }) => (
   </svg>
 );
 
-export const BagSVG = ({ size, color }) => (
+export const BagSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M11.7467 2.66663L6.92001 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
     <path d='M20.2533 2.66663L25.08 7.50663' stroke={color} strokeWidth='1.5' strokeMiterlimit='10' strokeLinecap='round' strokeLinejoin='round' />
@@ -288,7 +303,7 @@ export const BagSVG = ({ size, color }) => (
   </svg>
 );
 
-export const WomanOutlineSVG = ({ size, color }) => (
+export const WomanOutlineSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <path d='M208 368v104a23.73 23.73 0 0024 24h0a23.73 23.73 0 0024-24' fill='none' stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' />
     <path
@@ -303,7 +318,7 @@ export const WomanOutlineSVG = ({ size, color }) => (
     <path fill='none' stroke={color} strokeLinecap='round' strokeLinejoin='round' strokeWidth='32' d='M208 192l-48 160h192l-48-160' />
   </svg>
 );
-export const ManOutlineSVG = ({ size, color }) => (
+export const ManOutlineSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <path d='M208 208v264a23.73 23.73 0 0024 24h0a23.73 23.73 0 0024-24' fill='none' stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' />
     <path d='M256 336v136a23.73 23.73 0 0024 24h0a23.73 23.73 0 0024-24V208' fill='none' stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' />
@@ -318,13 +333,13 @@ export const ManOutlineSVG = ({ size, color }) => (
     <circle cx='256' cy='56' r='40' fill='none' stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' />
   </svg>
 );
-export const LaptopSVG = ({ size, color }) => (
+export const LaptopSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <rect x='48' y='96' width='416' height='304' rx='32.14' ry='32.14' fill='none' stroke={color} strokeLinejoin='round' strokeWidth='32' />
     <path stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' d='M16 416h480' />
   </svg>
 );
-export const FastFoodOutlineSVG = ({ size, color }) => (
+export const FastFoodOutlineSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M322 416c0 35.35-20.65 64-56 64H134c-35.35 0-56-28.65-56-64M336 336c17.67 0 32 17.91 32 40h0c0 22.09-14.33 40-32 40H64c-17.67 0-32-17.91-32-40h0c0-22.09 14.33-40 32-40'
@@ -347,7 +362,7 @@ export const FastFoodOutlineSVG = ({ size, color }) => (
     <path fill='none' stroke={color} strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' d='M224 112h256' />
   </svg>
 );
-export const CarSportsOutlineSVG = ({ size, color }) => (
+export const CarSportsOutlineSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <path
       d='M469.71 234.6c-7.33-9.73-34.56-16.43-46.08-33.94s-20.95-55.43-50.27-70S288 112 256 112s-88 4-117.36 18.63-38.75 52.52-50.27 70-38.75 24.24-46.08 33.97S29.8 305.84 32.94 336s9 48 9 48h86c14.08 0 18.66-5.29 47.46-8 31.6-3 62.6-4 80.6-4s50 1 81.58 4c28.8 2.73 33.53 8 47.46 8h85s5.86-17.84 9-48-2.04-91.67-9.33-101.4zM400 384h56v16h-56zM56 384h56v16H56z'
@@ -361,7 +376,7 @@ export const CarSportsOutlineSVG = ({ size, color }) => (
     <path fill='none' stroke={color} strokeLinecap='round' strokeLinejoin='round' strokeWidth='32' d='M432 192h16M64 192h16M78 211s46.35-12 178-12 178 12 178 12' />
   </svg>
 );
-export const BaseballOutlineSVG = ({ size, color }) => (
+export const BaseballOutlineSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <path
       fill='none'
@@ -383,14 +398,14 @@ export const BaseballOutlineSVG = ({ size, color }) => (
   </svg>
 );
 
-export const CloseSVG = ({ size, color }) => (
+export const CloseSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M18 6L6 18' stroke={color} strokeLinecap='round' strokeLinejoin='round' />
     <path d='M6 6L18 18' stroke={color} strokeLinecap='round' strokeLinejoin='round' />
   </svg>
 );
 
-export const MenuSVG = ({ size, color }) => (
+export const MenuSVG = ({ size, color }: SVGProps2) => (
   <svg width={size} height={size} viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path d='M20 18H4M20 12H4M20 6H4' stroke={color} strokeWidth='2' strokeLinecap='round' />
   </svg>

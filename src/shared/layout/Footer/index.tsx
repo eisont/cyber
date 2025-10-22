@@ -35,7 +35,7 @@ const Footer = () => {
           <S.SnsLogo>{TwitterSVG({ size: '16', color: '#fff' })}</S.SnsLogo>
           <S.SnsLogo>{FacebookSVG({ size: '16', color: '#fff' })}</S.SnsLogo>
           <S.SnsLogo>{TiktokSVG({ size: '16', color: '#fff' })}</S.SnsLogo>
-          <S.SnsLogo>{InstagramSVG({ size: '16', color: '#fff', color2: '#000' })}</S.SnsLogo>
+          <S.SnsLogo>{InstagramSVG({ size: '16', color: '#fff', insideColor: '#000' })}</S.SnsLogo>
         </S.SnsBox>
       </S.TotalBox>
     </S.Wrapper>
