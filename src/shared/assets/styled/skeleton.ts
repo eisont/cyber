@@ -15,7 +15,7 @@ export const DumBox = styled.div`
   animation: pulse 1.5s infinite ease-in-out;
 `;
 
-export const DumImg = styled.div`
+export const DumImg = styled.div<{ width: string; height: string }>`
   width: ${(pr) => pr.width};
   height: ${(pr) => pr.height};
   background: rgb(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@ export const DumImg = styled.div`
     height: 104px;
   }
 `;
-export const DumText = styled.div`
+export const DumText = styled.div<{ width: string; height: string }>`
   width: ${(pr) => pr.width};
   height: ${(pr) => pr.height};
   background: rgb(0, 0, 0, 0.3);
