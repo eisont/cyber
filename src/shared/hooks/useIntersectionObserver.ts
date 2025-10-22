@@ -4,14 +4,14 @@ export const useIntersectionObserver = () => {
   const imgRef = useRef(null);
 
   useEffect(() => {
-    // console.log('imgRef', imgRef);
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // console.log('view 노출', entry);
-          const img = entry.target.getAttribute('data-src');
-          entry.target.src = img;
+          const img = entry.target as HTMLImageElement;
+          const dataSrc = img.getAttribute('data-src');
+          if (dataSrc) {
+            img.src = dataSrc;
+          }
           observer.unobserve(entry.target);
         }
       });

@@ -5,8 +5,8 @@ export const productIdSlice = createSlice({
   initialState: 'beauty', // 초기값
   reducers: {
     // 상태가 변하는 값
-    getProductId(state, action) {
-      return (state = action.payload);
+    getProductId(_, { payload }) {
+      return payload;
     },
   },
 });
@@ -15,23 +15,36 @@ export const searchSlice = createSlice({
   name: 'search',
   initialState: '',
   reducers: {
-    setSearchData(state, action) {
-      return (state = action.payload);
+    setSearchData(_, { payload }) {
+      return payload;
     },
   },
 });
 
+type loginDataProps = {
+  username: string;
+  password: string;
+  expiresInMins: number;
+};
+const initialState: loginDataProps = {
+  username: '',
+  password: '',
+  expiresInMins: 30,
+};
+
 export const loginDataSlice = createSlice({
   name: 'loginData',
-  initialState: {},
+  initialState,
   reducers: {
     setLoginData: (_, { payload }) => payload,
   },
 });
 
+type userTokenProps = { accessToken: string };
+const tokenInitialState: userTokenProps = { accessToken: '' };
 export const userTokenSlice = createSlice({
   name: 'userToken',
-  initialState: {},
+  initialState: tokenInitialState,
   reducers: {
     setUserToken: (_, { payload }) => payload, // 전체 객체 교체
   },

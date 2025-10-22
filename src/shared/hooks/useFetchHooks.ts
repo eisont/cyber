@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { userTokenSlice } from '@/redux';
+import { useAppSelector } from '@/redux/hooks';
 
-export const useFetch = ({ resource, path = '', endPoint = [], query = {}, enabled = true }) => {
+export const useFetch = ({ resource = '', path = '', endPoint = [], query = {}, enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -34,7 +35,7 @@ export const useFetch = ({ resource, path = '', endPoint = [], query = {}, enabl
   return [data, isLoading];
 };
 
-export const useSearchFetch = ({ searchData, enabled = true }) => {
+export const useSearchFetch = ({ searchData = '', enabled = true }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,17 +59,20 @@ export const useSearchFetch = ({ searchData, enabled = true }) => {
 
   useEffect(() => {
     if (!enabled) return;
-    setTimeout(() => {
+
+    const id: ReturnType<typeof setTimeout> = setTimeout(() => {
       debounceTimer();
     }, 1000);
-    return () => clearTimeout(debounceTimer);
+    //     핵심: clearTimeout은 setTimeout이 반환한 ID(브라우저에선 number, Node에선 객체)를 받아요. TS에선 ReturnType<typeof setTimeout> 를 쓰면 환경 차이까지 안전하게 커버됩니다.
+
+    return () => clearTimeout(id);
   }, [debounceTimer, enabled]);
 
   return [data, isLoading];
 };
 
 export const useUserInfoFetch = ({ enabled = true }) => {
-  const accessToken = useSelector((s) => s.userToken?.accessToken);
+  const accessToken = useAppSelector((s) => s.userToken?.accessToken);
   const [userInfo, setUserInfo] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -94,7 +98,16 @@ export const useUserInfoFetch = ({ enabled = true }) => {
   return [userInfo, isLoading];
 };
 
-export const useTokenFetch = ({ query, body, enabled = true }) => {
+type tokenFetchPros = {
+  query: string;
+  body: {
+    username: string;
+    password: string;
+  };
+  enabled: boolean;
+};
+
+export const useTokenFetch = ({ query, body, enabled = true }: tokenFetchPros) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
