@@ -9,7 +9,6 @@ const SelectUser = lazy(() => import('@/pages/SelectUser'));
 const MyPage = lazy(() => import('@/pages/MyPage'));
 import ProductGrid from '@/shared/ui/ProductGrid';
 import { HeroBanner, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner } from '@/pages/ui';
-const Recipes = lazy(() => import('@/pages/Recipes'));
 const ProductDetail = lazy(() => import('@/pages/Explore/Detail'));
 
 const AppRouter = () => {
