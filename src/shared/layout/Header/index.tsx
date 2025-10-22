@@ -37,12 +37,12 @@ const Header = () => {
             <S.IconLink to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.IconLink>
           )}
 
-          {!userInfo ? (
+          {!userInfo.username ? (
             <S.Bt to={'/selectUser'}>유저 선택</S.Bt>
           ) : (
             <>
               <Link to={'/selectUser'}>
-                <S.Img src={userInfo.image} alt={userInfo.username} />
+                <S.Img src={userInfo?.image} alt={userInfo?.username} />
               </Link>
 
               <S.IconLink to={`/${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.IconLink>

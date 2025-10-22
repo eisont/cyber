@@ -49,12 +49,12 @@ export const userTokenSlice = createSlice({
     setUserToken: (_, { payload }) => payload, // 전체 객체 교체
   },
 });
+
+type userInfoProps = { image: string; username: string };
+const InfoState: userInfoProps = { image: '', username: '' };
 export const userInfoSlice = createSlice({
   name: 'userInfo',
-  initialState: {
-    image: '',
-    username: '',
-  },
+  initialState: InfoState,
   reducers: {
     setUserInfo: (_, { payload }) => payload, // 전체 객체 교체
   },
