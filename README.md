@@ -5,11 +5,14 @@
 
 ## 🚀 주요 기능
 - **메인 페이지**: 배너 및 상품 노출  
-- **카테고리 페이지**: 카테고리별 상품 조회  
+- **Explore 페이지**: 카테고리별 상품 조회, 레시피 조회  
 - **검색 기능**: 키워드 기반 상품 검색  
 - **상품 상세정보**: 상세 페이지 + 장바구니 담기  
 - **유저 선택**: 사용자 전환 가능  
 - **마이페이지**: 기본 정보 조회  
+- **로딩 UI**: Suspense + Skeleton 적용  
+- **에러 처리**: 서버 오류 시 전용 에러 화면 노출  
+- **모달 기능**: 삭제 확인 및 사용자 피드백 제공   
 
 ---
 
@@ -19,40 +22,38 @@
 - **스타일링**: Emotion  
 - **데이터 패칭**: Axios  
 - **빌드 툴**: Vite  
+- **라우팅**: React Router DOM  
+- **성능 최적화**: lazy, Suspense, memo, useCallback, useMemo   
 
 ---
 
 ## 📂 폴더 구조
 ```bash
 src
- ┣ pages/                 # 페이지 단위 컴포넌트
- ┃ ┣ Category/            # 카테고리 페이지
- ┃ ┃ ┣ ui/                # 카테고리 전용 UI
- ┃ ┃ ┣ Filter/            
- ┃ ┃ ┗ ProductItemDetail/ 
- ┃ ┣ Mypage/              # 마이페이지
- ┃ ┗ SelectUser/          # 유저 선택
+ ┣ app/
+ ┃ ┗ router/               # 라우터 설정
+ ┃   ┗ App.jsx
+ ┣ pages/                  # 페이지 단위 컴포넌트
+ ┃ ┣ Explore/              # 상품/레시피 탐색 페이지
+ ┃ ┃ ┣ Detail/             # 상세 보기 페이지
+ ┃ ┃ ┣ ui/                 # Explore 전용 UI
+ ┃ ┃ ┣ Explore.styled.js
+ ┃ ┃ ┗ index.jsx
+ ┃ ┣ Mypage/               # 마이페이지
+ ┃ ┣ Recipes/              # 레시피 페이지
+ ┃ ┣ SearchProducts/       # 검색 결과 페이지
+ ┃ ┗ SelectUser/           # 유저 선택 페이지
  ┃
- ┣ ui/                    # 공용 UI 컴포넌트
- ┃ ┣ CategoryHighlight/
- ┃ ┣ CategoryPromoBanner/
- ┃ ┣ HeroBanner/
- ┃ ┣ SeasonalSaleBanner/
- ┃ ┣ ProductGrid/
- ┃ ┣ ProductItem/
- ┃ ┣ ProductsBox/
- ┃ ┗ SearchProducts/
+ ┣ redux/                  # 전역 상태 관리
+ ┣ shared/                 # 공용 모듈
+ ┃ ┣ assets/               # 이미지, 아이콘, 폰트
+ ┃ ┣ hooks/                # 커스텀 훅 (useFetch, useIntersectionObserver 등)
+ ┃ ┣ layout/               # Header, Footer 등 공용 레이아웃
+ ┃ ┣ lib/                  # 유틸 함수 (ToUpper, OriginalPrice 등)
+ ┃ ┣ monks/                # Mock / 테스트 데이터
+ ┃ ┗ ui/                   # 공용 UI 컴포넌트 (ProductGrid, ProductItem 등)
  ┃
- ┣ shared/                # 공용 모듈
- ┃ ┣ assets/              # 이미지, 아이콘, 폰트
- ┃ ┣ hooks/               # 커스텀 훅
- ┃ ┣ layout/              # 레이아웃(Header, Footer)
- ┃ ┗ lib/                 # 유틸 함수
- ┃
- ┣ redux/                 # 전역 상태 관리
- ┣ monks/                 # 테스트/더미 데이터
- ┣ Layout.jsx             # 전체 레이아웃
- ┣ main.jsx               # 엔트리 포인트
+ ┗ main.jsx                # 진입 파일
 ```
 ---
 ## ⚙️ 설치 및 실행
@@ -68,19 +69,23 @@ npm run build
 ```
 ---
 ## 📸 스크린샷
-<img width="600" alt="mainpage" src="https://github.com/user-attachments/assets/7729f3cf-a795-4891-a538-3f67afb58de8" />
-<img width="500" alt="categorypage" src="https://github.com/user-attachments/assets/15bb4aed-941a-4c1f-ba4c-1b0818fa0e4b" />
-<img width="500" alt="productdetail" src="https://github.com/user-attachments/assets/88e09292-53e8-4ccd-b1cd-80fd0a2aa9c2" />
-<img width="500" alt="search" src="https://github.com/user-attachments/assets/abeaeea5-1fe2-4bc4-a042-c26f0d4c0a4b" />
-<img width="500" alt="userselect" src="https://github.com/user-attachments/assets/7e104f15-1ce2-4e12-9b88-79bf5c2ca44f" />
-<img width="500" alt="mypage" src="https://github.com/user-attachments/assets/2317798a-77be-44f1-bc8b-f165275ae7a3" />
-<img width="500" alt="cart" src="https://github.com/user-attachments/assets/54d48a81-16ab-4ed2-a2d6-d9b2ffdf0b82" />
+<img width="600" alt="main" src="https://github.com/user-attachments/assets/ae22e383-ddcf-4acf-a75f-fb00b83cb35d" />
+<img width="600" alt="explore" src="https://github.com/user-attachments/assets/705651aa-c09f-41a4-a44b-b4c74b1a8b32" />
+<img width="600" alt="productdetail" src="https://github.com/user-attachments/assets/e72add03-ce1f-400d-aec6-6241c15469e2" />
+<img width="600" alt="search" src="https://github.com/user-attachments/assets/15c1363f-8bc8-42e9-83d7-e07c544e5449" />
+<img width="600" alt="recipes" src="https://github.com/user-attachments/assets/1132efbe-6365-48f4-a2d2-51f3dc6803c0" />
+<img width="600" alt="modal" src="https://github.com/user-attachments/assets/df1176a7-fa68-44ab-8c5a-24e821c5e56f" />
+<img width="600" alt="userselect" src="https://github.com/user-attachments/assets/0e3e6bf1-b698-44d0-a65f-4cbc1cc7dbf0" />
+<img width="600" alt="user" src="https://github.com/user-attachments/assets/776f5e12-773d-42df-8bb3-43d2664b53cd" />
+<img width="600" alt="cart" src="https://github.com/user-attachments/assets/bf025764-36fa-4c9a-96e3-a22371205331" />
+
 
 ---
 ## 🧪 버전 관리
-
-* develop → main 브랜치 전략 사용
-* v1.0.0 배포: 메인, 카테고리, 검색, 상품 상세, 유저 선택, 마이페이지 구현
+	•	브랜치 전략: develop → main
+	•	v1.0.0 배포
+	•	메인, Explore(카테고리/레시피), 검색, 상품 상세, 유저 선택, 마이페이지 구현
+	•	lazy/suspense, skeleton, modal, error boundary 등 UI 개선 적용
 ---
 ## 🌐 배포 링크
 
