@@ -27,8 +27,7 @@ export const MainBox = styled.div`
 
 const SearchProducts = () => {
   const searchData = useSelector((state) => state.setSearchData);
-  const [data, ProductListsLoading] = useSearchFetch({ searchData, enabled: true });
-  const ProductListData = data.products;
+  const [{ products: ProductListData }, ProductListsLoading] = useSearchFetch({ searchData, enabled: true });
 
   return (
     <Wrapper>
