@@ -38,7 +38,10 @@ export const userTokenSlice = createSlice({
 });
 export const userInfoSlice = createSlice({
   name: 'userInfo',
-  initialState: '',
+  initialState: {
+    image: '',
+    username: '',
+  },
   reducers: {
     setUserInfo: (_, { payload }) => payload, // 전체 객체 교체
   },

@@ -1,24 +1,24 @@
 import { LogoSVG } from '@/shared/assets/SVGicons';
 import { SearchSVG, CloseSVG } from '@/shared/assets/SVGicons';
 import { BagSVG } from '@/shared/assets/SVGicons';
-import { useDispatch, useSelector } from 'react-redux';
 import { searchSlice } from '@/redux';
 import { Link, useLocation } from 'react-router-dom';
 import { MenuSVG } from '@/shared/assets/SVGicons';
 import * as S from '@/shared/layout/Header/Header.styled';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 const Header = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const location = useLocation();
   const pathname = location.pathname;
-  const userInfo = useSelector((state) => state.userInfo);
+  const userInfo = useAppSelector((state) => state.userInfo);
 
   return (
     <S.Wrapper>
       <S.TotalBox>
         <S.FlexBox>
-          <S.Icon to='/'>{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.Icon>
-          <S.MobileIcon to='/'>{LogoSVG({ width: '54', height: '18', color: '#000' })}</S.MobileIcon>
+          <S.IconLink to='/'>{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.IconLink>
+          <S.MobileIconLink to='/'>{LogoSVG({ width: '54', height: '18', color: '#000' })}</S.MobileIconLink>
 
           {pathname === '/products' && (
             <S.InputBox>
@@ -31,7 +31,11 @@ const Header = () => {
         </S.FlexBox>
 
         <S.IconBox>
-          {pathname === '/search' ? <S.Icon to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
+          {pathname === '/search' ? (
+            <S.IconLink to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.IconLink>
+          ) : (
+            <S.IconLink to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.IconLink>
+          )}
 
           {!userInfo ? (
             <S.Bt to={'/selectUser'}>유저 선택</S.Bt>
@@ -41,7 +45,7 @@ const Header = () => {
                 <S.Img src={userInfo.image} alt={userInfo.username} />
               </Link>
 
-              <S.Icon to={`/${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+              <S.IconLink to={`/${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.IconLink>
             </>
           )}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>

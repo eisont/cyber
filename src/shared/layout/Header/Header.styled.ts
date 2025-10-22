@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 
@@ -67,8 +67,17 @@ export const IconBox = styled(FlexBetween)`
     width: 30px;
   }
 `;
+export const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-export const Icon = styled(Link)`
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: none;
+  }
+`;
+
+export const IconLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +93,12 @@ export const Icon = styled(Link)`
   }
 `;
 export const MobileIcon = styled(Icon)`
+  display: none;
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    display: inline-block;
+  }
+`;
+export const MobileIconLink = styled(IconLink)`
   display: none;
   @media (max-width: ${BREAKPOINTS.mobile}) {
     display: inline-block;
