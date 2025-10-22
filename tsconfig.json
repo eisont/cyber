@@ -7,7 +7,8 @@
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react", // Emotion styled 사용 시 필수
-    "allowJs": true, // JS 파일도 TypeScript 컴파일러(tsc)가 인식하고 처리하도록 허용하는 옵션2
+    "allowJs": true, // JS 파일도 TypeScript 컴파일러(tsc)가 인식하고 처리하도록 허용하는 옵션
+    "noEmit": true, // tsc가 어떤 파일도 쓰지 않게 함
 
     /* === 경로 설정 === */
     "baseUrl": ".", // 절대경로 기준
