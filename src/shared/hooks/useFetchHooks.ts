@@ -3,9 +3,15 @@ import { useCallback, useEffect, useState } from 'react';
 import { useAppDispatch } from '@/redux/hooks';
 import { userTokenSlice } from '@/redux';
 import { useAppSelector } from '@/redux/hooks';
+import type { RecipeCard } from '@/shared/types/api/recipe';
+import type { Product } from '@/shared/types/api/product';
+import type { User } from '@/shared/types/api/user';
+
+type RecipesRes = { recipes: RecipeCard[]; products: Product[]; users: User[] };
+const initialData: RecipesRes = { recipes: [], products: [], users: [] };
 
 export const useFetch = ({ resource = '', path = '', endPoint = [], query = {}, enabled = true }) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<RecipesRes>(initialData);
   const [isLoading, setIsLoading] = useState(true);
 
   const endPointString = endPoint.length ? '/' + endPoint.map((el) => el).join('/') : '';
