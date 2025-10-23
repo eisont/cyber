@@ -22,7 +22,7 @@ const CategoryPromoBanner = () => {
     <Wrapper>
       <MainBox>
         {GetMonkCategoryPromoItems.map((el) => (
-          <CategoryPromoBannerItem key={el.id} ItemData={el} />
+          <CategoryPromoBannerItem key={el.id} {...el} />
         ))}
       </MainBox>
     </Wrapper>
