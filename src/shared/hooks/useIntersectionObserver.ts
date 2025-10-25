@@ -1,26 +1,36 @@
 import { useEffect, useRef } from 'react';
 
-export const useIntersectionObserver = () => {
-  const imgRef = useRef(null);
+export const useIntersectionObserver = <TElement extends Element>() => {
+  const elementRef = useRef<TElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          const dataSrc = img.getAttribute('data-src');
-          if (dataSrc) {
-            img.src = dataSrc;
-          }
-          observer.unobserve(entry.target);
+        if (!entry.isIntersecting) return;
+
+        const target = entry.target as HTMLElement & { dataset?: DOMStringMap };
+        const dataSrc = target.getAttribute('data-src');
+
+        if (dataSrc && target instanceof HTMLImageElement) {
+          target.src = dataSrc;
         }
+
+        observer.unobserve(entry.target);
       });
     });
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    const current = elementRef.current;
+    if (current) {
+      observer.observe(current);
     }
-  }, [imgRef]);
 
-  return { ref: imgRef };
+    return () => {
+      if (current) {
+        observer.unobserve(current);
+      }
+      observer.disconnect();
+    };
+  }, []);
+
+  return { ref: elementRef };
 };

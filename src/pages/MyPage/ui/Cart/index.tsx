@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import * as S from '@/pages/MyPage/MyPage.styled';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
+import type { CartResponse, Product } from '@/shared/types/api/product';
 
 const ItemRow = styled.div`
   display: grid;
@@ -40,35 +41,52 @@ const Summary = styled.div`
 `;
 
 const CartCard = () => {
-  const [{ products: ItemData }] = useFetch({ resource: 'cart', path: 9, enabled: true });
+  const [cartData] = useFetch<CartResponse>({
+    resource: 'cart',
+    path: 9,
+    enabled: true,
+    initialData: {
+      id: 0,
+      products: [],
+      total: 0,
+      discountedTotal: 0,
+      userId: 0,
+      totalProducts: 0,
+      totalQuantity: 0,
+    },
+  });
+  const items = cartData.products ?? [];
 
-  const totalQty = ItemData?.reduce((sum, it) => sum + (it.qty ?? 1), 0);
-  const totalPrice = ItemData?.reduce((sum, it) => sum + (it.price ?? 0) * (it.qty ?? 1), 0);
+  const getQuantity = (item: Product) => item.qty ?? item.quantity ?? 1;
+
+  const totalQty = items.reduce((sum, item) => sum + getQuantity(item), 0);
+  const totalPrice = items.reduce((sum, item) => sum + (item.price ?? 0) * getQuantity(item), 0);
 
   return (
     <S.Card>
       <S.Title>장바구니</S.Title>
 
-      {ItemData?.length === 0 ? (
+      {items.length === 0 ? (
         <div>장바구니가 비어 있어요.</div>
       ) : (
         <>
-          {ItemData?.map((it) => (
-            <ItemRow key={it.id}>
-              <Thumb src={it.thumbnail} alt={it.title} />
+          {items.map((item) => (
+            <ItemRow key={item.id}>
+              <Thumb src={item.thumbnail ?? ''} alt={item.title ?? 'cart-item'} loading="lazy" />
               <div>
-                <Title>{it.title}</Title>
+                <Title>{item.title}</Title>
                 <div style={{ color: '#888', fontSize: 12 }}>
-                  수량 {it.qty ?? 1} · 개당 ${it.price?.toLocaleString?.() ?? it.price}
+                  수량 {getQuantity(item)} · 개당 $
+                  {(item.price ?? 0).toLocaleString()}
                 </div>
               </div>
-              <Price>${((it.price ?? 0) * (it.qty ?? 1))?.toLocaleString()}</Price>
+              <Price>${((item.price ?? 0) * getQuantity(item)).toLocaleString()}</Price>
             </ItemRow>
           ))}
 
           <Summary>
             <div>총 {totalQty}개</div>
-            <div>${totalPrice?.toLocaleString()}</div>
+            <div>${totalPrice.toLocaleString()}</div>
           </Summary>
         </>
       )}

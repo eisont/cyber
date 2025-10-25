@@ -30,11 +30,11 @@ export const Arrow = styled(FlexCenter)`
   cursor: default;
 `;
 
-export const ProductItemMenu = styled(Menu)`
-  color: ${(pr) => pr.params && '#000'};
-  font-weight: 900;
+export const ProductItemMenu = styled(Menu)<{ readonly $isActive: boolean }>`
+  color: ${({ $isActive }) => ($isActive ? '#000' : '#a4a4a4')};
+  font-weight: ${({ $isActive }) => ($isActive ? 900 : 500)};
 `;
-export const ProductAllMenu = styled(Menu)`
-  color: ${(pr) => !pr.params && '#000'};
-  font-weight: ${(pr) => (pr.params ? '500' : '900')};
+export const ProductAllMenu = styled(Menu)<{ readonly $isActive: boolean }>`
+  color: ${({ $isActive }) => ($isActive ? '#000' : '#a4a4a4')};
+  font-weight: ${({ $isActive }) => ($isActive ? 900 : 500)};
 `;

@@ -40,14 +40,18 @@ export const CategoryBox = styled.div`
     height: 40px;
   }
 `;
-export const Explore = styled.div`
+type ExploreProps = {
+  readonly $isActive: boolean;
+};
+
+export const Explore = styled.div<ExploreProps>`
   margin: 0 20px 0 0;
   font-weight: 500;
   text-align: center;
 
-  font-size: ${(pr) => (pr.id === pr.productId ? '18px' : '14px')};
-  color: ${(pr) => (pr.id === pr.productId ? '#000' : '#A4A4A4')};
-  font-weight: ${(pr) => pr.id === pr.productId && '700'};
+  font-size: ${({ $isActive }) => ($isActive ? '18px' : '14px')};
+  color: ${({ $isActive }) => ($isActive ? '#000' : '#A4A4A4')};
+  font-weight: ${({ $isActive }) => ($isActive ? '700' : '500')};
 
   &:hover {
     cursor: pointer;
@@ -56,7 +60,7 @@ export const Explore = styled.div`
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
     margin: 5px 7px;
-    font-size: ${(pr) => (pr.id === pr.productId ? '14px' : '10px')};
+    font-size: ${({ $isActive }) => ($isActive ? '14px' : '10px')};
   }
 `;
 

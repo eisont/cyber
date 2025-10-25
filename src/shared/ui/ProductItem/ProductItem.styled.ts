@@ -121,7 +121,7 @@ export const DiscountedPrice = styled.div`
   }
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
   width: 188px;
   height: 48px;
   font-size: 16px;
@@ -135,6 +135,9 @@ export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
 
   &:hover {
     cursor: pointer;

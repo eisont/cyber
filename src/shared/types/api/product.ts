@@ -38,4 +38,25 @@ export type Product = {
   title: string;
   warrantyInformation: string;
   weight: number;
+  qty?: number;
+  quantity?: number;
+  total?: number;
+  discountedPrice?: number;
+};
+
+export type ProductsResponse = {
+  products: Product[];
+  total: number;
+  skip: number;
+  limit: number;
+};
+
+export type CartResponse = {
+  id: number;
+  products: Product[];
+  total: number;
+  discountedTotal: number;
+  userId: number;
+  totalProducts: number;
+  totalQuantity: number;
 };

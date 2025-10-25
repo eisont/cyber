@@ -3,10 +3,13 @@ import { useState } from 'react';
 import CartCard from '@/pages/MyPage/ui/Cart';
 import { ProfileCard, PersonalCard, AddressCard, WorkEduCard, FinanceCard, SystemCard } from '@/pages/MyPage/ui';
 import * as S from '@/pages/MyPage/MyPage.styled';
+import type { User } from '@/shared/types/api/user';
+
+type UserInfo = Partial<User>;
 
 const MyPage = () => {
-  const userInfo = useAppSelector((state) => state.userInfo);
-  const [toggle, setToggle] = useState(false);
+  const userInfo: UserInfo = useAppSelector((state) => state.userInfo);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   return (
     <S.Wrapper>
@@ -24,7 +27,7 @@ const MyPage = () => {
               <SystemCard user={userInfo} />
             </>
           )}
-          {!toggle && <CartCard user={userInfo} />}
+          {!toggle && <CartCard />}
         </div>
       </S.Grid>
     </S.Wrapper>

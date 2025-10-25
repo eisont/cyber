@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   max-width: 1080px;
@@ -76,7 +75,7 @@ export const NavButtons = styled.div`
   margin-top: 16px;
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
   padding: 8px 16px;
   border-radius: 6px;
   background: #007bff;
@@ -85,8 +84,15 @@ export const Button = styled(Link)`
   font-size: 14px;
   font-weight: 600;
   transition: background 0.2s;
+  border: 0;
+  cursor: pointer;
 
   &:hover {
     background: #0056b3;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #003f8c;
+    outline-offset: 2px;
   }
 `;

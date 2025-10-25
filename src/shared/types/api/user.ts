@@ -80,3 +80,10 @@ export type User = {
   username: string;
   weight: number;
 };
+
+export type UsersResponse = {
+  users: User[];
+  total: number;
+  skip: number;
+  limit: number;
+};

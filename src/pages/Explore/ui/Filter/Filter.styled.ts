@@ -13,11 +13,15 @@ export const CategoryBox = styled.div`
   margin: 0 0 20px 0;
 `;
 
-export const TitleBox = styled(FlexBetween)`
+type TitleBoxProps = {
+  readonly $isActive?: boolean;
+};
+
+export const TitleBox = styled(FlexBetween)<TitleBoxProps>`
   width: 256px;
 
   border-bottom: 0.5px solid #b5b5b5;
-  background: ${(pr) => pr.productId === 'recipes' && '#e8e8e8'};
+  background: ${({ $isActive }) => ($isActive ? '#e8e8e8' : 'transparent')};
 
   &:hover {
     cursor: pointer;
@@ -33,8 +37,8 @@ export const Title = styled.div`
     cursor: default;
   }
 `;
-export const Arrow = styled(FlexCenter)`
-  transform: ${(pr) => pr.toggle && 'rotate(180deg)'};
+export const Arrow = styled(FlexCenter)<{ readonly $isOpen: boolean }>`
+  transform: ${({ $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
 export const SearchBox = styled(FlexBetween)`
@@ -73,10 +77,10 @@ export const BrandInBox = styled.div`
   justify-content: start;
   align-items: center;
 `;
-export const Brand = styled.div`
-  font-size: ${(pr) => (pr.name === pr.productId ? '18px' : '14px')};
-  color: ${(pr) => (pr.name === pr.productId ? '#000' : '#A4A4A4')};
-  font-weight: ${(pr) => pr.name === pr.productId && '700'};
+export const Brand = styled.div<{ readonly $isActive: boolean }>`
+  font-size: ${({ $isActive }) => ($isActive ? '18px' : '14px')};
+  color: ${({ $isActive }) => ($isActive ? '#000' : '#A4A4A4')};
+  font-weight: ${({ $isActive }) => ($isActive ? '700' : '500')};
 
   &:hover {
     cursor: pointer;

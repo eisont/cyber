@@ -105,12 +105,18 @@ export const OriginalPrice = styled.div`
   align-items: center;
 `;
 
-const Bt = styled(FlexCenter)`
+const Bt = styled.button`
   padding: 15px 20px;
 
   border: 1px solid black;
   background: none;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  font: inherit;
+
   &:hover {
     cursor: pointer;
     font-weight: 600;

@@ -78,7 +78,7 @@ const SkeletonProductItemDetail = () => {
               </S.Tt>
             </div>
             <S.FlexBox>
-              <S.CartBt>장바구니 담기</S.CartBt>
+              <S.CartBt type="button">장바구니 담기</S.CartBt>
             </S.FlexBox>
           </S.RBox>
         </S.ContentBox>
