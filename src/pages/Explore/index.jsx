@@ -12,9 +12,19 @@ const Explore = () => {
   const location = useLocation();
   const productId = useSelector((state) => state.productId);
 
-  const [{ products: ProductListData }] = useFetch({ resource: 'products', path: 'category', endPoint: [productId || 'beauty'], query: { select: 'id' }, enabled: true });
+  const [{ products: ProductListData }] = useFetch({
+    resource: 'products',
+    path: 'category',
+    endPoint: [productId || 'beauty'],
+    query: { select: 'id' },
+    enabled: true,
+  });
 
-  const [{ recipes: RecipesData }] = useFetch({ resource: 'recipes', query: { limit: 50 }, enabled: true });
+  const [{ recipes: RecipesData }] = useFetch({
+    resource: 'recipes',
+    query: { limit: 50 },
+    enabled: true,
+  });
 
   return (
     <S.Wrapper>
@@ -25,7 +35,12 @@ const Explore = () => {
             <Filter />
             <S.FlexColBox>
               <S.ProductsCount>
-                Selected Products: <S.Count>{location.pathname === '/recipes' ? RecipesData?.length || 0 : ProductListData?.length || 0}</S.Count>
+                Selected Products:{' '}
+                <S.Count>
+                  {location.pathname === '/recipes'
+                    ? RecipesData?.length || 0
+                    : ProductListData?.length || 0}
+                </S.Count>
               </S.ProductsCount>
 
               {location.pathname !== '/recipes' ? <ProductsBox /> : <Recipes />}

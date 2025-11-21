@@ -7,7 +7,11 @@ import Modal from '@/pages/Recipes/ui/Modal';
 const Recipes = () => {
   const [selectId, setSelectId] = useState();
 
-  const [{ recipes: RecipesData }] = useFetch({ resource: 'recipes', query: { limit: 50 }, enabled: true });
+  const [{ recipes: RecipesData }] = useFetch({
+    resource: 'recipes',
+    query: { limit: 50 },
+    enabled: true,
+  });
 
   return (
     <S.Wrapper>
@@ -15,7 +19,12 @@ const Recipes = () => {
         {RecipesData?.map((el) => (
           <RecipesItem key={el.id} {...el} setSelectId={setSelectId} />
         ))}
-        {selectId && <Modal data={RecipesData.find((el) => el.id === selectId)} onClose={() => setSelectId(null)} />}
+        {selectId && (
+          <Modal
+            data={RecipesData.find((el) => el.id === selectId)}
+            onClose={() => setSelectId(null)}
+          />
+        )}
       </S.ProductsBox>
     </S.Wrapper>
   );

@@ -15,7 +15,11 @@ const Filter = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  const [ProductsCategoryListData, isLoading] = useFetch({ resource: 'products', path: 'category-list', enabled: true });
+  const [ProductsCategoryListData, isLoading] = useFetch({
+    resource: 'products',
+    path: 'category-list',
+    enabled: true,
+  });
 
   const handleItemSelect = (id, type) => {
     dispatch(productIdSlice.actions.getProductId(id));
@@ -41,7 +45,7 @@ const Filter = () => {
                   .fill('')
                   .map((_, i) => (
                     <S.BrandInBox key={Number(new Date() * i)}>
-                      <DumText width='160px' height='15px' />
+                      <DumText width="160px" height="15px" />
                     </S.BrandInBox>
                   ))}
               </>
@@ -49,7 +53,11 @@ const Filter = () => {
               <>
                 {ProductsCategoryListData.map((el) => (
                   <S.BrandInBox key={Number(new Date()) + el}>
-                    <S.Brand onClick={() => handleItemSelect(el, '/Explore')} productId={ToUpper(productId)} name={ToUpper(el)}>
+                    <S.Brand
+                      onClick={() => handleItemSelect(el, '/Explore')}
+                      productId={ToUpper(productId)}
+                      name={ToUpper(el)}
+                    >
                       {ToUpper(el)}
                     </S.Brand>
                   </S.BrandInBox>

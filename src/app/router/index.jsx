@@ -20,7 +20,7 @@ const AppRouter = () => {
       <Suspense fallback={<>loading...</>}>
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={
               <>
                 <HeroBanner />
@@ -32,12 +32,12 @@ const AppRouter = () => {
             }
           />
 
-          <Route path='/explore' element={<Explore />}>
-            <Route path=':id' element={<ProductDetail />} />
+          <Route path="/explore" element={<Explore />}>
+            <Route path=":id" element={<ProductDetail />} />
           </Route>
-          <Route path='/recipes' element={<Explore />} />
-          <Route path='/search' element={<SearchProducts />} />
-          <Route path='/selectUser' element={<SelectUser />} />
+          <Route path="/recipes" element={<Explore />} />
+          <Route path="/search" element={<SearchProducts />} />
+          <Route path="/selectUser" element={<SelectUser />} />
           <Route path={`/${userInfo.username}`} element={<MyPage />} />
         </Routes>
       </Suspense>

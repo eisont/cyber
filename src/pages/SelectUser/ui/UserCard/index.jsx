@@ -41,7 +41,18 @@ const UserCard = (pr) => {
   return (
     <Wrapper>
       <Img src={pr.user.image} />
-      <HiddenBox onClick={() => dispatch(loginDataSlice.actions.setLoginData({ username: pr.user.username, password: pr.user.password, expiresInMins: 30 }))} className='hiddenBox'>
+      <HiddenBox
+        onClick={() =>
+          dispatch(
+            loginDataSlice.actions.setLoginData({
+              username: pr.user.username,
+              password: pr.user.password,
+              expiresInMins: 30,
+            }),
+          )
+        }
+        className="hiddenBox"
+      >
         {pr.user.username}
       </HiddenBox>
     </Wrapper>

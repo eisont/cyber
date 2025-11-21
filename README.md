@@ -1,33 +1,37 @@
 # Cyber
-> React 기반의 DummyJSON 프로젝트  
+
+> React 기반의 DummyJSON 프로젝트
 
 ---
 
 ## 🚀 주요 기능
-- **메인 페이지**: 배너 및 상품 노출  
-- **Explore 페이지**: 카테고리별 상품 조회, 레시피 조회  
-- **검색 기능**: 키워드 기반 상품 검색  
-- **상품 상세정보**: 상세 페이지 + 장바구니 담기  
-- **유저 선택**: 사용자 전환 가능  
-- **마이페이지**: 기본 정보 조회  
-- **로딩 UI**: Suspense + Skeleton 적용  
-- **에러 처리**: 서버 오류 시 전용 에러 화면 노출  
-- **모달 기능**: 삭제 확인 및 사용자 피드백 제공   
+
+- **메인 페이지**: 배너 및 상품 노출
+- **Explore 페이지**: 카테고리별 상품 조회, 레시피 조회
+- **검색 기능**: 키워드 기반 상품 검색
+- **상품 상세정보**: 상세 페이지 + 장바구니 담기
+- **유저 선택**: 사용자 전환 가능
+- **마이페이지**: 기본 정보 조회
+- **로딩 UI**: Suspense + Skeleton 적용
+- **에러 처리**: 서버 오류 시 전용 에러 화면 노출
+- **모달 기능**: 삭제 확인 및 사용자 피드백 제공
 
 ---
 
 ## 🛠️ 기술 스택
-- **Frontend**: React  
-- **상태 관리**: Redux, Redux Toolkit  
-- **스타일링**: Emotion  
-- **데이터 패칭**: Axios  
-- **빌드 툴**: Vite  
-- **라우팅**: React Router DOM  
-- **성능 최적화**: lazy, Suspense, memo, useCallback, useMemo   
+
+- **Frontend**: React
+- **상태 관리**: Redux, Redux Toolkit
+- **스타일링**: Emotion
+- **데이터 패칭**: Axios
+- **빌드 툴**: Vite
+- **라우팅**: React Router DOM
+- **성능 최적화**: lazy, Suspense, memo, useCallback, useMemo
 
 ---
 
 ## 📂 폴더 구조
+
 ```bash
 src
  ┣ app/
@@ -55,8 +59,11 @@ src
  ┃
  ┗ main.jsx                # 진입 파일
 ```
+
 ---
+
 ## ⚙️ 설치 및 실행
+
 ```bash
 # 패키지 설치
 npm install
@@ -67,8 +74,11 @@ npm run dev
 # 빌드
 npm run build
 ```
+
 ---
+
 ## 📸 스크린샷
+
 <img width="600" alt="main" src="https://github.com/user-attachments/assets/ae22e383-ddcf-4acf-a75f-fb00b83cb35d" />
 <img width="600" alt="explore" src="https://github.com/user-attachments/assets/705651aa-c09f-41a4-a44b-b4c74b1a8b32" />
 <img width="600" alt="productdetail" src="https://github.com/user-attachments/assets/e72add03-ce1f-400d-aec6-6241c15469e2" />
@@ -79,23 +89,27 @@ npm run build
 <img width="600" alt="user" src="https://github.com/user-attachments/assets/776f5e12-773d-42df-8bb3-43d2664b53cd" />
 <img width="600" alt="cart" src="https://github.com/user-attachments/assets/bf025764-36fa-4c9a-96e3-a22371205331" />
 
+---
+
+## 🧪 버전 관리
+
+    •	브랜치 전략: develop → main
+    •	v1.0.0 배포
+    •	메인, Explore(카테고리/레시피), 검색, 상품 상세, 유저 선택, 마이페이지 구현
+    •	lazy/suspense, skeleton, modal, error boundary 등 UI 개선 적용
 
 ---
-## 🧪 버전 관리
-	•	브랜치 전략: develop → main
-	•	v1.0.0 배포
-	•	메인, Explore(카테고리/레시피), 검색, 상품 상세, 유저 선택, 마이페이지 구현
-	•	lazy/suspense, skeleton, modal, error boundary 등 UI 개선 적용
----
+
 ## 🌐 배포 링크
 
->추후 추가 예정
+> 추후 추가 예정
+
 ---
+
 ## 📌 향후 계획
 
 - 무한 스크롤 적용
 - 반응형 웹 (모바일/태블릿/데스크탑) 개선
 - 장바구니 UX 개선
-
 
 ---

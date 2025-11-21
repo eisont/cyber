@@ -11,26 +11,35 @@ const Breadcrumb = () => {
   const location = useLocation();
   const productId = useSelector((state) => state.productId);
 
-  const [ItemTitleData, isLoading] = useFetch({ resource: 'products', endPoint: [params.id], query: { select: 'title' }, enabled: true });
+  const [ItemTitleData, isLoading] = useFetch({
+    resource: 'products',
+    endPoint: [params.id],
+    query: { select: 'title' },
+    enabled: true,
+  });
 
   return (
     <S.Wrapper>
-      <S.Menu to='/'>Home</S.Menu>
+      <S.Menu to="/">Home</S.Menu>
       <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
       {location.pathname === '/recipes' ? (
         <S.ProductItemMenu params={'true'}>Recipes</S.ProductItemMenu>
       ) : (
         <>
-          <S.Menu to='/Explore'>Products</S.Menu>
+          <S.Menu to="/Explore">Products</S.Menu>
           <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-          <S.ProductAllMenu to='/Explore' params={params.id}>
+          <S.ProductAllMenu to="/Explore" params={params.id}>
             {ToUpper(productId)}
           </S.ProductAllMenu>
 
           {params.id && (
             <>
               <S.Arrow>{Arrow24pxSVG({ size: '24', color: '#a4a4a4' })}</S.Arrow>
-              {isLoading ? <DumText width='160px' height='10px' /> : <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>}
+              {isLoading ? (
+                <DumText width="160px" height="10px" />
+              ) : (
+                <S.ProductItemMenu params={params.id}>{ItemTitleData.title}</S.ProductItemMenu>
+              )}
             </>
           )}
         </>

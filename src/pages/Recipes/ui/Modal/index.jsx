@@ -8,7 +8,7 @@ const Modal = memo((pr) => {
       <S.Icon onClick={() => pr.onClose()}>{CloseSVG({ size: '50px', color: '#000' })}</S.Icon>
 
       <S.FlexBox>
-        <S.ModalImg src={pr?.data.image} alt='image' />
+        <S.ModalImg src={pr?.data.image} alt="image" />
         <S.ColFlexBox>
           <S.MText style={{ fontSize: '35px' }}>요리 순서</S.MText>
           {pr.data.instructions.map((el, i) => (

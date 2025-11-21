@@ -8,7 +8,7 @@ const RecipesItem = memo((pr) => {
   return (
     <S.Wrapper onClick={() => pr.setSelectId(pr.id)}>
       <S.MainBox>
-        <S.Img ref={ref} data-src={pr?.image} src={pr?.image} alt='image' />
+        <S.Img ref={ref} data-src={pr?.image} src={pr?.image} alt="image" />
         <S.RBox>
           <S.Name>{pr?.name}</S.Name>
           <S.Text>⭐️{pr.rating}</S.Text>

@@ -45,7 +45,11 @@ const CategoryPromoBannerItem = (pr) => {
       <MainBox>
         <ItemImg src={`img/CategoryPromoBanner/${pr.ItemData.img}`} alt={pr.ItemData.alt} />
         <ItemText color={pr.ItemData.color}>{pr.ItemData.text}</ItemText>
-        <ItemBt color={pr.ItemData.color} background={pr.ItemData.background} hover={pr.ItemData.hover}>
+        <ItemBt
+          color={pr.ItemData.color}
+          background={pr.ItemData.background}
+          hover={pr.ItemData.hover}
+        >
           {pr.ItemData.button}
         </ItemBt>
       </MainBox>

@@ -66,11 +66,14 @@ const MobilePlaystation5Img = styled.img`
 const PlayStation5 = () => {
   return (
     <Wrapper>
-      <Playstation5Img src='img/HeroBanner/PlayStation5.webp' alt='PlayStation5' />
-      <MobilePlaystation5Img src='img/mobile/PlayStation5.webp' alt='PlayStation5' />
+      <Playstation5Img src="img/HeroBanner/PlayStation5.webp" alt="PlayStation5" />
+      <MobilePlaystation5Img src="img/mobile/PlayStation5.webp" alt="PlayStation5" />
       <Playstation5TextBox>
         <TitleText>Playstation 5</TitleText>
-        <SubText>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</SubText>
+        <SubText>
+          Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your
+          PlayStation experience.
+        </SubText>
       </Playstation5TextBox>
     </Wrapper>
   );
