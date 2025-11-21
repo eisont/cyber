@@ -1,7 +1,19 @@
 #!/usr/bin/env sh
 
-echo "🔎 Running ESLint..."
-npm run lint
+echo "🔎 [1/2] ESLint 검사 시작..."
 
-echo "✨ Running Prettier..."
+npm run lint
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint 검사 실패: 오류 또는 경고를 먼저 수정해주세요."
+  exit 1
+fi
+
+echo "✨ [2/2] Prettier 포맷팅 실행..."
+
 npm run format
+if [ $? -ne 0 ]; then
+  echo "❌ Prettier 포맷팅 실패: 설정이나 코드 상태를 확인해주세요."
+  exit 1
+fi
+
+echo "✅ pre-commit 훅 통과! (ESLint + Prettier OK)"
