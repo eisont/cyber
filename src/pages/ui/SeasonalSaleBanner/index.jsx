@@ -73,7 +73,10 @@ const SeasonalSaleBanner = () => {
           <TitleText>
             <span style={{ fontWeight: '100' }}>Big Summer </span> Sale
           </TitleText>
-          <SubText>Comfort and hunger live together in the life of Leo. He lives in harmony. A life of consequence.</SubText>
+          <SubText>
+            Comfort and hunger live together in the life of Leo. He lives in harmony. A life of
+            consequence.
+          </SubText>
           <Button>Shop Now</Button>
         </Banner2TextBox>
       </Background>

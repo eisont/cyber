@@ -10,7 +10,10 @@ const Footer = () => {
           <S.Box1>
             <S.Logo>{LogoSVG({ width: '96', height: '32', color: '#fff' })}</S.Logo>
             <S.MobileLogo>{LogoSVG({ width: '54', height: '18', color: '#fff' })}</S.MobileLogo>
-            <S.SText>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</S.SText>
+            <S.SText>
+              We are a residential interior design firm located in Portland. Our boutique-studio
+              offers more than
+            </S.SText>
           </S.Box1>
           <S.Box2>
             <S.STitle>Services</S.STitle>

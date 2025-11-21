@@ -17,21 +17,30 @@ const Header = () => {
     <S.Wrapper>
       <S.TotalBox>
         <S.FlexBox>
-          <S.Icon to='/'>{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.Icon>
-          <S.MobileIcon to='/'>{LogoSVG({ width: '54', height: '18', color: '#000' })}</S.MobileIcon>
+          <S.Icon to="/">{LogoSVG({ width: '96', height: '32', color: '#000' })}</S.Icon>
+          <S.MobileIcon to="/">
+            {LogoSVG({ width: '54', height: '18', color: '#000' })}
+          </S.MobileIcon>
 
           {pathname === '/products' && (
             <S.InputBox>
               <S.SearchIcon>
                 <S.Icon>{SearchSVG({ size: '24', color: '#989898' })}</S.Icon>
               </S.SearchIcon>
-              <S.Input placeholder='Search' onChange={(e) => dispatch(searchSlice.actions.setSearchData(e.target.value))} />
+              <S.Input
+                placeholder="Search"
+                onChange={(e) => dispatch(searchSlice.actions.setSearchData(e.target.value))}
+              />
             </S.InputBox>
           )}
         </S.FlexBox>
 
         <S.IconBox>
-          {pathname === '/search' ? <S.Icon to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon> : <S.Icon to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>}
+          {pathname === '/search' ? (
+            <S.Icon to={'/'}>{CloseSVG({ size: '34', color: '#191919' })}</S.Icon>
+          ) : (
+            <S.Icon to={'/search'}>{SearchSVG({ size: '32', color: '#191919' })}</S.Icon>
+          )}
 
           {!userInfo ? (
             <S.Bt to={'/selectUser'}>유저 선택</S.Bt>
@@ -41,7 +50,9 @@ const Header = () => {
                 <S.Img src={userInfo.image} alt={userInfo.username} />
               </Link>
 
-              <S.Icon to={`/${userInfo.username}`}>{BagSVG({ size: '32', color: '#191919' })}</S.Icon>
+              <S.Icon to={`/${userInfo.username}`}>
+                {BagSVG({ size: '32', color: '#191919' })}
+              </S.Icon>
             </>
           )}
           <S.MobileIcon>{MenuSVG({ size: '20', color: '#191919' })}</S.MobileIcon>

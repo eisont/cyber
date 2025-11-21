@@ -86,8 +86,8 @@ const SubText = styled.div`
 const VisionPro = () => {
   return (
     <Wrapper>
-      <VisionProImg src='img/HeroBanner/VisionPro.webp' alt='VisionPro' />
-      <MobileVisionProImg src='img/mobile/VisionPro.webp' alt='VisionPro' />
+      <VisionProImg src="img/HeroBanner/VisionPro.webp" alt="VisionPro" />
+      <MobileVisionProImg src="img/mobile/VisionPro.webp" alt="VisionPro" />
       <VisionProTextBox>
         <TitleText>
           <ThinTitle>

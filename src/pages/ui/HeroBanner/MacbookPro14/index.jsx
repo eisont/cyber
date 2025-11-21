@@ -103,17 +103,23 @@ const MacBookPro14 = () => {
   const dispatch = useDispatch();
   return (
     <Wrapper>
-      <MobileMacBookPro14Img src='img/mobile/MacBookPro14.webp' alt='MacBookPro14' />
+      <MobileMacBookPro14Img src="img/mobile/MacBookPro14.webp" alt="MacBookPro14" />
       <MacBookPro14TextBox>
         <TitleText>
           Macbook<BoldTitle> Pro</BoldTitle> 14
         </TitleText>
-        <SubText>The new 14‑inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</SubText>
-        <LinkSt to='explore' onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}>
+        <SubText>
+          The new 14‑inch MacBook Air makes room for more of what you love with a spacious Liquid
+          Retina display.
+        </SubText>
+        <LinkSt
+          to="explore"
+          onClick={() => dispatch(productIdSlice.actions.getProductId('laptops'))}
+        >
           <Button>Shop Now</Button>
         </LinkSt>
       </MacBookPro14TextBox>
-      <MacBookPro14Img src='img/HeroBanner/MacBookPro14.webp' alt='MacBookPro14' />
+      <MacBookPro14Img src="img/HeroBanner/MacBookPro14.webp" alt="MacBookPro14" />
     </Wrapper>
   );
 };

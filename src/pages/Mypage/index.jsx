@@ -1,7 +1,14 @@
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import CartCard from '@/pages/Mypage/ui/Cart';
-import { ProfileCard, PersonalCard, AddressCard, WorkEduCard, FinanceCard, SystemCard } from '@/pages/Mypage/ui';
+import {
+  ProfileCard,
+  PersonalCard,
+  AddressCard,
+  WorkEduCard,
+  FinanceCard,
+  SystemCard,
+} from '@/pages/Mypage/ui';
 import * as S from '@/pages/Mypage/Mypage.styled';
 
 const MyPage = () => {

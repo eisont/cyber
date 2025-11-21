@@ -6,7 +6,12 @@ import { useFetch } from '@/shared/hooks/useFetchHooks';
 const ProductsBox = () => {
   const productId = useSelector((state) => state.productId);
 
-  const [{ products: ProductListData }, isLoading] = useFetch({ resource: 'products', path: 'category', endPoint: [productId || 'beauty'], enabled: true });
+  const [{ products: ProductListData }, isLoading] = useFetch({
+    resource: 'products',
+    path: 'category',
+    endPoint: [productId || 'beauty'],
+    enabled: true,
+  });
 
   return (
     <S.Wrapper>

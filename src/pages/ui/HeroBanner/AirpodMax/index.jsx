@@ -73,8 +73,8 @@ const SubText = styled.div`
 const AirPodMax = () => {
   return (
     <Wrapper>
-      <AirPodMaxImg src='img/HeroBanner/AirPodMax.webp' alt='AirPodMax' />
-      <MobileAirPodMaxImg src='img/mobile/AirPodMax.webp' alt='AirPodMax' />
+      <AirPodMaxImg src="img/HeroBanner/AirPodMax.webp" alt="AirPodMax" />
+      <MobileAirPodMaxImg src="img/mobile/AirPodMax.webp" alt="AirPodMax" />
       <AirPodMaxTextBox>
         <TitleText>
           <ThinTitle>Apple AirPods</ThinTitle> Max
