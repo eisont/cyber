@@ -1,0 +1,5 @@
+# commitlint로 규칙 검사
+#!/usr/bin/env sh
+
+echo "📝 Running commitlint..."
+npx commitlint --edit "$1"
