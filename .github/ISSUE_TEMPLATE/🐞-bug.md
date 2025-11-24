@@ -1,9 +1,12 @@
 ---
-name: '🐞 Bug'
-about: '버그 / 예외 상황 이슈'
-title: '[Bug] '
-labels: ['bug']
-assignees: []
+name: "\U0001F41E Bug"
+about: 버그 / 예외 상황 이슈
+title: ''
+labels: fix
+assignees: eisont
+
+---
+
 ---
 
 ## 🐞 버그 내용

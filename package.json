@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "preview": "vite preview",
-    "prepare": "husky",
-    "format": "prettier . --write"
+    "format": "prettier \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" --write",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -38,7 +38,6 @@
     "globals": "^16.3.0",
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.7.1",
     "vite": "^7.0.4"
   }
 }

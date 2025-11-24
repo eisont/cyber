@@ -1,9 +1,12 @@
 ---
-name: '🧹 Chore / Refactor'
-about: '기능 변화는 거의 없지만, 코드/구조를 정리하는 작업'
-title: '[Chore] '
-labels: ['chore']
-assignees: []
+name: "\U0001F9F9 Chore / Refactor"
+about: 기능 변화는 거의 없지만, 코드/구조를 정리하는 작업
+title: ''
+labels: chore, refactor
+assignees: eisont
+
+---
+
 ---
 
 ## 🧹 작업 목적

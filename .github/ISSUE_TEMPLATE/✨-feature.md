@@ -1,9 +1,12 @@
 ---
-name: '✨ Feature'
-about: '새 기능 / 화면 / 플로우 추가 이슈'
-title: '[Feat] '
-labels: ['feat']
-assignees: []
+name: "✨ Feature"
+about: 새 기능 / 화면 / 플로우 추가 이슈
+title: "[Feat] "
+labels: feat
+assignees: eisont
+
+---
+
 ---
 
 ## 🎯 목적
