@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --max-warnings=0",
     "preview": "vite preview",
-    "format": "prettier \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" --write",
-    "prepare": "husky"
+    "format": "prettier \"src/**/*.{ts,tsx,js,jsx,json,css,md}\" --write"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
