@@ -1,16 +1,16 @@
 # Cyber
 
-> React 기반의 DummyJSON 프로젝트
+> React + Vite 기반의 DummyJSON 프로젝트
 
 ---
 
 ## 🚀 주요 기능
 
-- **메인 페이지**: 배너 및 상품 노출
+- **메인 페이지**: 배너 및 상품 리스트 노출
 - **Explore 페이지**: 카테고리별 상품 조회, 레시피 조회
 - **검색 기능**: 키워드 기반 상품 검색
 - **상품 상세정보**: 상세 페이지 + 장바구니 담기
-- **유저 선택**: 사용자 전환 가능
+- **유저 선택**: 사용자 전환 기능
 - **마이페이지**: 기본 정보 조회
 - **로딩 UI**: Suspense + Skeleton 적용
 - **에러 처리**: 서버 오류 시 전용 에러 화면 노출
@@ -26,13 +26,22 @@
 - **데이터 패칭**: Axios
 - **빌드 툴**: Vite
 - **라우팅**: React Router DOM
-- **성능 최적화**: lazy, Suspense, memo, useCallback, useMemo
+- **성능 최적화**: `lazy`, `Suspense`, `memo`, `useCallback`, `useMemo`
+
+---
+
+## 🧹 코드 스타일 & 품질 관리
+
+- **Lint**: ESLint (`@typescript-eslint`, `eslint-config-prettier`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`)
+- **포맷팅**: Prettier + `prettier-plugin-tailwindcss`
+- **Git Hooks**: Husky (pre-commit 등 훅으로 lint/format 연동 가능)
+- **커밋 컨벤션**: Commitlint + `@commitlint/config-conventional` (Conventional Commits 규칙 기반)
 
 ---
 
 ## 📂 폴더 구조
 
-```bash
+````bash
 src
  ┣ app/
  ┃ ┗ router/               # 라우터 설정
@@ -54,13 +63,10 @@ src
  ┃ ┣ hooks/                # 커스텀 훅 (useFetch, useIntersectionObserver 등)
  ┃ ┣ layout/               # Header, Footer 등 공용 레이아웃
  ┃ ┣ lib/                  # 유틸 함수 (ToUpper, OriginalPrice 등)
- ┃ ┣ monks/                # Mock / 테스트 데이터
+ ┃ ┣ mock/                 # Mock / 테스트 데이터
  ┃ ┗ ui/                   # 공용 UI 컴포넌트 (ProductGrid, ProductItem 등)
  ┃
  ┗ main.jsx                # 진입 파일
-```
-
----
 
 ## ⚙️ 설치 및 실행
 
@@ -71,9 +77,17 @@ npm install
 # 개발 서버 실행
 npm run dev
 
-# 빌드
+# 프로덕션 빌드
 npm run build
-```
+
+# 빌드 결과 미리보기
+npm run preview
+
+# ESLint 검사
+npm run lint
+
+# 코드 포맷팅 (Prettier)
+npm run format
 
 ---
 
@@ -94,9 +108,19 @@ npm run build
 ## 🧪 버전 관리
 
     •	브랜치 전략: develop → main
-    •	v1.0.0 배포
-    •	메인, Explore(카테고리/레시피), 검색, 상품 상세, 유저 선택, 마이페이지 구현
-    •	lazy/suspense, skeleton, modal, error boundary 등 UI 개선 적용
+	•	현재 버전: v1.0.0
+	•	구현 범위:
+	•	메인
+	•	Explore(카테고리/레시피)
+	•	검색
+	•	상품 상세
+	•	유저 선택
+	•	마이페이지
+	•	UI/UX 개선:
+	•	lazy/Suspense
+	•	Skeleton
+	•	Modal
+	•	Error Boundary
 
 ---
 
@@ -113,3 +137,4 @@ npm run build
 - 장바구니 UX 개선
 
 ---
+````
