@@ -1,15 +1,15 @@
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
-import CartCard from '@/pages/Mypage/ui/Cart';
+import * as S from '@/pages/Mypage/MyPage.styled';
 import {
-  ProfileCard,
-  PersonalCard,
   AddressCard,
-  WorkEduCard,
   FinanceCard,
+  PersonalCard,
+  ProfileCard,
   SystemCard,
+  WorkEduCard,
 } from '@/pages/Mypage/ui';
-import * as S from '@/pages/Mypage/Mypage.styled';
+import CartCard from '@/pages/Mypage/ui/Cart';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const MyPage = () => {
   const userInfo = useSelector((state) => state.userInfo);
