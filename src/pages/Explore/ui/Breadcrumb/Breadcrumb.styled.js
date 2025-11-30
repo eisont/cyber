@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { Link } from 'react-router-dom';
+
+import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`

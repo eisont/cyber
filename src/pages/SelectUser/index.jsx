@@ -1,6 +1,6 @@
-import { useFetch } from '@/shared/hooks/useFetchHooks';
-import UserCard from '@/pages/SelectUser/ui/UserCard';
 import * as S from '@/pages/SelectUser/SelectUser.styled';
+import UserCard from '@/pages/SelectUser/ui/UserCard';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const SelectUser = () => {
   const [{ users: usersData }, isLoading] = useFetch({ resource: 'users', enabled: true });

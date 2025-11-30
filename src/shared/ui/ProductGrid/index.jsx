@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+
 import { productIdSlice } from '@/redux';
-import ProductItem from '@/shared/ui/ProductItem';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { ToUpper } from '@/shared/lib';
 import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
+import ProductItem from '@/shared/ui/ProductItem';
 
 const ProductGrid = () => {
   const productId = useSelector((state) => state.productId);

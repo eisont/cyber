@@ -1,14 +1,14 @@
+import { lazy, Suspense } from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
 
 import Layout from '@/pages/Layout';
 const Explore = lazy(() => import('@/pages/Explore'));
 const SearchProducts = lazy(() => import('@/pages/SearchProducts'));
 const SelectUser = lazy(() => import('@/pages/SelectUser'));
 const MyPage = lazy(() => import('@/pages/Mypage'));
-import ProductGrid from '@/shared/ui/ProductGrid';
 import { HeroBanner, CategoryHighlight, CategoryPromoBanner, SeasonalSaleBanner } from '@/pages/ui';
+import ProductGrid from '@/shared/ui/ProductGrid';
 const ProductDetail = lazy(() => import('@/pages/Explore/Detail'));
 
 const AppRouter = () => {
