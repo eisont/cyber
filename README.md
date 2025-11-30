@@ -1,4 +1,4 @@
-# Cyber
+# Cyber v1
 
 > React + Vite 기반의 DummyJSON 프로젝트
 
@@ -67,12 +67,13 @@ src
  ┃ ┗ ui/                   # 공용 UI 컴포넌트 (ProductGrid, ProductItem 등)
  ┃
  ┗ main.jsx                # 진입 파일
+````
 
 ````
 
 ## ⚙️ 설치 및 실행
+```bash
 
-````bash
 # 패키지 설치
 npm install
 
