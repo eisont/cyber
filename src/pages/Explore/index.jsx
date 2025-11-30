@@ -1,11 +1,12 @@
+import { useSelector } from 'react-redux';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
+
+import * as S from '@/pages/Explore/Explore.styled';
+import Breadcrumb from '@/pages/Explore/ui/Breadcrumb';
 import Filter from '@/pages/Explore/ui/Filter';
 import ProductsBox from '@/pages/Explore/ui/ProductsBox';
-import Breadcrumb from '@/pages/Explore/ui/Breadcrumb';
-import * as S from '@/pages/Explore/Explore.styled';
 import Recipes from '@/pages/Recipes';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { useSelector } from 'react-redux';
 
 const Explore = () => {
   const params = useParams();

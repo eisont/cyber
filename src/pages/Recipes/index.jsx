@@ -1,8 +1,9 @@
 import { useState } from 'react';
+
 import * as S from '@/pages/Recipes/Recipes.styled';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
-import RecipesItem from '@/pages/Recipes/ui/RecipesItem';
 import Modal from '@/pages/Recipes/ui/Modal';
+import RecipesItem from '@/pages/Recipes/ui/RecipesItem';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
 
 const Recipes = () => {
   const [selectId, setSelectId] = useState();

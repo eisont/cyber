@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
-import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
+
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 100%;

@@ -1,7 +1,7 @@
+import styled from '@emotion/styled';
+
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { Header, Footer } from '@/shared/layout';
-
-import styled from '@emotion/styled';
 
 const Wrapper = styled.div`
   display: flex;

@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import * as S from '@/pages/Mypage/MyPage.styled';
 import {
   AddressCard,
@@ -8,8 +11,6 @@ import {
   WorkEduCard,
 } from '@/pages/Mypage/ui';
 import CartCard from '@/pages/Mypage/ui/Cart';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 const MyPage = () => {
   const userInfo = useSelector((state) => state.userInfo);

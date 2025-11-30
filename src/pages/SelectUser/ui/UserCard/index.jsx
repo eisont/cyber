@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import { loginDataSlice } from '@/redux';
 
 const Wrapper = styled.div`

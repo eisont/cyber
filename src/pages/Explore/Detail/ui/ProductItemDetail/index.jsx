@@ -1,8 +1,9 @@
-import { OriginalPrice } from '@/shared/lib';
 import { useParams } from 'react-router-dom';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { DumText, DumImg } from '@/shared/assets/styled/skeleton';
+
 import * as S from '@/pages/Explore/Detail/ui/ProductItemDetail/ProductItemDetail.styled';
+import { DumText, DumImg } from '@/shared/assets/styled/skeleton';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { OriginalPrice } from '@/shared/lib';
 
 const ProductItemDetail = () => {
   const params = useParams();

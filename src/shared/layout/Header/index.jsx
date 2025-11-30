@@ -1,9 +1,10 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
+
+import { searchSlice } from '@/redux';
 import { LogoSVG } from '@/shared/assets/SVGicons';
 import { SearchSVG, CloseSVG } from '@/shared/assets/SVGicons';
 import { BagSVG } from '@/shared/assets/SVGicons';
-import { useDispatch, useSelector } from 'react-redux';
-import { searchSlice } from '@/redux';
-import { Link, useLocation } from 'react-router-dom';
 import { MenuSVG } from '@/shared/assets/SVGicons';
 import * as S from '@/shared/layout/Header/Header.styled';
 

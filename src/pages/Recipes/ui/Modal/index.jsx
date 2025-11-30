@@ -1,6 +1,7 @@
-import { CloseSVG } from '@/shared/assets/SVGicons';
-import * as S from '@/pages/Recipes/ui/RecipesItem/RecipesItem.styled';
 import { memo } from 'react';
+
+import * as S from '@/pages/Recipes/ui/RecipesItem/RecipesItem.styled';
+import { CloseSVG } from '@/shared/assets/SVGicons';
 
 const Modal = memo((pr) => {
   return (
