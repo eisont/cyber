@@ -68,9 +68,11 @@ src
  ┃
  ┗ main.jsx                # 진입 파일
 
+````
+
 ## ⚙️ 설치 및 실행
 
-```bash
+````bash
 # 패키지 설치
 npm install
 
@@ -88,6 +90,7 @@ npm run lint
 
 # 코드 포맷팅 (Prettier)
 npm run format
+````
 
 ---
 
