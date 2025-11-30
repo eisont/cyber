@@ -1,8 +1,9 @@
+import styled from '@emotion/styled';
+
 import CategoryPromoBannerItem from '@/pages/ui/CategoryPromoBanner/CategoryPromoBannerItem';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
 import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { GetMonkCategoryPromoItems } from '@/shared/mock/categories';
-import styled from '@emotion/styled';
 
 const Wrapper = styled(FlexCenter)`
   width: 100%;

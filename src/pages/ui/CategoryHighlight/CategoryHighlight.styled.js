@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-import { FlexBetween, FlexColBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { Link } from 'react-router-dom';
+
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { FlexBetween, FlexColBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)`
   height: 352px;

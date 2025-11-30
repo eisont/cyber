@@ -1,7 +1,8 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks/useFetchHooks';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { userInfoSlice } from '@/redux';
+import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks/useFetchHooks';
 
 const AuthAndUserInfo = () => {
   const loginData = useSelector((state) => state.loginData);

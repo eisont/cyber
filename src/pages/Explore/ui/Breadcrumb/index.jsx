@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
+
 import * as S from '@/pages/Explore/ui/Breadcrumb/Breadcrumb.styled';
-import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
-import { ToUpper } from '@/shared/lib';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
 import { DumText } from '@/shared/assets/styled/skeleton';
+import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
+import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { ToUpper } from '@/shared/lib';
 
 const Breadcrumb = () => {
   const params = useParams();

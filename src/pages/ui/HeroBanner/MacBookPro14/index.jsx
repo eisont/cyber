@@ -1,9 +1,10 @@
+import styled from '@emotion/styled';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import { productIdSlice } from '@/redux';
-import styled from '@emotion/styled';
-import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexBetween)`
   width: 720px;

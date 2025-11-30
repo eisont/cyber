@@ -1,9 +1,10 @@
-import { useSearchFetch } from '@/shared/hooks/useFetchHooks';
 import styled from '@emotion/styled';
-import ProductItem from '@/shared/ui/ProductItem';
-import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { useSelector } from 'react-redux';
+
+import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { DumBox } from '@/shared/assets/styled/skeleton';
+import { useSearchFetch } from '@/shared/hooks/useFetchHooks';
+import ProductItem from '@/shared/ui/ProductItem';
 
 const Wrapper = styled.div`
   display: flex;

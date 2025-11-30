@@ -1,12 +1,13 @@
-import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
-import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
 import { memo, useState } from 'react';
-import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
-import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
-import { OriginalPrice } from '@/shared/lib';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import { productIdSlice } from '@/redux';
+import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
+import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
+import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
+import { OriginalPrice } from '@/shared/lib';
+import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
 
 const ProductItem = memo((pr) => {
   const dispatch = useDispatch();

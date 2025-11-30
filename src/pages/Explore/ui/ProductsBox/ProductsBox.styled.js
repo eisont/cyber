@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
-import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
+
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled.div`
   width: 831px;

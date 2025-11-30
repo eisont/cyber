@@ -1,12 +1,13 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 import * as S from '@/pages/Explore/ui/Filter/Filter.styled';
 import { productIdSlice } from '@/redux';
-import { ToUpper } from '@/shared/lib';
+import { DumText } from '@/shared/assets/styled/skeleton';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons';
 import { useFetch } from '@/shared/hooks/useFetchHooks';
-import { DumText } from '@/shared/assets/styled/skeleton';
-import { useNavigate } from 'react-router-dom';
+import { ToUpper } from '@/shared/lib';
 
 const Filter = () => {
   const productId = useSelector((state) => state.productId);

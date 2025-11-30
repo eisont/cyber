@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)`

@@ -1,11 +1,12 @@
+import styled from '@emotion/styled';
+
 import AirPodMax from '@/pages/ui/HeroBanner/AirPodMax';
 import Iphone13Pro from '@/pages/ui/HeroBanner/Iphone13Pro';
 import MacBookPro14 from '@/pages/ui/HeroBanner/MacBookPro14';
 import PlayStation5 from '@/pages/ui/HeroBanner/PlayStation5';
 import VisionPro from '@/pages/ui/HeroBanner/VisionPro';
-import { FlexBetween, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
-import styled from '@emotion/styled';
+import { FlexBetween, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexColBetween)`
   height: 1232px;
