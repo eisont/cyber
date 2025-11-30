@@ -111,8 +111,8 @@ const Iphone13Pro = () => {
           <Button>Shop Now</Button>
         </LinkSt>
       </Iphone13ProTextBox>
-      <Iphone13ProImg src="img/HeroBanner/Iphone14pro.webp" alt="Iphone13pro" />
-      <MobileIphone13ProImg src="img/mobile/Iphone14pro.webp" alt="Iphone13pro" />
+      <Iphone13ProImg src="img/HeroBanner/Iphone14pro.webp" alt="Iphone14pro" />
+      <MobileIphone13ProImg src="img/mobile/Iphone14pro.webp" alt="Iphone14pro" />
     </Wrapper>
   );
 };
