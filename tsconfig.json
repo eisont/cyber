@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    /* ----- 기본 컴파일 타겟 / 모듈 ----- */
+    /* --- 기본 타겟/모듈 --- */
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "react-jsx",
 
-    /* ----- JS/TS 관련 ----- */
-    "allowJs": false,
+    /* --- JS/TS 설정 --- */
+    "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "useDefineForClassFields": true,
 
-    /* ----- 엄격 모드(타입 강화) ----- */
+    /* --- 엄격 모드 --- */
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -25,18 +25,18 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
 
-    /* ----- 모듈/임포트 관련 ----- */
+    /* --- 모듈/임포트 --- */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
 
-    /* ----- 경로 별칭(alias) ----- */
+    /* --- 절대 경로(alias) --- */
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]
     },
 
-    /* ----- Vite / 환경 타입 ----- */
+    /* --- Vite 타입 --- */
     "types": ["vite/client"]
   },
   "include": ["src"],
