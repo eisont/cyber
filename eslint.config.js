@@ -1,19 +1,19 @@
-// eslint.config.mjs
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default [
   {
     ignores: ['dist', 'node_modules', 'coverage'],
   },
   {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    files: ['src/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parser: tseslint.parser,
       parserOptions: {
         project: './tsconfig.json',
         tsconfigRootDir: new URL('.', import.meta.url).pathname,
@@ -23,6 +23,7 @@ export default tseslint.config(
       },
     },
     plugins: {
+      '@typescript-eslint': tseslint.plugin,
       react,
       'react-hooks': reactHooks,
       import: importPlugin,
@@ -79,4 +80,4 @@ export default tseslint.config(
       ...prettier.rules,
     },
   },
-);
+];
