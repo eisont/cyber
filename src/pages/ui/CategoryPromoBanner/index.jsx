@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import CategoryPromoBannerItem from '@/pages/ui/CategoryPromoBanner/CategoryPromoBannerItem';
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
 import { FlexBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { GetMonkCategoryPromoItems } from '@/shared/mock/categories';
 

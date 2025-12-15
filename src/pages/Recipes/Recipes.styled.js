@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
 
 export const Wrapper = styled.div`
   width: 831px;

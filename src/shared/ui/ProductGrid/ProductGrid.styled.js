@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
 import { FlexCenter, FlexColAround } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)``;

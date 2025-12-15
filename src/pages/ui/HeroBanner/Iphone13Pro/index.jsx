@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { productIdSlice } from '@/redux';
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
 import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
 
 const Wrapper = styled(FlexBetween)`

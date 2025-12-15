@@ -1,5 +1,10 @@
 // Logo
-export const LogoSVG = ({ width, height, color }) => (
+type WHCProps = { width: string; height: string; color: string };
+type SCProps = { size: string; color: string };
+type SCCProps = { size: string; color: string; color2: string };
+type SCIProps = { size: string; color: string; insideColor: string };
+
+export const LogoSVG = ({ width, height, color }: WHCProps) => (
   <svg
     width={width}
     height={height}
@@ -35,7 +40,7 @@ export const LogoSVG = ({ width, height, color }) => (
 );
 
 // Footer
-export const TiktokSVG = ({ size, color }) => (
+export const TiktokSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -50,7 +55,7 @@ export const TiktokSVG = ({ size, color }) => (
   </svg>
 );
 
-export const FacebookSVG = ({ size, color }) => (
+export const FacebookSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -65,7 +70,7 @@ export const FacebookSVG = ({ size, color }) => (
   </svg>
 );
 
-export const InstagramSVG = ({ size, color, color2 }) => (
+export const InstagramSVG = ({ size, color, color2 }: SCCProps) => (
   <svg
     width={size}
     height={size}
@@ -99,7 +104,7 @@ export const InstagramSVG = ({ size, color, color2 }) => (
   </svg>
 );
 
-export const TwitterSVG = ({ size, color }) => (
+export const TwitterSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -116,7 +121,7 @@ export const TwitterSVG = ({ size, color }) => (
   </svg>
 );
 
-export const SearchSVG = ({ size, color }) => (
+export const SearchSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -132,7 +137,7 @@ export const SearchSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const Arrow24pxSVG = ({ size, color }) => (
+export const Arrow24pxSVG = ({ size, color }: SCProps) => (
   // stroke='#A4A4A4'
 
   <svg
@@ -146,7 +151,7 @@ export const Arrow24pxSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ExpandDownSVG = ({ size, color }) => (
+export const ExpandDownSVG = ({ size, color }: SCProps) => (
   // stroke='#191919'
 
   <svg
@@ -160,7 +165,7 @@ export const ExpandDownSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ViewSVG = ({ size, color }) => (
+export const ViewSVG = ({ size, color }: SCProps) => (
   // stroke='#979797'
 
   <svg
@@ -178,7 +183,7 @@ export const ViewSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ToEditSVG = ({ size, color }) => (
+export const ToEditSVG = ({ size, color }: SCProps) => (
   // fill = '#222222'
 
   <svg
@@ -197,7 +202,7 @@ export const ToEditSVG = ({ size, color }) => (
   </svg>
 );
 
-export const SmartWatchesSVG = ({ size, color }) => (
+export const SmartWatchesSVG = ({ size, color }: SCProps) => (
   // fill = '#2E2E2E'
 
   <svg
@@ -245,7 +250,7 @@ export const SmartWatchesSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const PlusSVG = ({ size, color }) => (
+export const PlusSVG = ({ size, color }: SCProps) => (
   // fill='#222222'
 
   <svg
@@ -263,7 +268,7 @@ export const PlusSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const PhonesSVG = ({ size, color }) => (
+export const PhonesSVG = ({ size, color }: SCProps) => (
   // fill='#2E2E2E'
 
   <svg
@@ -280,7 +285,7 @@ export const PhonesSVG = ({ size, color }) => (
   </svg>
 );
 
-export const EmptyCartSVG = ({ size, color }) => (
+export const EmptyCartSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -320,7 +325,7 @@ export const EmptyCartSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const AddToCartSVG = ({ size, color, insideColor }) => (
+export const AddToCartSVG = ({ size, color, insideColor }: SCIProps) => (
   <svg
     width={size}
     height={size}
@@ -365,7 +370,7 @@ export const AddToCartSVG = ({ size, color, insideColor }) => (
   </svg>
 );
 
-export const FavoritesSVG = ({ size, color }) => (
+export const FavoritesSVG = ({ size, color }: SCProps) => (
   // stroke = #919191
 
   <svg
@@ -385,7 +390,7 @@ export const FavoritesSVG = ({ size, color }) => (
   </svg>
 );
 
-export const UserSVG = ({ size, color }) => (
+export const UserSVG = ({ size, color }: SCProps) => (
   // stroke = #191919"
 
   <svg
@@ -405,7 +410,7 @@ export const UserSVG = ({ size, color }) => (
   </svg>
 );
 
-export const ArrowSVG = ({ size, color }) => (
+export const ArrowSVG = ({ size, color }: SCProps) => (
   // fill='#2E2E2E'
 
   <svg
@@ -422,7 +427,7 @@ export const ArrowSVG = ({ size, color }) => (
   </svg>
 );
 
-export const BagSVG = ({ size, color }) => (
+export const BagSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -462,7 +467,7 @@ export const BagSVG = ({ size, color }) => (
   </svg>
 );
 
-export const WomanOutlineSVG = ({ size, color }) => (
+export const WomanOutlineSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M208 368v104a23.73 23.73 0 0024 24h0a23.73 23.73 0 0024-24"
@@ -500,7 +505,7 @@ export const WomanOutlineSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const ManOutlineSVG = ({ size, color }) => (
+export const ManOutlineSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M208 208v264a23.73 23.73 0 0024 24h0a23.73 23.73 0 0024-24"
@@ -538,7 +543,7 @@ export const ManOutlineSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const LaptopSVG = ({ size, color }) => (
+export const LaptopSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <rect
       x="48"
@@ -561,7 +566,7 @@ export const LaptopSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const FastFoodOutlineSVG = ({ size, color }) => (
+export const FastFoodOutlineSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M322 416c0 35.35-20.65 64-56 64H134c-35.35 0-56-28.65-56-64M336 336c17.67 0 32 17.91 32 40h0c0 22.09-14.33 40-32 40H64c-17.67 0-32-17.91-32-40h0c0-22.09 14.33-40 32-40"
@@ -605,7 +610,7 @@ export const FastFoodOutlineSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const CarSportsOutlineSVG = ({ size, color }) => (
+export const CarSportsOutlineSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M469.71 234.6c-7.33-9.73-34.56-16.43-46.08-33.94s-20.95-55.43-50.27-70S288 112 256 112s-88 4-117.36 18.63-38.75 52.52-50.27 70-38.75 24.24-46.08 33.97S29.8 305.84 32.94 336s9 48 9 48h86c14.08 0 18.66-5.29 47.46-8 31.6-3 62.6-4 80.6-4s50 1 81.58 4c28.8 2.73 33.53 8 47.46 8h85s5.86-17.84 9-48-2.04-91.67-9.33-101.4zM400 384h56v16h-56zM56 384h56v16H56z"
@@ -626,7 +631,7 @@ export const CarSportsOutlineSVG = ({ size, color }) => (
     />
   </svg>
 );
-export const BaseballOutlineSVG = ({ size, color }) => (
+export const BaseballOutlineSVG = ({ size, color }: SCProps) => (
   <svg width={size} height={size} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       fill="none"
@@ -657,7 +662,7 @@ export const BaseballOutlineSVG = ({ size, color }) => (
   </svg>
 );
 
-export const CloseSVG = ({ size, color }) => (
+export const CloseSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}
@@ -670,7 +675,7 @@ export const CloseSVG = ({ size, color }) => (
   </svg>
 );
 
-export const MenuSVG = ({ size, color }) => (
+export const MenuSVG = ({ size, color }: SCProps) => (
   <svg
     width={size}
     height={size}

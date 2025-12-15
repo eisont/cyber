@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
-import { FlexBetween, FlexColBetween, FlexCenter } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
+import { FlexBetween, FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)`
   width: 100%;
