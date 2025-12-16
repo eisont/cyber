@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import AppRouter from '@/app/router';
 import { store } from '@/redux';
-import ScrollToTop from '@/shared/hooks/ScrollToTop';
+import ScrollToTop from '@/shared/hooks/scrollToTop';
 import AuthAndUserInfo from '@/shared/hooks/useAuthAndUserInfo';
 
 const App = () => {
