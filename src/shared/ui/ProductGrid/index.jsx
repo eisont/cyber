@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import { productIdSlice } from '@/redux';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 import { ToUpper } from '@/shared/lib';
 import * as S from '@/shared/ui/ProductGrid/ProductGrid.styled';
 import ProductItem from '@/shared/ui/ProductItem';

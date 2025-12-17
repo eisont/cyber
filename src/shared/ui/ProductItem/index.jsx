@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { productIdSlice } from '@/redux';
 import { DumImg, DumText } from '@/shared/assets/styled/skeleton';
 import { AddToCartSVG, EmptyCartSVG } from '@/shared/assets/SVGicons';
-import { useIntersectionObserver } from '@/shared/hooks/useIntersectionObserver';
+import { useIntersectionObserver } from '@/shared/hooks';
 import { OriginalPrice } from '@/shared/lib';
 import * as S from '@/shared/ui/ProductItem/ProductItem.styled';
 

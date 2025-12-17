@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import * as S from '@/pages/Explore/ui/ProductsBox/ProductsBox.styled';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 import ProductItem from '@/shared/ui/ProductItem';
 
 const ProductsBox = () => {

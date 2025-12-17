@@ -4,7 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import * as S from '@/pages/Explore/ui/Breadcrumb/Breadcrumb.styled';
 import { DumText } from '@/shared/assets/styled/skeleton';
 import { Arrow24pxSVG } from '@/shared/assets/SVGicons';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 import { ToUpper } from '@/shared/lib';
 
 const Breadcrumb = () => {

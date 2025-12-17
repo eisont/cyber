@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
-import { BREAKPOINTS } from '@/shared/assets/styled/breakpoints';
-import { FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
-import { FlexBetween } from '@/shared/assets/styled/CommonStyled';
+import { BREAKPOINTS } from '@/shared/assets/styled/breakPoints';
+import { FlexBetween, FlexCenter, FlexColBetween } from '@/shared/assets/styled/CommonStyled';
 
 export const Wrapper = styled(FlexCenter)`
   position: relative;

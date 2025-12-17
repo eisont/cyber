@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { userInfoSlice } from '@/redux';
-import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks/useFetchHooks';
+import { useTokenFetch, useUserInfoFetch } from '@/shared/hooks';
 
 const AuthAndUserInfo = () => {
   const loginData = useSelector((state) => state.loginData);
@@ -19,4 +19,4 @@ const AuthAndUserInfo = () => {
   return null;
 };
 
-export default AuthAndUserInfo;
+export { AuthAndUserInfo };
