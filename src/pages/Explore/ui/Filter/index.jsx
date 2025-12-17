@@ -6,7 +6,7 @@ import * as S from '@/pages/Explore/ui/Filter/Filter.styled';
 import { productIdSlice } from '@/redux';
 import { DumText } from '@/shared/assets/styled/skeleton';
 import { ExpandDownSVG } from '@/shared/assets/SVGicons';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 import { ToUpper } from '@/shared/lib';
 
 const Filter = () => {

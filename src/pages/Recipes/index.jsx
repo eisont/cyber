@@ -3,7 +3,7 @@ import { useState } from 'react';
 import * as S from '@/pages/Recipes/Recipes.styled';
 import Modal from '@/pages/Recipes/ui/Modal';
 import RecipesItem from '@/pages/Recipes/ui/RecipesItem';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 
 const Recipes = () => {
   const [selectId, setSelectId] = useState();

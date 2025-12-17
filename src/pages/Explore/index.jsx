@@ -6,7 +6,7 @@ import Breadcrumb from '@/pages/Explore/ui/Breadcrumb';
 import Filter from '@/pages/Explore/ui/Filter';
 import ProductsBox from '@/pages/Explore/ui/ProductsBox';
 import Recipes from '@/pages/Recipes';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 
 const Explore = () => {
   const params = useParams();

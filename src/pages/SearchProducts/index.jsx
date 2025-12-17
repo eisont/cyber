@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 import { useSelector } from 'react-redux';
 
-import { FlexCenter } from '@/shared/assets/styled/CommonStyled';
 import { DumBox } from '@/shared/assets/styled/skeleton';
-import { useSearchFetch } from '@/shared/hooks/useFetchHooks';
+import { useSearchFetch } from '@/shared/hooks';
 import ProductItem from '@/shared/ui/ProductItem';
 
 const Wrapper = styled.div`

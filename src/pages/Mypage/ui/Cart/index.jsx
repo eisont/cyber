@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import * as S from '@/pages/Mypage/MyPage.styled';
-import { useFetch } from '@/shared/hooks/useFetchHooks';
+import { useFetch } from '@/shared/hooks';
 
 const ItemRow = styled.div`
   display: grid;
